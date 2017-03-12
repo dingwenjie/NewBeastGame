@@ -1,0 +1,83 @@
+fileFormatVersion: 2
+guid: b29a642dfad30054e81b993830b23fcc
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Bip01
+    100002: Bip01 Head
+    100004: Bip01 Spine
+    100006: body
+    100008: Bone_body
+    100010: Bone_foot
+    100012: Bone_mouth02
+    100014: Bone_tail
+    100016: Dummy_pos_ctl
+    100018: //RootNode
+    100020: weenie_worm
+    400000: Bip01
+    400002: Bip01 Head
+    400004: Bip01 Spine
+    400006: body
+    400008: Bone_body
+    400010: Bone_foot
+    400012: Bone_mouth02
+    400014: Bone_tail
+    400016: Dummy_pos_ctl
+    400018: //RootNode
+    400020: weenie_worm
+    4300000: weenie_worm
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: weenie_worm
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 1
+  userData: 

@@ -1,0 +1,397 @@
+fileFormatVersion: 2
+guid: 70aee8f875036a0429d1f9fa5a034207
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bip01
+    100002: Bip01 Footsteps
+    100004: Bip01 Head
+    100006: Bip01 HeadNub
+    100008: Bip01 L Calf
+    100010: Bip01 L Clavicle
+    100012: Bip01 L Foot
+    100014: Bip01 L Forearm
+    100016: Bip01 L Hand
+    100018: Bip01 L Thigh
+    100020: Bip01 L Toe0
+    100022: Bip01 L Toe0Nub
+    100024: Bip01 L Toe1
+    100026: Bip01 L Toe1Nub
+    100028: Bip01 L Toe2
+    100030: Bip01 L Toe2Nub
+    100032: Bip01 L UpperArm
+    100034: Bip01 Neck
+    100036: Bip01 Pelvis
+    100038: Bip01 R Calf
+    100040: Bip01 R Clavicle
+    100042: Bip01 R Foot
+    100044: Bip01 R Forearm
+    100046: Bip01 R Hand
+    100048: Bip01 R Thigh
+    100050: Bip01 R Toe0
+    100052: Bip01 R Toe0Nub
+    100054: Bip01 R Toe1
+    100056: Bip01 R Toe1Nub
+    100058: Bip01 R Toe2
+    100060: Bip01 R Toe2Nub
+    100062: Bip01 R UpperArm
+    100064: Bip01 Spine
+    100066: Bip01 Spine1
+    100068: Bip01 Spine2
+    100070: Bone01
+    100072: Bone02
+    100074: Bone03
+    100076: Bone04
+    100078: Bone05
+    100080: Bone06
+    100082: Bone07
+    100084: Bone08
+    100086: Bone09
+    100088: Bone10
+    100090: Bone11
+    100092: Bone12
+    100094: Bone13
+    100096: Bone14
+    100098: Bone15
+    100100: Bone16
+    100102: Bone17
+    100104: Bone18
+    100106: Bone19
+    100108: Bone20
+    100110: Bone21
+    100112: Bone22
+    100114: Bone23
+    100116: Bone24
+    100118: Bone25
+    100120: Bone26
+    100122: Bone27
+    100124: Bone28
+    100126: Bone29
+    100128: Bone30
+    100130: Bone31
+    100132: Bone32
+    100134: Bone33
+    100136: Bone34
+    100138: Bone35
+    100140: Bone36
+    100142: Bone37
+    100144: Bone38
+    100146: Bone39
+    100148: Bone40
+    100150: Bone41
+    100152: Bone42
+    100154: Bone43
+    100156: Bone44
+    100158: Bone45
+    100160: Bone46
+    100162: Bone47
+    100164: Bone49
+    100166: Bone50
+    100168: Bone51
+    100170: Bone52
+    100172: Bone53
+    100174: Bone54
+    100176: Bone55
+    100178: Bone56
+    100180: Bone57
+    100182: Bone58
+    100184: Dummy01
+    100186: Dummy02
+    100188: Dummy03
+    100190: Dummy04
+    100192: Dummy05
+    100194: Dummy06
+    100196: Dummy07
+    100198: Dummy08
+    100200: Dummy09
+    100202: Dummy10
+    100204: Dummy11
+    100206: Dummy12
+    100208: Dummy13
+    100210: Dummy14
+    100212: Dummy15
+    100214: Dummy16
+    100216: Dummy17
+    100218: Dummy18
+    100220: Dummy19
+    100222: Dummy20
+    100224: Dummy21
+    100226: Dummy22
+    100228: Dummy23
+    100230: Dummy24
+    100232: Dummy25
+    100234: Dummy26
+    100236: Dummy27
+    100238: Dummy28
+    100240: Dummy29
+    100242: Dummy30
+    100244: Dummy31
+    100246: Dummy32
+    100248: Dummy33
+    100250: Dummy34
+    100252: Dummy35
+    100254: Dummy36
+    100256: Dummy37
+    100258: Dummy38
+    100260: Dummy39
+    100262: Dummy40
+    100264: Dummy41
+    100266: Dummy42
+    100268: Dummy43
+    100270: Dummy44
+    100272: Dummy45
+    100274: Dummy46
+    100276: Dummy47
+    100278: Dummy48
+    100280: dummy_fx
+    100282: IK Chain01
+    100284: IK Chain02
+    100286: IK Chain03
+    100288: IK Chain04
+    100290: IK Chain05
+    100292: IK Chain06
+    100294: IK Chain07
+    100296: IK Chain08
+    100298: IK Chain09
+    100300: IK Chain10
+    100302: IK Chain11
+    100304: IK Chain12
+    100306: IK Chain13
+    100308: IK Chain14
+    100310: IK Chain15
+    100312: IK Chain16
+    100314: IK Chain17
+    100316: IK Chain18
+    100318: IK Chain19
+    100320: IK Chain20
+    100322: IK Chain21
+    100324: IK Chain22
+    100326: IK Chain23
+    100328: IK Chain24
+    100330: undeadobject
+    100332: //RootNode
+    400000: Bip01
+    400002: Bip01 Footsteps
+    400004: Bip01 Head
+    400006: Bip01 HeadNub
+    400008: Bip01 L Calf
+    400010: Bip01 L Clavicle
+    400012: Bip01 L Foot
+    400014: Bip01 L Forearm
+    400016: Bip01 L Hand
+    400018: Bip01 L Thigh
+    400020: Bip01 L Toe0
+    400022: Bip01 L Toe0Nub
+    400024: Bip01 L Toe1
+    400026: Bip01 L Toe1Nub
+    400028: Bip01 L Toe2
+    400030: Bip01 L Toe2Nub
+    400032: Bip01 L UpperArm
+    400034: Bip01 Neck
+    400036: Bip01 Pelvis
+    400038: Bip01 R Calf
+    400040: Bip01 R Clavicle
+    400042: Bip01 R Foot
+    400044: Bip01 R Forearm
+    400046: Bip01 R Hand
+    400048: Bip01 R Thigh
+    400050: Bip01 R Toe0
+    400052: Bip01 R Toe0Nub
+    400054: Bip01 R Toe1
+    400056: Bip01 R Toe1Nub
+    400058: Bip01 R Toe2
+    400060: Bip01 R Toe2Nub
+    400062: Bip01 R UpperArm
+    400064: Bip01 Spine
+    400066: Bip01 Spine1
+    400068: Bip01 Spine2
+    400070: Bone01
+    400072: Bone02
+    400074: Bone03
+    400076: Bone04
+    400078: Bone05
+    400080: Bone06
+    400082: Bone07
+    400084: Bone08
+    400086: Bone09
+    400088: Bone10
+    400090: Bone11
+    400092: Bone12
+    400094: Bone13
+    400096: Bone14
+    400098: Bone15
+    400100: Bone16
+    400102: Bone17
+    400104: Bone18
+    400106: Bone19
+    400108: Bone20
+    400110: Bone21
+    400112: Bone22
+    400114: Bone23
+    400116: Bone24
+    400118: Bone25
+    400120: Bone26
+    400122: Bone27
+    400124: Bone28
+    400126: Bone29
+    400128: Bone30
+    400130: Bone31
+    400132: Bone32
+    400134: Bone33
+    400136: Bone34
+    400138: Bone35
+    400140: Bone36
+    400142: Bone37
+    400144: Bone38
+    400146: Bone39
+    400148: Bone40
+    400150: Bone41
+    400152: Bone42
+    400154: Bone43
+    400156: Bone44
+    400158: Bone45
+    400160: Bone46
+    400162: Bone47
+    400164: Bone49
+    400166: Bone50
+    400168: Bone51
+    400170: Bone52
+    400172: Bone53
+    400174: Bone54
+    400176: Bone55
+    400178: Bone56
+    400180: Bone57
+    400182: Bone58
+    400184: Dummy01
+    400186: Dummy02
+    400188: Dummy03
+    400190: Dummy04
+    400192: Dummy05
+    400194: Dummy06
+    400196: Dummy07
+    400198: Dummy08
+    400200: Dummy09
+    400202: Dummy10
+    400204: Dummy11
+    400206: Dummy12
+    400208: Dummy13
+    400210: Dummy14
+    400212: Dummy15
+    400214: Dummy16
+    400216: Dummy17
+    400218: Dummy18
+    400220: Dummy19
+    400222: Dummy20
+    400224: Dummy21
+    400226: Dummy22
+    400228: Dummy23
+    400230: Dummy24
+    400232: Dummy25
+    400234: Dummy26
+    400236: Dummy27
+    400238: Dummy28
+    400240: Dummy29
+    400242: Dummy30
+    400244: Dummy31
+    400246: Dummy32
+    400248: Dummy33
+    400250: Dummy34
+    400252: Dummy35
+    400254: Dummy36
+    400256: Dummy37
+    400258: Dummy38
+    400260: Dummy39
+    400262: Dummy40
+    400264: Dummy41
+    400266: Dummy42
+    400268: Dummy43
+    400270: Dummy44
+    400272: Dummy45
+    400274: Dummy46
+    400276: Dummy47
+    400278: Dummy48
+    400280: dummy_fx
+    400282: IK Chain01
+    400284: IK Chain02
+    400286: IK Chain03
+    400288: IK Chain04
+    400290: IK Chain05
+    400292: IK Chain06
+    400294: IK Chain07
+    400296: IK Chain08
+    400298: IK Chain09
+    400300: IK Chain10
+    400302: IK Chain11
+    400304: IK Chain12
+    400306: IK Chain13
+    400308: IK Chain14
+    400310: IK Chain15
+    400312: IK Chain16
+    400314: IK Chain17
+    400316: IK Chain18
+    400318: IK Chain19
+    400320: IK Chain20
+    400322: IK Chain21
+    400324: IK Chain22
+    400326: IK Chain23
+    400328: IK Chain24
+    400330: undeadobject
+    400332: //RootNode
+    4300000: undeadobject
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: undeadobject
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

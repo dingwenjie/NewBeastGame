@@ -1,0 +1,231 @@
+fileFormatVersion: 2
+guid: 8e317d5a81f8a5b41977a10fd999b9b8
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Bip01
+    100004: Bip01 Footsteps
+    100006: Bip01 Head
+    100008: Bip01 HeadNub
+    100010: Bip01 L Calf
+    100012: Bip01 L Clavicle
+    100014: Bip01 L Finger0
+    100016: Bip01 L Finger01
+    100018: Bip01 L Finger0Nub
+    100020: Bip01 L Finger1
+    100022: Bip01 L Finger11
+    100024: Bip01 L Finger1Nub
+    100026: Bip01 L Foot
+    100028: Bip01 L Forearm
+    100030: Bip01 L Hand
+    100032: Bip01 L HorseLink
+    100034: Bip01 L Thigh
+    100036: Bip01 L Toe0
+    100038: Bip01 L Toe0Nub
+    100040: Bip01 L UpperArm
+    100042: Bip01 Neck
+    100044: Bip01 Pelvis
+    100046: Bip01 Prop1
+    100048: Bip01 R Calf
+    100050: Bip01 R Clavicle
+    100052: Bip01 R Finger0
+    100054: Bip01 R Finger01
+    100056: Bip01 R Finger0Nub
+    100058: Bip01 R Finger1
+    100060: Bip01 R Finger11
+    100062: Bip01 R Finger1Nub
+    100064: Bip01 R Foot
+    100066: Bip01 R Forearm
+    100068: Bip01 R Hand
+    100070: Bip01 R HorseLink
+    100072: Bip01 R Thigh
+    100074: Bip01 R Toe0
+    100076: Bip01 R Toe0Nub
+    100078: Bip01 R UpperArm
+    100080: Bip01 Spine
+    100082: Bip01 Spine1
+    100084: Bone_cloth_f00
+    100086: Bone_cloth_f01
+    100088: Bone_cloth_f02
+    100090: Bone_cloth_f03
+    100092: Bone_cloth_f04
+    100094: Bone_cloth_f05
+    100096: Bone_cloth_L01
+    100098: Bone_cloth_L02
+    100100: Bone_cloth_L03
+    100102: Bone_cloth_L04
+    100104: Bone_cloth_L05
+    100106: Bone_cloth_L06
+    100108: Bone_cloth_L07
+    100110: Bone_cloth_L08
+    100112: Bone_cloth_L09
+    100114: Bone_cloth_L10
+    100116: Bone_cloth_R01
+    100118: Bone_cloth_R02
+    100120: Bone_cloth_R03
+    100122: Bone_cloth_R04
+    100124: Bone_cloth_R05
+    100126: Bone_cloth_R06
+    100128: Bone_cloth_R07
+    100130: Bone_cloth_R08
+    100132: Bone_cloth_R09
+    100134: Bone_cloth_R10
+    100136: Bone_cloth_s01
+    100138: Bone_cloth_s02
+    100140: Bone_cloth_s03
+    100142: Bone_cloth_s04
+    100144: Bone_mouth
+    100146: Bone_tail01
+    100148: Bone_tail02
+    100150: Bone_tail03
+    100152: Bone_tail04
+    100154: Bone_tail05
+    100156: dummy_fx
+    100158: IK Chain01
+    100160: IK Chain02
+    100162: unique_baltor_female_preti
+    100164: unique_baltor_female_preti01_weapon
+    400000: //RootNode
+    400002: Bip01
+    400004: Bip01 Footsteps
+    400006: Bip01 Head
+    400008: Bip01 HeadNub
+    400010: Bip01 L Calf
+    400012: Bip01 L Clavicle
+    400014: Bip01 L Finger0
+    400016: Bip01 L Finger01
+    400018: Bip01 L Finger0Nub
+    400020: Bip01 L Finger1
+    400022: Bip01 L Finger11
+    400024: Bip01 L Finger1Nub
+    400026: Bip01 L Foot
+    400028: Bip01 L Forearm
+    400030: Bip01 L Hand
+    400032: Bip01 L HorseLink
+    400034: Bip01 L Thigh
+    400036: Bip01 L Toe0
+    400038: Bip01 L Toe0Nub
+    400040: Bip01 L UpperArm
+    400042: Bip01 Neck
+    400044: Bip01 Pelvis
+    400046: Bip01 Prop1
+    400048: Bip01 R Calf
+    400050: Bip01 R Clavicle
+    400052: Bip01 R Finger0
+    400054: Bip01 R Finger01
+    400056: Bip01 R Finger0Nub
+    400058: Bip01 R Finger1
+    400060: Bip01 R Finger11
+    400062: Bip01 R Finger1Nub
+    400064: Bip01 R Foot
+    400066: Bip01 R Forearm
+    400068: Bip01 R Hand
+    400070: Bip01 R HorseLink
+    400072: Bip01 R Thigh
+    400074: Bip01 R Toe0
+    400076: Bip01 R Toe0Nub
+    400078: Bip01 R UpperArm
+    400080: Bip01 Spine
+    400082: Bip01 Spine1
+    400084: Bone_cloth_f00
+    400086: Bone_cloth_f01
+    400088: Bone_cloth_f02
+    400090: Bone_cloth_f03
+    400092: Bone_cloth_f04
+    400094: Bone_cloth_f05
+    400096: Bone_cloth_L01
+    400098: Bone_cloth_L02
+    400100: Bone_cloth_L03
+    400102: Bone_cloth_L04
+    400104: Bone_cloth_L05
+    400106: Bone_cloth_L06
+    400108: Bone_cloth_L07
+    400110: Bone_cloth_L08
+    400112: Bone_cloth_L09
+    400114: Bone_cloth_L10
+    400116: Bone_cloth_R01
+    400118: Bone_cloth_R02
+    400120: Bone_cloth_R03
+    400122: Bone_cloth_R04
+    400124: Bone_cloth_R05
+    400126: Bone_cloth_R06
+    400128: Bone_cloth_R07
+    400130: Bone_cloth_R08
+    400132: Bone_cloth_R09
+    400134: Bone_cloth_R10
+    400136: Bone_cloth_s01
+    400138: Bone_cloth_s02
+    400140: Bone_cloth_s03
+    400142: Bone_cloth_s04
+    400144: Bone_mouth
+    400146: Bone_tail01
+    400148: Bone_tail02
+    400150: Bone_tail03
+    400152: Bone_tail04
+    400154: Bone_tail05
+    400156: dummy_fx
+    400158: IK Chain01
+    400160: IK Chain02
+    400162: unique_baltor_female_preti
+    400164: unique_baltor_female_preti01_weapon
+    4300000: unique_baltor_female_preti01_weapon
+    4300002: unique_baltor_female_preti
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: unique_baltor_female_preti
+    13700002: unique_baltor_female_preti01_weapon
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

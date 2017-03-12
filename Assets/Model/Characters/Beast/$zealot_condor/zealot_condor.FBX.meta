@@ -1,0 +1,211 @@
+fileFormatVersion: 2
+guid: a3bd1bef11e89f14c852e6edbd4f1aef
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Bip01
+    100002: Bip01 Footsteps
+    100004: Bip01 Head
+    100006: Bip01 HeadNub
+    100008: Bip01 L Calf
+    100010: Bip01 L Foot
+    100012: Bip01 L HorseLink
+    100014: Bip01 L Thigh
+    100016: Bip01 L Toe0
+    100018: Bip01 L Toe0Nub
+    100020: Bip01 L Toe1
+    100022: Bip01 L Toe1Nub
+    100024: Bip01 L Toe2
+    100026: Bip01 L Toe2Nub
+    100028: Bip01 L Toe3
+    100030: Bip01 L Toe3Nub
+    100032: Bip01 Neck
+    100034: Bip01 Neck1
+    100036: Bip01 Neck2
+    100038: Bip01 Pelvis
+    100040: Bip01 Ponytail1
+    100042: Bip01 Ponytail1Nub
+    100044: Bip01 R Calf
+    100046: Bip01 R Foot
+    100048: Bip01 R HorseLink
+    100050: Bip01 R Thigh
+    100052: Bip01 R Toe0
+    100054: Bip01 R Toe0Nub
+    100056: Bip01 R Toe1
+    100058: Bip01 R Toe1Nub
+    100060: Bip01 R Toe2
+    100062: Bip01 R Toe2Nub
+    100064: Bip01 R Toe3
+    100066: Bip01 R Toe3Nub
+    100068: Bip01 Spine
+    100070: Bip01 Tail
+    100072: Bip01 Tail1
+    100074: Bip01 Tail2
+    100076: Bip01 TailNub
+    100078: Bone_L_arm01
+    100080: Bone_L_arm02
+    100082: Bone_L_arm03
+    100084: Bone_L_fur01
+    100086: Bone_L_fur01_end
+    100088: Bone_L_fur02
+    100090: Bone_L_fur02_end
+    100092: Bone_L_fur03
+    100094: Bone_L_fur04
+    100096: Bone_L_fur05
+    100098: Bone_R_arm01
+    100100: Bone_R_arm02
+    100102: Bone_R_arm03
+    100104: Bone_R_fur01
+    100106: Bone_R_fur01_end
+    100108: Bone_R_fur02
+    100110: Bone_R_fur02_end
+    100112: Bone_R_fur03
+    100114: Bone_R_fur04
+    100116: Bone_R_fur05
+    100118: condor
+    100120: IK Chain01
+    100122: IK Chain02
+    100124: IK Chain03
+    100126: IK Chain04
+    100128: Point01
+    100130: Point02
+    100132: Point03
+    100134: Point04
+    100136: Point_L_fur01
+    100138: Point_L_fur02
+    100140: Point_L_fur03
+    100142: Point_R_fur01
+    100144: Point_R_fur02
+    100146: Point_R_fur03
+    100148: //RootNode
+    400000: Bip01
+    400002: Bip01 Footsteps
+    400004: Bip01 Head
+    400006: Bip01 HeadNub
+    400008: Bip01 L Calf
+    400010: Bip01 L Foot
+    400012: Bip01 L HorseLink
+    400014: Bip01 L Thigh
+    400016: Bip01 L Toe0
+    400018: Bip01 L Toe0Nub
+    400020: Bip01 L Toe1
+    400022: Bip01 L Toe1Nub
+    400024: Bip01 L Toe2
+    400026: Bip01 L Toe2Nub
+    400028: Bip01 L Toe3
+    400030: Bip01 L Toe3Nub
+    400032: Bip01 Neck
+    400034: Bip01 Neck1
+    400036: Bip01 Neck2
+    400038: Bip01 Pelvis
+    400040: Bip01 Ponytail1
+    400042: Bip01 Ponytail1Nub
+    400044: Bip01 R Calf
+    400046: Bip01 R Foot
+    400048: Bip01 R HorseLink
+    400050: Bip01 R Thigh
+    400052: Bip01 R Toe0
+    400054: Bip01 R Toe0Nub
+    400056: Bip01 R Toe1
+    400058: Bip01 R Toe1Nub
+    400060: Bip01 R Toe2
+    400062: Bip01 R Toe2Nub
+    400064: Bip01 R Toe3
+    400066: Bip01 R Toe3Nub
+    400068: Bip01 Spine
+    400070: Bip01 Tail
+    400072: Bip01 Tail1
+    400074: Bip01 Tail2
+    400076: Bip01 TailNub
+    400078: Bone_L_arm01
+    400080: Bone_L_arm02
+    400082: Bone_L_arm03
+    400084: Bone_L_fur01
+    400086: Bone_L_fur01_end
+    400088: Bone_L_fur02
+    400090: Bone_L_fur02_end
+    400092: Bone_L_fur03
+    400094: Bone_L_fur04
+    400096: Bone_L_fur05
+    400098: Bone_R_arm01
+    400100: Bone_R_arm02
+    400102: Bone_R_arm03
+    400104: Bone_R_fur01
+    400106: Bone_R_fur01_end
+    400108: Bone_R_fur02
+    400110: Bone_R_fur02_end
+    400112: Bone_R_fur03
+    400114: Bone_R_fur04
+    400116: Bone_R_fur05
+    400118: condor
+    400120: IK Chain01
+    400122: IK Chain02
+    400124: IK Chain03
+    400126: IK Chain04
+    400128: Point01
+    400130: Point02
+    400132: Point03
+    400134: Point04
+    400136: Point_L_fur01
+    400138: Point_L_fur02
+    400140: Point_L_fur03
+    400142: Point_R_fur01
+    400144: Point_R_fur02
+    400146: Point_R_fur03
+    400148: //RootNode
+    4300000: condor
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: condor
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 1
+  userData: 

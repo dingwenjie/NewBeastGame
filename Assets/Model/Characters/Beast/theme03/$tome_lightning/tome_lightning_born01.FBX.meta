@@ -1,0 +1,244 @@
+fileFormatVersion: 2
+guid: c79c003c1a1f7764d8466210b14f1a61
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bip01
+    100002: Bip01 Head
+    100004: Bip01 Spine
+    100006: Bone20
+    100008: Bone21
+    100010: Bone22
+    100012: Dummy01
+    100014: Dummy014
+    100016: Dummy03
+    100018: Dummy04
+    100020: Dummy05
+    100022: Dummy06
+    100024: Dummy07
+    100026: Dummy08
+    100028: Dummy11
+    100030: Dummy12
+    100032: Dummy13
+    100034: IK Chain01
+    100036: IK Chain02
+    100038: IK Chain03
+    100040: //RootNode
+    100042: Bone01
+    100044: Bone02
+    100046: Bone03
+    100048: Bone04
+    100050: Bone05
+    100052: Bone06
+    100054: Bone08
+    100056: Bone09
+    100058: Bone10
+    100060: Bone12
+    100062: Bone13
+    100064: Bone14
+    100066: Bone15
+    100068: Bone16
+    100070: Bone17
+    100072: Bone23
+    100074: Bone24
+    100076: Bone31
+    400000: Bip01
+    400002: Bip01 Head
+    400004: Bip01 Spine
+    400006: Bone20
+    400008: Bone21
+    400010: Bone22
+    400012: Dummy01
+    400014: Dummy014
+    400016: Dummy03
+    400018: Dummy04
+    400020: Dummy05
+    400022: Dummy06
+    400024: Dummy07
+    400026: Dummy08
+    400028: Dummy11
+    400030: Dummy12
+    400032: Dummy13
+    400034: IK Chain01
+    400036: IK Chain02
+    400038: IK Chain03
+    400040: //RootNode
+    400042: Bone01
+    400044: Bone02
+    400046: Bone03
+    400048: Bone04
+    400050: Bone05
+    400052: Bone06
+    400054: Bone08
+    400056: Bone09
+    400058: Bone10
+    400060: Bone12
+    400062: Bone13
+    400064: Bone14
+    400066: Bone15
+    400068: Bone16
+    400070: Bone17
+    400072: Bone23
+    400074: Bone24
+    400076: Bone31
+    7400000: born01
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: born01
+      takeName: Take 001
+      firstFrame: 30
+      lastFrame: 64
+      wrapMode: 8
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bip01
+        weight: 1
+      - path: Bip01/Bip01 Spine
+        weight: 1
+      - path: Bip01/Bip01 Spine/Bip01 Head
+        weight: 1
+      - path: Bip01/Bip01 Spine/Bone03
+        weight: 1
+      - path: Bip01/Bip01 Spine/Bone03/Bone01
+        weight: 1
+      - path: Bip01/Bip01 Spine/Bone20
+        weight: 1
+      - path: Bip01/Bip01 Spine/Bone20/Bone21
+        weight: 1
+      - path: Bip01/Bip01 Spine/Bone20/Bone21/Bone22
+        weight: 1
+      - path: Bip01/Bip01 Spine/Bone20/Bone21/Bone22/Bone23
+        weight: 1
+      - path: Bip01/Bip01 Spine/Bone20/Bone21/Bone22/Bone23/Bone24
+        weight: 1
+      - path: Bip01/Bip01 Spine/Bone20/Bone21/Bone22/Dummy13
+        weight: 1
+      - path: Bip01/Bip01 Spine/Bone20/Bone21/Bone22/Dummy13/Dummy08
+        weight: 1
+      - path: Bip01/Bip01 Spine/Bone20/Bone21/Bone22/Dummy13/Dummy08/IK Chain03
+        weight: 1
+      - path: Bip01/Bip01 Spine/Bone20/Bone21/Dummy12
+        weight: 1
+      - path: Bip01/Bip01 Spine/Bone20/Bone21/Dummy12/Dummy07
+        weight: 1
+      - path: Bip01/Bip01 Spine/Bone20/Bone21/Dummy12/Dummy07/IK Chain02
+        weight: 1
+      - path: Bip01/Bip01 Spine/Bone20/Dummy11
+        weight: 1
+      - path: Bip01/Bip01 Spine/Bone20/Dummy11/Dummy01
+        weight: 1
+      - path: Bip01/Bip01 Spine/Bone20/Dummy11/Dummy01/IK Chain01
+        weight: 1
+      - path: Bip01/Bip01 Spine/Bone31
+        weight: 1
+      - path: Bip01/Bip01 Spine/Bone31/Bone02
+        weight: 1
+      - path: Bip01/Bip01 Spine/Dummy03
+        weight: 1
+      - path: Bip01/Bip01 Spine/Dummy04
+        weight: 1
+      - path: Bip01/Bip01 Spine/Dummy05
+        weight: 1
+      - path: Bip01/Bip01 Spine/Dummy06
+        weight: 1
+      - path: Bip01/Bone04
+        weight: 1
+      - path: Bip01/Bone04/Bone05
+        weight: 1
+      - path: Bip01/Bone04/Bone05/Bone06
+        weight: 1
+      - path: Bip01/Bone08
+        weight: 1
+      - path: Bip01/Bone08/Bone09
+        weight: 1
+      - path: Bip01/Bone08/Bone09/Bone10
+        weight: 1
+      - path: Bip01/Bone12
+        weight: 1
+      - path: Bip01/Bone12/Bone15
+        weight: 1
+      - path: Bip01/Bone12/Bone15/Bone16
+        weight: 1
+      - path: Bip01/Bone13
+        weight: 1
+      - path: Bip01/Bone13/Bone14
+        weight: 1
+      - path: Bip01/Bone13/Bone14/Bone17
+        weight: 1
+      - path: Dummy014
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

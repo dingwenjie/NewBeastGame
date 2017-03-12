@@ -1,0 +1,317 @@
+fileFormatVersion: 2
+guid: 3b48a1ef641fa3a4c9c7f71c20e7ab10
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bip01
+    100002: Bip01 Footsteps
+    100004: Bip01 Head
+    100006: Bip01 Head01
+    100008: Bip01 HeadNub
+    100010: Bip01 L Calf
+    100012: Bip01 L Clavicle
+    100014: Bip01 L Finger0
+    100016: Bip01 L Finger01
+    100018: Bip01 L Finger0Nub
+    100020: Bip01 L Finger1
+    100022: Bip01 L Finger11
+    100024: Bip01 L Finger1Nub
+    100026: Bip01 L Foot
+    100028: Bip01 L Forearm
+    100030: Bip01 L Hand
+    100032: Bip01 L Thigh
+    100034: Bip01 L Toe0
+    100036: Bip01 L Toe0Nub
+    100038: Bip01 L UpperArm
+    100040: Bip01 Neck
+    100042: Bip01 Neck1
+    100044: Bip01 Pelvis
+    100046: Bip01 Ponytail1
+    100048: Bip01 Ponytail1Nub
+    100050: Bip01 Ponytail2
+    100052: Bip01 Ponytail2Nub
+    100054: Bip01 R Calf
+    100056: Bip01 R Clavicle
+    100058: Bip01 R Finger0
+    100060: Bip01 R Finger01
+    100062: Bip01 R Finger0Nub
+    100064: Bip01 R Finger1
+    100066: Bip01 R Finger11
+    100068: Bip01 R Finger1Nub
+    100070: Bip01 R Foot
+    100072: Bip01 R Forearm
+    100074: Bip01 R Hand
+    100076: Bip01 R Thigh
+    100078: Bip01 R Toe0
+    100080: Bip01 R Toe0Nub
+    100082: Bip01 R UpperArm
+    100084: Bip01 Spine
+    100086: Bip01 Spine1
+    100088: Bip01 Tail
+    100090: Bip01 Tail1
+    100092: Bip01 Tail2
+    100094: Bip01 TailNub
+    100096: Bone01
+    100098: Bone02
+    100100: Bone03
+    100102: Bone04
+    100104: Bone05
+    100106: Bone07
+    100108: Bone08
+    100110: Bone09
+    100112: Dummy01
+    100114: Dummy02
+    100116: Dummy03
+    100118: Dummy04
+    100120: Dummy05
+    100122: IK Chain01
+    100124: IK Chain02
+    100126: lizard_draggon_Bip01
+    100128: lizard_draggon_Bip01 Footsteps
+    100130: lizard_draggon_Bip01 HeadNub
+    100132: lizard_draggon_Bip01 L Calf
+    100134: lizard_draggon_Bip01 L Clavicle
+    100136: lizard_draggon_Bip01 L Finger0
+    100138: lizard_draggon_Bip01 L Finger01
+    100140: lizard_draggon_Bip01 L Finger0Nub
+    100142: lizard_draggon_Bip01 L Finger1
+    100144: lizard_draggon_Bip01 L Finger11
+    100146: lizard_draggon_Bip01 L Finger1Nub
+    100148: lizard_draggon_Bip01 L Finger2
+    100150: lizard_draggon_Bip01 L Finger21
+    100152: lizard_draggon_Bip01 L Finger2Nub
+    100154: lizard_draggon_Bip01 L Foot
+    100156: lizard_draggon_Bip01 L Forearm
+    100158: lizard_draggon_Bip01 L ForeTwist
+    100160: lizard_draggon_Bip01 L Hand
+    100162: lizard_draggon_Bip01 L Thigh
+    100164: lizard_draggon_Bip01 L Toe0
+    100166: lizard_draggon_Bip01 L Toe01
+    100168: lizard_draggon_Bip01 L Toe0Nub
+    100170: lizard_draggon_Bip01 L UpperArm
+    100172: lizard_draggon_Bip01 LUpArmTwist
+    100174: lizard_draggon_Bip01 Neck
+    100176: lizard_draggon_Bip01 Pelvis
+    100178: lizard_draggon_Bip01 R Calf
+    100180: lizard_draggon_Bip01 R Clavicle
+    100182: lizard_draggon_Bip01 R Finger0
+    100184: lizard_draggon_Bip01 R Finger01
+    100186: lizard_draggon_Bip01 R Finger0Nub
+    100188: lizard_draggon_Bip01 R Finger1
+    100190: lizard_draggon_Bip01 R Finger11
+    100192: lizard_draggon_Bip01 R Finger1Nub
+    100194: lizard_draggon_Bip01 R Finger2
+    100196: lizard_draggon_Bip01 R Finger21
+    100198: lizard_draggon_Bip01 R Finger2Nub
+    100200: lizard_draggon_Bip01 R Foot
+    100202: lizard_draggon_Bip01 R Forearm
+    100204: lizard_draggon_Bip01 R ForeTwist
+    100206: lizard_draggon_Bip01 R Hand
+    100208: lizard_draggon_Bip01 R Thigh
+    100210: lizard_draggon_Bip01 R Toe0
+    100212: lizard_draggon_Bip01 R Toe01
+    100214: lizard_draggon_Bip01 R Toe0Nub
+    100216: lizard_draggon_Bip01 R UpperArm
+    100218: lizard_draggon_Bip01 RUpArmTwist
+    100220: lizard_draggon_Bip01 Spine
+    100222: lizard_draggon_Bip01 Spine1
+    100224: lizard_draggon_Bone01
+    100226: lizard_draggon_Bone02
+    100228: lizard_draggon_Bone03
+    100230: lizard_draggon_Bone04
+    100232: lizard_draggon_Bone05
+    100234: lizard_draggon_dummy_weapon
+    100236: //RootNode
+    100238: lizardman_dragoon_01
+    100240: lizardman_dragoon_02
+    100242: Point01
+    100244: saur
+    100246: saur0000
+    400000: Bip01
+    400002: Bip01 Footsteps
+    400004: Bip01 Head
+    400006: Bip01 Head01
+    400008: Bip01 HeadNub
+    400010: Bip01 L Calf
+    400012: Bip01 L Clavicle
+    400014: Bip01 L Finger0
+    400016: Bip01 L Finger01
+    400018: Bip01 L Finger0Nub
+    400020: Bip01 L Finger1
+    400022: Bip01 L Finger11
+    400024: Bip01 L Finger1Nub
+    400026: Bip01 L Foot
+    400028: Bip01 L Forearm
+    400030: Bip01 L Hand
+    400032: Bip01 L Thigh
+    400034: Bip01 L Toe0
+    400036: Bip01 L Toe0Nub
+    400038: Bip01 L UpperArm
+    400040: Bip01 Neck
+    400042: Bip01 Neck1
+    400044: Bip01 Pelvis
+    400046: Bip01 Ponytail1
+    400048: Bip01 Ponytail1Nub
+    400050: Bip01 Ponytail2
+    400052: Bip01 Ponytail2Nub
+    400054: Bip01 R Calf
+    400056: Bip01 R Clavicle
+    400058: Bip01 R Finger0
+    400060: Bip01 R Finger01
+    400062: Bip01 R Finger0Nub
+    400064: Bip01 R Finger1
+    400066: Bip01 R Finger11
+    400068: Bip01 R Finger1Nub
+    400070: Bip01 R Foot
+    400072: Bip01 R Forearm
+    400074: Bip01 R Hand
+    400076: Bip01 R Thigh
+    400078: Bip01 R Toe0
+    400080: Bip01 R Toe0Nub
+    400082: Bip01 R UpperArm
+    400084: Bip01 Spine
+    400086: Bip01 Spine1
+    400088: Bip01 Tail
+    400090: Bip01 Tail1
+    400092: Bip01 Tail2
+    400094: Bip01 TailNub
+    400096: Bone01
+    400098: Bone02
+    400100: Bone03
+    400102: Bone04
+    400104: Bone05
+    400106: Bone07
+    400108: Bone08
+    400110: Bone09
+    400112: Dummy01
+    400114: Dummy02
+    400116: Dummy03
+    400118: Dummy04
+    400120: Dummy05
+    400122: IK Chain01
+    400124: IK Chain02
+    400126: lizard_draggon_Bip01
+    400128: lizard_draggon_Bip01 Footsteps
+    400130: lizard_draggon_Bip01 HeadNub
+    400132: lizard_draggon_Bip01 L Calf
+    400134: lizard_draggon_Bip01 L Clavicle
+    400136: lizard_draggon_Bip01 L Finger0
+    400138: lizard_draggon_Bip01 L Finger01
+    400140: lizard_draggon_Bip01 L Finger0Nub
+    400142: lizard_draggon_Bip01 L Finger1
+    400144: lizard_draggon_Bip01 L Finger11
+    400146: lizard_draggon_Bip01 L Finger1Nub
+    400148: lizard_draggon_Bip01 L Finger2
+    400150: lizard_draggon_Bip01 L Finger21
+    400152: lizard_draggon_Bip01 L Finger2Nub
+    400154: lizard_draggon_Bip01 L Foot
+    400156: lizard_draggon_Bip01 L Forearm
+    400158: lizard_draggon_Bip01 L ForeTwist
+    400160: lizard_draggon_Bip01 L Hand
+    400162: lizard_draggon_Bip01 L Thigh
+    400164: lizard_draggon_Bip01 L Toe0
+    400166: lizard_draggon_Bip01 L Toe01
+    400168: lizard_draggon_Bip01 L Toe0Nub
+    400170: lizard_draggon_Bip01 L UpperArm
+    400172: lizard_draggon_Bip01 LUpArmTwist
+    400174: lizard_draggon_Bip01 Neck
+    400176: lizard_draggon_Bip01 Pelvis
+    400178: lizard_draggon_Bip01 R Calf
+    400180: lizard_draggon_Bip01 R Clavicle
+    400182: lizard_draggon_Bip01 R Finger0
+    400184: lizard_draggon_Bip01 R Finger01
+    400186: lizard_draggon_Bip01 R Finger0Nub
+    400188: lizard_draggon_Bip01 R Finger1
+    400190: lizard_draggon_Bip01 R Finger11
+    400192: lizard_draggon_Bip01 R Finger1Nub
+    400194: lizard_draggon_Bip01 R Finger2
+    400196: lizard_draggon_Bip01 R Finger21
+    400198: lizard_draggon_Bip01 R Finger2Nub
+    400200: lizard_draggon_Bip01 R Foot
+    400202: lizard_draggon_Bip01 R Forearm
+    400204: lizard_draggon_Bip01 R ForeTwist
+    400206: lizard_draggon_Bip01 R Hand
+    400208: lizard_draggon_Bip01 R Thigh
+    400210: lizard_draggon_Bip01 R Toe0
+    400212: lizard_draggon_Bip01 R Toe01
+    400214: lizard_draggon_Bip01 R Toe0Nub
+    400216: lizard_draggon_Bip01 R UpperArm
+    400218: lizard_draggon_Bip01 RUpArmTwist
+    400220: lizard_draggon_Bip01 Spine
+    400222: lizard_draggon_Bip01 Spine1
+    400224: lizard_draggon_Bone01
+    400226: lizard_draggon_Bone02
+    400228: lizard_draggon_Bone03
+    400230: lizard_draggon_Bone04
+    400232: lizard_draggon_Bone05
+    400234: lizard_draggon_dummy_weapon
+    400236: //RootNode
+    400238: lizardman_dragoon_01
+    400240: lizardman_dragoon_02
+    400242: Point01
+    400244: saur
+    400246: saur0000
+    4300000: saur0000
+    4300002: lizardman_dragoon_02
+    4300004: lizardman_dragoon_01
+    4300006: saur
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: lizardman_dragoon_01
+    13700002: lizardman_dragoon_02
+    13700004: saur
+    13700006: saur0000
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

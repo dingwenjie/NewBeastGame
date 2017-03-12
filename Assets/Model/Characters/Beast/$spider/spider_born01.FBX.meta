@@ -1,0 +1,166 @@
+fileFormatVersion: 2
+guid: 9dccf40efb71dc94d87917b16e88861d
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Bip01
+    100002: Bip01 Head
+    100004: Bip_attack_target
+    100006: Bone_L_leg01_1
+    100008: Bone_L_leg01_2
+    100010: Bone_L_leg01_3
+    100012: Bone_L_leg01_IK
+    100014: Bone_L_leg02_1
+    100016: Bone_L_leg02_2
+    100018: Bone_L_leg02_3
+    100020: Bone_L_leg02_IK
+    100022: Bone_L_leg03_1
+    100024: Bone_L_leg03_2
+    100026: Bone_L_leg03_3
+    100028: Bone_L_leg03_IK
+    100030: Bone_L_leg04_1
+    100032: Bone_L_leg04_2
+    100034: Bone_L_leg04_3
+    100036: Bone_L_leg04_IK
+    100038: Bone_R_leg01_1
+    100040: Bone_R_leg01_2
+    100042: Bone_R_leg01_3
+    100044: Bone_R_leg01_IK
+    100046: Bone_R_leg02_1
+    100048: Bone_R_leg02_2
+    100050: Bone_R_leg02_3
+    100052: Bone_R_leg02_IK
+    100054: Bone_R_leg03_1
+    100056: Bone_R_leg03_2
+    100058: Bone_R_leg03_3
+    100060: Bone_R_leg03_IK
+    100062: Bone_R_leg04_1
+    100064: Bone_R_leg04_2
+    100066: Bone_R_leg04_3
+    100068: Bone_R_leg04_IK
+    100070: Bone_tail
+    100072: Box001
+    100074: Dummy001
+    100076: //RootNode
+    100078: spider_forest_little
+    400000: Bip01
+    400002: Bip01 Head
+    400004: Bip_attack_target
+    400006: Bone_L_leg01_1
+    400008: Bone_L_leg01_2
+    400010: Bone_L_leg01_3
+    400012: Bone_L_leg01_IK
+    400014: Bone_L_leg02_1
+    400016: Bone_L_leg02_2
+    400018: Bone_L_leg02_3
+    400020: Bone_L_leg02_IK
+    400022: Bone_L_leg03_1
+    400024: Bone_L_leg03_2
+    400026: Bone_L_leg03_3
+    400028: Bone_L_leg03_IK
+    400030: Bone_L_leg04_1
+    400032: Bone_L_leg04_2
+    400034: Bone_L_leg04_3
+    400036: Bone_L_leg04_IK
+    400038: Bone_R_leg01_1
+    400040: Bone_R_leg01_2
+    400042: Bone_R_leg01_3
+    400044: Bone_R_leg01_IK
+    400046: Bone_R_leg02_1
+    400048: Bone_R_leg02_2
+    400050: Bone_R_leg02_3
+    400052: Bone_R_leg02_IK
+    400054: Bone_R_leg03_1
+    400056: Bone_R_leg03_2
+    400058: Bone_R_leg03_3
+    400060: Bone_R_leg03_IK
+    400062: Bone_R_leg04_1
+    400064: Bone_R_leg04_2
+    400066: Bone_R_leg04_3
+    400068: Bone_R_leg04_IK
+    400070: Bone_tail
+    400072: Box001
+    400074: Dummy001
+    400076: //RootNode
+    400078: spider_forest_little
+    2300000: Box001
+    3300000: Box001
+    4300000: spider_forest_little
+    4300002: Box001
+    7400000: born01
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: spider_forest_little
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations:
+    - name: born01
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 8
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      transformMask: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 1
+  userData: 

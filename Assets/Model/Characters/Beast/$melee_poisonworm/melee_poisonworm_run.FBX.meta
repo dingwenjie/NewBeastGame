@@ -1,0 +1,158 @@
+fileFormatVersion: 2
+guid: 8e08673dae411db4da8f694249e74472
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bip01
+    100002: Bip01 Head
+    100004: Bip01 L Hand
+    100006: Bip01 R Hand
+    100008: Bip01 Spine
+    100010: body
+    100012: Bone_bark_L
+    100014: Bone_bark_R
+    100016: Bone_head
+    100018: Bone_head_ctl
+    100020: Bone_L_foot1
+    100022: Bone_L_foot2
+    100024: Bone_L_foot4
+    100026: Bone_R_foot1
+    100028: Bone_R_foot2
+    100030: Bone_R_foot4
+    100032: Bone_scale1
+    100034: Bone_scale2
+    100036: Bone_scale3
+    100038: Bone_spine1
+    100040: Bone_tail1
+    100042: Bone_tail2
+    100044: Bone_tongue2
+    100046: Bone_tongue3
+    100048: Dummy001
+    100050: IK Chain01
+    100052: IK Chain01 ctl
+    100054: IK Chain02
+    100056: IK Chain02 ctl
+    100058: //RootNode
+    100060: poison_worm
+    100062: root
+    100064: Bone_tongue1
+    100066: Bip01 Spine2
+    400000: Bip01
+    400002: Bip01 Head
+    400004: Bip01 L Hand
+    400006: Bip01 R Hand
+    400008: Bip01 Spine
+    400010: body
+    400012: Bone_bark_L
+    400014: Bone_bark_R
+    400016: Bone_head
+    400018: Bone_head_ctl
+    400020: Bone_L_foot1
+    400022: Bone_L_foot2
+    400024: Bone_L_foot4
+    400026: Bone_R_foot1
+    400028: Bone_R_foot2
+    400030: Bone_R_foot4
+    400032: Bone_scale1
+    400034: Bone_scale2
+    400036: Bone_scale3
+    400038: Bone_spine1
+    400040: Bone_tail1
+    400042: Bone_tail2
+    400044: Bone_tongue2
+    400046: Bone_tongue3
+    400048: Dummy001
+    400050: IK Chain01
+    400052: IK Chain01 ctl
+    400054: IK Chain02
+    400056: IK Chain02 ctl
+    400058: //RootNode
+    400060: poison_worm
+    400062: root
+    400064: Bone_tongue1
+    400066: Bip01 Spine2
+    4300000: poison_worm
+    7400000: walk01
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: poison_worm
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walk01
+      takeName: Take 001
+      firstFrame: 24
+      lastFrame: 40
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 1
+  userData: 

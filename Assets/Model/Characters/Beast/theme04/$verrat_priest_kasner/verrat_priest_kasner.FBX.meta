@@ -1,0 +1,407 @@
+fileFormatVersion: 2
+guid: 96ab223c3a76e4543ae65662c3abf3cb
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bip01
+    100002: Bip01 Footsteps
+    100004: Bip01 Head
+    100006: Bip01 HeadNub
+    100008: Bip01 L Calf
+    100010: Bip01 L Clavicle
+    100012: Bip01 L Finger0
+    100014: Bip01 L Finger01
+    100016: Bip01 L Finger02
+    100018: Bip01 L Finger0Nub
+    100020: Bip01 L Finger1
+    100022: Bip01 L Finger11
+    100024: Bip01 L Finger12
+    100026: Bip01 L Finger1Nub
+    100028: Bip01 L Finger2
+    100030: Bip01 L Finger21
+    100032: Bip01 L Finger22
+    100034: Bip01 L Finger2Nub
+    100036: Bip01 L Finger3
+    100038: Bip01 L Finger31
+    100040: Bip01 L Finger32
+    100042: Bip01 L Finger3Nub
+    100044: Bip01 L Foot
+    100046: Bip01 L Forearm
+    100048: Bip01 L Hand
+    100050: Bip01 L Hand_1
+    100052: Bip01 L Thigh
+    100054: Bip01 L Toe0
+    100056: Bip01 L Toe01
+    100058: Bip01 L Toe02
+    100060: Bip01 L Toe0Nub
+    100062: Bip01 L UpperArm
+    100064: Bip01 Neck
+    100066: Bip01 Pelvis
+    100068: Bip01 R Calf
+    100070: Bip01 R Clavicle
+    100072: Bip01 R Finger0
+    100074: Bip01 R Finger01
+    100076: Bip01 R Finger02
+    100078: Bip01 R Finger0Nub
+    100080: Bip01 R Finger1
+    100082: Bip01 R Finger11
+    100084: Bip01 R Finger12
+    100086: Bip01 R Finger1Nub
+    100088: Bip01 R Finger2
+    100090: Bip01 R Finger21
+    100092: Bip01 R Finger22
+    100094: Bip01 R Finger2Nub
+    100096: Bip01 R Finger3
+    100098: Bip01 R Finger31
+    100100: Bip01 R Finger32
+    100102: Bip01 R Finger3Nub
+    100104: Bip01 R Foot
+    100106: Bip01 R Forearm
+    100108: Bip01 R Hand
+    100110: Bip01 R Hand_1
+    100112: Bip01 R Thigh
+    100114: Bip01 R Toe0
+    100116: Bip01 R Toe01
+    100118: Bip01 R Toe02
+    100120: Bip01 R Toe0Nub
+    100122: Bip01 R UpperArm
+    100124: Bip01 Spine
+    100126: Bip01 Spine1
+    100128: Bone01
+    100130: Bone02
+    100132: Bone03
+    100134: Bone04
+    100136: Bone05
+    100138: Bone06
+    100140: Bone07
+    100142: Bone08
+    100144: Bone09
+    100146: Bone10
+    100148: Bone11
+    100150: Bone12
+    100152: Bone13
+    100154: Bone14
+    100156: Bone15
+    100158: Bone16
+    100160: Bone17
+    100162: Bone18
+    100164: Bone19
+    100166: Bone20
+    100168: Bone21
+    100170: Bone22
+    100172: Bone23
+    100174: Bone24
+    100176: Bone25
+    100178: Bone26
+    100180: Bone27
+    100182: Bone28
+    100184: Bone29
+    100186: Bone30
+    100188: Bone31
+    100190: Bone32
+    100192: Bone33
+    100194: Bone34
+    100196: Bone35
+    100198: Bone36
+    100200: Bone37
+    100202: Bone38
+    100204: Bone39
+    100206: Bone40
+    100208: Bone41
+    100210: Bone42
+    100212: Bone43
+    100214: Bone44
+    100216: Bone45
+    100218: Bone46
+    100220: Bone47
+    100222: Bone48
+    100224: Bone49
+    100226: Bone50
+    100228: Bone51
+    100230: Bone52
+    100232: Bone53
+    100234: Bone54
+    100236: Bone55
+    100238: Bone57
+    100240: Bone58
+    100242: Bone59
+    100244: Bone61
+    100246: Bone62
+    100248: Bone63
+    100250: Bone65
+    100252: Bone66
+    100254: Bone67
+    100256: Bone68
+    100258: Bone69
+    100260: Bone70
+    100262: Bone71
+    100264: Bone72
+    100266: Bone73
+    100268: Bone74
+    100270: Bone75
+    100272: Bone76
+    100274: Bone77
+    100276: Bone78
+    100278: Bone79
+    100280: Bone80
+    100282: Bone81
+    100284: Bone82
+    100286: Bone83
+    100288: Bone84
+    100290: Bone85
+    100292: Bone86
+    100294: Bone87
+    100296: Bone88
+    100298: Bone89
+    100300: Bone90
+    100302: Bone91
+    100304: Bone92
+    100306: Bone93
+    100308: Bone94
+    100310: Bone95
+    100312: Bone96
+    100314: Bone97
+    100316: Dummy02
+    100318: Dummy03
+    100320: Dummy04
+    100322: Dummy28
+    100324: Dummy29
+    100326: Dummy30
+    100328: Dummy31
+    100330: Dummy33
+    100332: Dummy34
+    100334: Dummy35
+    100336: //RootNode
+    100338: verrat_priest_kasner_01
+    100340: verrat_priest_kasner_02
+    400000: Bip01
+    400002: Bip01 Footsteps
+    400004: Bip01 Head
+    400006: Bip01 HeadNub
+    400008: Bip01 L Calf
+    400010: Bip01 L Clavicle
+    400012: Bip01 L Finger0
+    400014: Bip01 L Finger01
+    400016: Bip01 L Finger02
+    400018: Bip01 L Finger0Nub
+    400020: Bip01 L Finger1
+    400022: Bip01 L Finger11
+    400024: Bip01 L Finger12
+    400026: Bip01 L Finger1Nub
+    400028: Bip01 L Finger2
+    400030: Bip01 L Finger21
+    400032: Bip01 L Finger22
+    400034: Bip01 L Finger2Nub
+    400036: Bip01 L Finger3
+    400038: Bip01 L Finger31
+    400040: Bip01 L Finger32
+    400042: Bip01 L Finger3Nub
+    400044: Bip01 L Foot
+    400046: Bip01 L Forearm
+    400048: Bip01 L Hand
+    400050: Bip01 L Hand_1
+    400052: Bip01 L Thigh
+    400054: Bip01 L Toe0
+    400056: Bip01 L Toe01
+    400058: Bip01 L Toe02
+    400060: Bip01 L Toe0Nub
+    400062: Bip01 L UpperArm
+    400064: Bip01 Neck
+    400066: Bip01 Pelvis
+    400068: Bip01 R Calf
+    400070: Bip01 R Clavicle
+    400072: Bip01 R Finger0
+    400074: Bip01 R Finger01
+    400076: Bip01 R Finger02
+    400078: Bip01 R Finger0Nub
+    400080: Bip01 R Finger1
+    400082: Bip01 R Finger11
+    400084: Bip01 R Finger12
+    400086: Bip01 R Finger1Nub
+    400088: Bip01 R Finger2
+    400090: Bip01 R Finger21
+    400092: Bip01 R Finger22
+    400094: Bip01 R Finger2Nub
+    400096: Bip01 R Finger3
+    400098: Bip01 R Finger31
+    400100: Bip01 R Finger32
+    400102: Bip01 R Finger3Nub
+    400104: Bip01 R Foot
+    400106: Bip01 R Forearm
+    400108: Bip01 R Hand
+    400110: Bip01 R Hand_1
+    400112: Bip01 R Thigh
+    400114: Bip01 R Toe0
+    400116: Bip01 R Toe01
+    400118: Bip01 R Toe02
+    400120: Bip01 R Toe0Nub
+    400122: Bip01 R UpperArm
+    400124: Bip01 Spine
+    400126: Bip01 Spine1
+    400128: Bone01
+    400130: Bone02
+    400132: Bone03
+    400134: Bone04
+    400136: Bone05
+    400138: Bone06
+    400140: Bone07
+    400142: Bone08
+    400144: Bone09
+    400146: Bone10
+    400148: Bone11
+    400150: Bone12
+    400152: Bone13
+    400154: Bone14
+    400156: Bone15
+    400158: Bone16
+    400160: Bone17
+    400162: Bone18
+    400164: Bone19
+    400166: Bone20
+    400168: Bone21
+    400170: Bone22
+    400172: Bone23
+    400174: Bone24
+    400176: Bone25
+    400178: Bone26
+    400180: Bone27
+    400182: Bone28
+    400184: Bone29
+    400186: Bone30
+    400188: Bone31
+    400190: Bone32
+    400192: Bone33
+    400194: Bone34
+    400196: Bone35
+    400198: Bone36
+    400200: Bone37
+    400202: Bone38
+    400204: Bone39
+    400206: Bone40
+    400208: Bone41
+    400210: Bone42
+    400212: Bone43
+    400214: Bone44
+    400216: Bone45
+    400218: Bone46
+    400220: Bone47
+    400222: Bone48
+    400224: Bone49
+    400226: Bone50
+    400228: Bone51
+    400230: Bone52
+    400232: Bone53
+    400234: Bone54
+    400236: Bone55
+    400238: Bone57
+    400240: Bone58
+    400242: Bone59
+    400244: Bone61
+    400246: Bone62
+    400248: Bone63
+    400250: Bone65
+    400252: Bone66
+    400254: Bone67
+    400256: Bone68
+    400258: Bone69
+    400260: Bone70
+    400262: Bone71
+    400264: Bone72
+    400266: Bone73
+    400268: Bone74
+    400270: Bone75
+    400272: Bone76
+    400274: Bone77
+    400276: Bone78
+    400278: Bone79
+    400280: Bone80
+    400282: Bone81
+    400284: Bone82
+    400286: Bone83
+    400288: Bone84
+    400290: Bone85
+    400292: Bone86
+    400294: Bone87
+    400296: Bone88
+    400298: Bone89
+    400300: Bone90
+    400302: Bone91
+    400304: Bone92
+    400306: Bone93
+    400308: Bone94
+    400310: Bone95
+    400312: Bone96
+    400314: Bone97
+    400316: Dummy02
+    400318: Dummy03
+    400320: Dummy04
+    400322: Dummy28
+    400324: Dummy29
+    400326: Dummy30
+    400328: Dummy31
+    400330: Dummy33
+    400332: Dummy34
+    400334: Dummy35
+    400336: //RootNode
+    400338: verrat_priest_kasner_01
+    400340: verrat_priest_kasner_02
+    4300000: verrat_priest_kasner_02
+    4300002: verrat_priest_kasner_01
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: verrat_priest_kasner_01
+    13700002: verrat_priest_kasner_02
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

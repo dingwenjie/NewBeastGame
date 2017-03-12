@@ -1,0 +1,207 @@
+fileFormatVersion: 2
+guid: adcaa8f9bd2d6504395e4a282e47b4f5
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Bip01 Head
+    100002: Bip01 L Hand
+    100004: Bip01 R Hand
+    100006: Bip01 Spine
+    100008: body
+    100010: Bone01
+    100012: Bone02
+    100014: Bone04e
+    100016: Bone05
+    100018: Bone06
+    100020: Bone07
+    100022: Bone08e
+    100024: Bone09
+    100026: Bone10
+    100028: Bone12e
+    100030: Bone13
+    100032: Bone14
+    100034: Bone15
+    100036: Bone16e
+    100038: Bone17
+    100040: Bone18
+    100042: Bone19
+    100044: Bone21
+    100046: Bone22
+    100048: Bone23
+    100050: Bone24e
+    100052: Bone25
+    100054: Bone26
+    100056: Bone27e
+    100058: Bone28
+    100060: Bone29e
+    100062: Bone30e
+    100064: Bone31
+    100066: Dummy01h01
+    100068: Dummy02h02
+    100070: Dummy03f02
+    100072: Dummy04f01
+    100074: Dummy05f03
+    100076: Dummy06
+    100078: Dummy07
+    100080: Dummy08
+    100082: Dummy09
+    100084: Dummy10
+    100086: Dummy11
+    100088: Dummy12
+    100090: Dummy13
+    100092: Dummy14
+    100094: Dummy15
+    100096: Dummy16
+    100098: Dummy17
+    100100: IK Chain01
+    100102: IK Chain02
+    100104: IK Chain03
+    100106: IK Chain04
+    100108: IK Chain05
+    100110: IK Chain06
+    100112: IK Chain07
+    100114: IK Chain08
+    100116: IK Chain09
+    100118: IK Chain10
+    100120: //RootNode
+    100122: Bip01
+    100124: Dummy018
+    400000: Bip01 Head
+    400002: Bip01 L Hand
+    400004: Bip01 R Hand
+    400006: Bip01 Spine
+    400008: body
+    400010: Bone01
+    400012: Bone02
+    400014: Bone04e
+    400016: Bone05
+    400018: Bone06
+    400020: Bone07
+    400022: Bone08e
+    400024: Bone09
+    400026: Bone10
+    400028: Bone12e
+    400030: Bone13
+    400032: Bone14
+    400034: Bone15
+    400036: Bone16e
+    400038: Bone17
+    400040: Bone18
+    400042: Bone19
+    400044: Bone21
+    400046: Bone22
+    400048: Bone23
+    400050: Bone24e
+    400052: Bone25
+    400054: Bone26
+    400056: Bone27e
+    400058: Bone28
+    400060: Bone29e
+    400062: Bone30e
+    400064: Bone31
+    400066: Dummy01h01
+    400068: Dummy02h02
+    400070: Dummy03f02
+    400072: Dummy04f01
+    400074: Dummy05f03
+    400076: Dummy06
+    400078: Dummy07
+    400080: Dummy08
+    400082: Dummy09
+    400084: Dummy10
+    400086: Dummy11
+    400088: Dummy12
+    400090: Dummy13
+    400092: Dummy14
+    400094: Dummy15
+    400096: Dummy16
+    400098: Dummy17
+    400100: IK Chain01
+    400102: IK Chain02
+    400104: IK Chain03
+    400106: IK Chain04
+    400108: IK Chain05
+    400110: IK Chain06
+    400112: IK Chain07
+    400114: IK Chain08
+    400116: IK Chain09
+    400118: IK Chain10
+    400120: //RootNode
+    400122: Bip01
+    400124: Dummy018
+    7400000: detect01
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations:
+    - name: detect01
+      takeName: Take 001
+      firstFrame: 10
+      lastFrame: 29
+      wrapMode: 8
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      transformMask: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 1
+  userData: 

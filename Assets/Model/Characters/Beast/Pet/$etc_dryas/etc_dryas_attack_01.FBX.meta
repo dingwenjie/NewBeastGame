@@ -1,0 +1,417 @@
+fileFormatVersion: 2
+guid: 89f3bb74057566e409b89a9dac548557
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: B_hair01
+    100002: B_hair02
+    100004: B_hair03
+    100006: B_hair04
+    100008: B_hair_start
+    100010: Bip01
+    100012: Bip01 Head
+    100014: Bip01 HeadNub
+    100016: Bip01 L Calf
+    100018: Bip01 L Clavicle
+    100020: Bip01 L Finger0
+    100022: Bip01 L Finger01
+    100024: Bip01 L Finger0Nub
+    100026: Bip01 L Finger1
+    100028: Bip01 L Finger11
+    100030: Bip01 L Finger1Nub
+    100032: Bip01 L Foot
+    100034: Bip01 L Forearm
+    100036: Bip01 L Hand
+    100038: Bip01 L Thigh
+    100040: Bip01 L Toe0
+    100042: Bip01 L Toe0Nub
+    100044: Bip01 L UpperArm
+    100046: Bip01 Neck
+    100048: Bip01 Pelvis
+    100050: Bip01 R Calf
+    100052: Bip01 R Clavicle
+    100054: Bip01 R Finger0
+    100056: Bip01 R Finger01
+    100058: Bip01 R Finger0Nub
+    100060: Bip01 R Finger1
+    100062: Bip01 R Finger11
+    100064: Bip01 R Finger1Nub
+    100066: Bip01 R Foot
+    100068: Bip01 R Forearm
+    100070: Bip01 R Hand
+    100072: Bip01 R Thigh
+    100074: Bip01 R Toe0
+    100076: Bip01 R Toe0Nub
+    100078: Bip01 R UpperArm
+    100080: Bip01 Spine
+    100082: Bip01 Spine1
+    100084: BL_hair01
+    100086: BL_hair02
+    100088: BL_hair03
+    100090: BL_hair_start
+    100092: Bone01
+    100094: Bone02
+    100096: Bone36
+    100098: Bone36(mirrored)
+    100100: Bone37
+    100102: Bone38
+    100104: BR_hair01
+    100106: BR_hair02
+    100108: BR_hair03
+    100110: BR_hair_start
+    100112: Dummy01
+    100114: Dummy02
+    100116: Dummy03
+    100118: Dummy04
+    100120: Dummy05
+    100122: Dummy06
+    100124: Dummy07
+    100126: Dummy08
+    100128: Dummy09
+    100130: Dummy10
+    100132: Dummy11
+    100134: Dummy12
+    100136: Dummy13
+    100138: Dummy14
+    100140: Dummy15
+    100142: Dummy16
+    100144: Dummy17
+    100146: Dummy18
+    100148: Dummy19
+    100150: Dummy20
+    100152: Dummy21
+    100154: Dummy22
+    100156: Dummy23
+    100158: Dummy24
+    100160: Dummy25
+    100162: Dummy26
+    100164: Dummy27
+    100166: Dummy28
+    100168: Dummy29
+    100170: Dummy30
+    100172: Dummy31
+    100174: Dummy32
+    100176: Dummy33
+    100178: Dummy34
+    100180: Dummy35
+    100182: Dummy36
+    100184: Dummy37
+    100186: Dummy38
+    100188: Dummy39
+    100190: Dummy40
+    100192: Dummy41
+    100194: Dummy42
+    100196: Dummy43
+    100198: Dummy44
+    100200: Dummy45
+    100202: Dummy46
+    100204: Dummy47
+    100206: Dummy48
+    100208: Dummy49
+    100210: Dummy50
+    100212: Dummy51
+    100214: //RootNode
+    100216: IK Chain01
+    100218: IK Chain02
+    100220: IK Chain03
+    100222: IK Chain04
+    100224: IK Chain05
+    100226: IK Chain06
+    100228: IK Chain07
+    100230: IK Chain08
+    100232: IK Chain09
+    100234: IK Chain10
+    100236: IK Chain11
+    100238: IK Chain12
+    100240: IK Chain13
+    100242: IK Chain14
+    100244: IK Chain15
+    100246: IK Chain16
+    100248: IK Chain17
+    100250: IK Chain18
+    100252: IK Chain19
+    100254: IK Chain20
+    100256: IK Chain21
+    100258: IK Chain22
+    100260: IK Chain23
+    100262: IK Chain24
+    100264: IK Chain25
+    100266: L_antenna01
+    100268: L_antenna02
+    100270: L_antenna_start
+    100272: L_hair01
+    100274: L_hair02
+    100276: L_hair03
+    100278: L_hair_start
+    100280: L_wing01
+    100282: L_wing01(mirrored)
+    100284: L_wing02
+    100286: L_wing02(mirrored)
+    100288: L_wing03
+    100290: L_wing03(mirrored)
+    100292: L_wing_start
+    100294: L_wing_start(mirrored)
+    100296: R_antenna01
+    100298: R_antenna02
+    100300: R_antenna_start
+    100302: R_hair01
+    100304: R_hair02
+    100306: R_hair03
+    100308: R_hair_start
+    100310: skirt01
+    100312: skirt02
+    100314: skirt03
+    100316: skirt_start
+    100318: spring
+    100320: B_hair_end
+    100322: BL_hair_end
+    100324: BR_hair_end
+    100326: L_hair_end
+    100328: L_wing_end
+    100330: L_wing_end(mirrored)
+    100332: R_hair_end
+    100334: skirt_end
+    400000: B_hair01
+    400002: B_hair02
+    400004: B_hair03
+    400006: B_hair04
+    400008: B_hair_start
+    400010: Bip01
+    400012: Bip01 Head
+    400014: Bip01 HeadNub
+    400016: Bip01 L Calf
+    400018: Bip01 L Clavicle
+    400020: Bip01 L Finger0
+    400022: Bip01 L Finger01
+    400024: Bip01 L Finger0Nub
+    400026: Bip01 L Finger1
+    400028: Bip01 L Finger11
+    400030: Bip01 L Finger1Nub
+    400032: Bip01 L Foot
+    400034: Bip01 L Forearm
+    400036: Bip01 L Hand
+    400038: Bip01 L Thigh
+    400040: Bip01 L Toe0
+    400042: Bip01 L Toe0Nub
+    400044: Bip01 L UpperArm
+    400046: Bip01 Neck
+    400048: Bip01 Pelvis
+    400050: Bip01 R Calf
+    400052: Bip01 R Clavicle
+    400054: Bip01 R Finger0
+    400056: Bip01 R Finger01
+    400058: Bip01 R Finger0Nub
+    400060: Bip01 R Finger1
+    400062: Bip01 R Finger11
+    400064: Bip01 R Finger1Nub
+    400066: Bip01 R Foot
+    400068: Bip01 R Forearm
+    400070: Bip01 R Hand
+    400072: Bip01 R Thigh
+    400074: Bip01 R Toe0
+    400076: Bip01 R Toe0Nub
+    400078: Bip01 R UpperArm
+    400080: Bip01 Spine
+    400082: Bip01 Spine1
+    400084: BL_hair01
+    400086: BL_hair02
+    400088: BL_hair03
+    400090: BL_hair_start
+    400092: Bone01
+    400094: Bone02
+    400096: Bone36
+    400098: Bone36(mirrored)
+    400100: Bone37
+    400102: Bone38
+    400104: BR_hair01
+    400106: BR_hair02
+    400108: BR_hair03
+    400110: BR_hair_start
+    400112: Dummy01
+    400114: Dummy02
+    400116: Dummy03
+    400118: Dummy04
+    400120: Dummy05
+    400122: Dummy06
+    400124: Dummy07
+    400126: Dummy08
+    400128: Dummy09
+    400130: Dummy10
+    400132: Dummy11
+    400134: Dummy12
+    400136: Dummy13
+    400138: Dummy14
+    400140: Dummy15
+    400142: Dummy16
+    400144: Dummy17
+    400146: Dummy18
+    400148: Dummy19
+    400150: Dummy20
+    400152: Dummy21
+    400154: Dummy22
+    400156: Dummy23
+    400158: Dummy24
+    400160: Dummy25
+    400162: Dummy26
+    400164: Dummy27
+    400166: Dummy28
+    400168: Dummy29
+    400170: Dummy30
+    400172: Dummy31
+    400174: Dummy32
+    400176: Dummy33
+    400178: Dummy34
+    400180: Dummy35
+    400182: Dummy36
+    400184: Dummy37
+    400186: Dummy38
+    400188: Dummy39
+    400190: Dummy40
+    400192: Dummy41
+    400194: Dummy42
+    400196: Dummy43
+    400198: Dummy44
+    400200: Dummy45
+    400202: Dummy46
+    400204: Dummy47
+    400206: Dummy48
+    400208: Dummy49
+    400210: Dummy50
+    400212: Dummy51
+    400214: //RootNode
+    400216: IK Chain01
+    400218: IK Chain02
+    400220: IK Chain03
+    400222: IK Chain04
+    400224: IK Chain05
+    400226: IK Chain06
+    400228: IK Chain07
+    400230: IK Chain08
+    400232: IK Chain09
+    400234: IK Chain10
+    400236: IK Chain11
+    400238: IK Chain12
+    400240: IK Chain13
+    400242: IK Chain14
+    400244: IK Chain15
+    400246: IK Chain16
+    400248: IK Chain17
+    400250: IK Chain18
+    400252: IK Chain19
+    400254: IK Chain20
+    400256: IK Chain21
+    400258: IK Chain22
+    400260: IK Chain23
+    400262: IK Chain24
+    400264: IK Chain25
+    400266: L_antenna01
+    400268: L_antenna02
+    400270: L_antenna_start
+    400272: L_hair01
+    400274: L_hair02
+    400276: L_hair03
+    400278: L_hair_start
+    400280: L_wing01
+    400282: L_wing01(mirrored)
+    400284: L_wing02
+    400286: L_wing02(mirrored)
+    400288: L_wing03
+    400290: L_wing03(mirrored)
+    400292: L_wing_start
+    400294: L_wing_start(mirrored)
+    400296: R_antenna01
+    400298: R_antenna02
+    400300: R_antenna_start
+    400302: R_hair01
+    400304: R_hair02
+    400306: R_hair03
+    400308: R_hair_start
+    400310: skirt01
+    400312: skirt02
+    400314: skirt03
+    400316: skirt_start
+    400318: spring
+    400320: B_hair_end
+    400322: BL_hair_end
+    400324: BR_hair_end
+    400326: L_hair_end
+    400328: L_wing_end
+    400330: L_wing_end(mirrored)
+    400332: R_hair_end
+    400334: skirt_end
+    7400000: skill01
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations:
+    - name: skill01
+      takeName: Take 001
+      firstFrame: 10
+      lastFrame: 37
+      wrapMode: 8
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      transformMask: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 1
+  userData: 

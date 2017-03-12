@@ -1,0 +1,443 @@
+fileFormatVersion: 2
+guid: 2d4353e23b3d0e642b8715170960f0fd
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bip01
+    100002: Bip01 Footsteps
+    100004: Bip01 Head
+    100006: Bip01 HeadNub
+    100008: Bip01 L Calf
+    100010: Bip01 L Clavicle
+    100012: Bip01 L Finger0
+    100014: Bip01 L Finger0Nub
+    100016: Bip01 L Finger1
+    100018: Bip01 L Finger1Nub
+    100020: Bip01 L Foot
+    100022: Bip01 L Forearm
+    100024: Bip01 L Hand
+    100026: Bip01 L Thigh
+    100028: Bip01 L Toe0
+    100030: Bip01 L Toe01
+    100032: Bip01 L Toe02
+    100034: Bip01 L Toe0Nub
+    100036: Bip01 L UpperArm
+    100038: Bip01 Neck
+    100040: Bip01 Pelvis
+    100042: Bip01 R Calf
+    100044: Bip01 R Clavicle
+    100046: Bip01 R Finger0
+    100048: Bip01 R Finger0Nub
+    100050: Bip01 R Finger1
+    100052: Bip01 R Finger1Nub
+    100054: Bip01 R Foot
+    100056: Bip01 R Forearm
+    100058: Bip01 R Hand
+    100060: Bip01 R Thigh
+    100062: Bip01 R Toe0
+    100064: Bip01 R Toe01
+    100066: Bip01 R Toe02
+    100068: Bip01 R Toe0Nub
+    100070: Bip01 R UpperArm
+    100072: Bip01 Spine
+    100074: Bone_clth_L01
+    100076: Bone_clth_L02
+    100078: Bone_clth_L03
+    100080: Bone_clth_L04
+    100082: Bone_clth_R01
+    100084: Bone_clth_R02
+    100086: Bone_clth_R03
+    100088: Bone_clth_R04
+    100090: Bone_skrt_B01
+    100092: Bone_skrt_B02
+    100094: Bone_skrt_B03
+    100096: Bone_skrt_B04
+    100098: Bone_skrt_B05
+    100100: Bone_skrt_F01
+    100102: Bone_skrt_F02
+    100104: Bone_skrt_F03
+    100106: Bone_skrt_F04
+    100108: Bone_skrt_F05
+    100110: Bone_skrt_L01
+    100112: Bone_skrt_L02
+    100114: Bone_skrt_L03
+    100116: Bone_skrt_L04
+    100118: Bone_skrt_L05
+    100120: Bone_skrt_R01
+    100122: Bone_skrt_R02
+    100124: Bone_skrt_R03
+    100126: Bone_skrt_R04
+    100128: Bone_skrt_R05
+    100130: Bone_wg_B01
+    100132: Bone_wg_B02
+    100134: Bone_wg_B03
+    100136: Bone_wg_B04
+    100138: Bone_wg_B05
+    100140: Bone_wg_B06
+    100142: Bone_wg_BL01
+    100144: Bone_wg_BL02
+    100146: Bone_wg_BL03
+    100148: Bone_wg_BL04
+    100150: Bone_wg_BL05
+    100152: Bone_wg_BR01
+    100154: Bone_wg_BR02
+    100156: Bone_wg_BR03
+    100158: Bone_wg_BR04
+    100160: Bone_wg_BR05
+    100162: Bone_wg_L01
+    100164: Bone_wg_L02
+    100166: Bone_wg_L03
+    100168: Bone_wg_L04
+    100170: Bone_wg_L05
+    100172: Bone_wg_L06
+    100174: Bone_wg_R01
+    100176: Bone_wg_R02
+    100178: Bone_wg_R03
+    100180: Bone_wg_R04
+    100182: Bone_wg_R05
+    100184: Bone_wg_R06
+    100186: //RootNode
+    100188: etc_sha_lohan_01
+    100190: etc_sha_lohan_02
+    100192: fx_Bone_eng_L01
+    100194: fx_Bone_eng_L02
+    100196: fx_Bone_eng_L03
+    100198: fx_Bone_eng_L04
+    100200: fx_Bone_eng_L05
+    100202: fx_Bone_eng_L06
+    100204: fx_Bone_eng_L07
+    100206: fx_Bone_eng_L08
+    100208: fx_Bone_eng_L09
+    100210: fx_Bone_eng_L10
+    100212: fx_Bone_eng_L11
+    100214: fx_Bone_eng_L12
+    100216: fx_Bone_eng_L13
+    100218: fx_Bone_eng_L14
+    100220: fx_Bone_eng_L15
+    100222: fx_Bone_eng_L16
+    100224: fx_Bone_eng_L17
+    100226: fx_Bone_eng_L18
+    100228: fx_Bone_eng_L19
+    100230: fx_Bone_eng_L20
+    100232: fx_Bone_eng_L21
+    100234: fx_Bone_eng_L22
+    100236: fx_Bone_eng_R01
+    100238: fx_Bone_eng_R02
+    100240: fx_Bone_eng_R03
+    100242: fx_Bone_eng_R04
+    100244: fx_Bone_eng_R05
+    100246: fx_Bone_eng_R06
+    100248: fx_Bone_eng_R07
+    100250: fx_Bone_eng_R08
+    100252: fx_Bone_eng_R09
+    100254: fx_Bone_eng_R10
+    100256: fx_Bone_eng_R11
+    100258: fx_Bone_eng_R12
+    100260: fx_Bone_eng_R13
+    100262: fx_Bone_eng_R14
+    100264: fx_Bone_eng_R15
+    100266: fx_Bone_eng_R16
+    100268: fx_Bone_eng_R17
+    100270: fx_Bone_eng_R18
+    100272: fx_Bone_eng_R19
+    100274: fx_Bone_eng_R20
+    100276: fx_Bone_eng_R21
+    100278: fx_Bone_eng_R22
+    100280: fx_Dummy02
+    100282: fx_Dummy03
+    100284: fx_Dummy04
+    100286: fx_Dummy05
+    100288: fx_Dummy06
+    100290: fx_Dummy07
+    100292: fx_Dummy08
+    100294: fx_Dummy09
+    100296: fx_Dummy10
+    100298: fx_Dummy11
+    100300: fx_Dummy12
+    100302: fx_Dummy15
+    100304: fx_Dummy16
+    100306: fx_Dummy17
+    100308: fx_Dummy18
+    100310: fx_Dummy19
+    100312: fx_Dummy20
+    100314: fx_Dummy21
+    100316: fx_Dummy22
+    100318: fx_Dummy23
+    100320: fx_Dummy24
+    100322: fx_Dummy25
+    100324: fx_dummy_spine
+    100326: fx_dummy_spine_L
+    100328: fx_dummy_spine_R
+    100330: fx_IK Chain02
+    100332: fx_IK Chain03
+    100334: fx_IK Chain04
+    100336: fx_IK Chain05
+    100338: fx_IK Chain06
+    100340: fx_IK Chain07
+    100342: fx_IK Chain08
+    100344: fx_IK Chain09
+    100346: fx_IK Chain10
+    100348: fx_IK Chain11
+    100350: fx_IK Chain12
+    100352: fx_IK Chain14
+    100354: fx_IK Chain15
+    100356: fx_IK Chain16
+    100358: fx_IK Chain17
+    100360: fx_IK Chain18
+    100362: fx_IK Chain19
+    100364: fx_IK Chain20
+    100366: fx_IK Chain21
+    100368: fx_IK Chain22
+    100370: fx_IK Chain23
+    100372: fx_IK Chain24
+    100374: Point01
+    100376: Point02
+    400000: Bip01
+    400002: Bip01 Footsteps
+    400004: Bip01 Head
+    400006: Bip01 HeadNub
+    400008: Bip01 L Calf
+    400010: Bip01 L Clavicle
+    400012: Bip01 L Finger0
+    400014: Bip01 L Finger0Nub
+    400016: Bip01 L Finger1
+    400018: Bip01 L Finger1Nub
+    400020: Bip01 L Foot
+    400022: Bip01 L Forearm
+    400024: Bip01 L Hand
+    400026: Bip01 L Thigh
+    400028: Bip01 L Toe0
+    400030: Bip01 L Toe01
+    400032: Bip01 L Toe02
+    400034: Bip01 L Toe0Nub
+    400036: Bip01 L UpperArm
+    400038: Bip01 Neck
+    400040: Bip01 Pelvis
+    400042: Bip01 R Calf
+    400044: Bip01 R Clavicle
+    400046: Bip01 R Finger0
+    400048: Bip01 R Finger0Nub
+    400050: Bip01 R Finger1
+    400052: Bip01 R Finger1Nub
+    400054: Bip01 R Foot
+    400056: Bip01 R Forearm
+    400058: Bip01 R Hand
+    400060: Bip01 R Thigh
+    400062: Bip01 R Toe0
+    400064: Bip01 R Toe01
+    400066: Bip01 R Toe02
+    400068: Bip01 R Toe0Nub
+    400070: Bip01 R UpperArm
+    400072: Bip01 Spine
+    400074: Bone_clth_L01
+    400076: Bone_clth_L02
+    400078: Bone_clth_L03
+    400080: Bone_clth_L04
+    400082: Bone_clth_R01
+    400084: Bone_clth_R02
+    400086: Bone_clth_R03
+    400088: Bone_clth_R04
+    400090: Bone_skrt_B01
+    400092: Bone_skrt_B02
+    400094: Bone_skrt_B03
+    400096: Bone_skrt_B04
+    400098: Bone_skrt_B05
+    400100: Bone_skrt_F01
+    400102: Bone_skrt_F02
+    400104: Bone_skrt_F03
+    400106: Bone_skrt_F04
+    400108: Bone_skrt_F05
+    400110: Bone_skrt_L01
+    400112: Bone_skrt_L02
+    400114: Bone_skrt_L03
+    400116: Bone_skrt_L04
+    400118: Bone_skrt_L05
+    400120: Bone_skrt_R01
+    400122: Bone_skrt_R02
+    400124: Bone_skrt_R03
+    400126: Bone_skrt_R04
+    400128: Bone_skrt_R05
+    400130: Bone_wg_B01
+    400132: Bone_wg_B02
+    400134: Bone_wg_B03
+    400136: Bone_wg_B04
+    400138: Bone_wg_B05
+    400140: Bone_wg_B06
+    400142: Bone_wg_BL01
+    400144: Bone_wg_BL02
+    400146: Bone_wg_BL03
+    400148: Bone_wg_BL04
+    400150: Bone_wg_BL05
+    400152: Bone_wg_BR01
+    400154: Bone_wg_BR02
+    400156: Bone_wg_BR03
+    400158: Bone_wg_BR04
+    400160: Bone_wg_BR05
+    400162: Bone_wg_L01
+    400164: Bone_wg_L02
+    400166: Bone_wg_L03
+    400168: Bone_wg_L04
+    400170: Bone_wg_L05
+    400172: Bone_wg_L06
+    400174: Bone_wg_R01
+    400176: Bone_wg_R02
+    400178: Bone_wg_R03
+    400180: Bone_wg_R04
+    400182: Bone_wg_R05
+    400184: Bone_wg_R06
+    400186: //RootNode
+    400188: etc_sha_lohan_01
+    400190: etc_sha_lohan_02
+    400192: fx_Bone_eng_L01
+    400194: fx_Bone_eng_L02
+    400196: fx_Bone_eng_L03
+    400198: fx_Bone_eng_L04
+    400200: fx_Bone_eng_L05
+    400202: fx_Bone_eng_L06
+    400204: fx_Bone_eng_L07
+    400206: fx_Bone_eng_L08
+    400208: fx_Bone_eng_L09
+    400210: fx_Bone_eng_L10
+    400212: fx_Bone_eng_L11
+    400214: fx_Bone_eng_L12
+    400216: fx_Bone_eng_L13
+    400218: fx_Bone_eng_L14
+    400220: fx_Bone_eng_L15
+    400222: fx_Bone_eng_L16
+    400224: fx_Bone_eng_L17
+    400226: fx_Bone_eng_L18
+    400228: fx_Bone_eng_L19
+    400230: fx_Bone_eng_L20
+    400232: fx_Bone_eng_L21
+    400234: fx_Bone_eng_L22
+    400236: fx_Bone_eng_R01
+    400238: fx_Bone_eng_R02
+    400240: fx_Bone_eng_R03
+    400242: fx_Bone_eng_R04
+    400244: fx_Bone_eng_R05
+    400246: fx_Bone_eng_R06
+    400248: fx_Bone_eng_R07
+    400250: fx_Bone_eng_R08
+    400252: fx_Bone_eng_R09
+    400254: fx_Bone_eng_R10
+    400256: fx_Bone_eng_R11
+    400258: fx_Bone_eng_R12
+    400260: fx_Bone_eng_R13
+    400262: fx_Bone_eng_R14
+    400264: fx_Bone_eng_R15
+    400266: fx_Bone_eng_R16
+    400268: fx_Bone_eng_R17
+    400270: fx_Bone_eng_R18
+    400272: fx_Bone_eng_R19
+    400274: fx_Bone_eng_R20
+    400276: fx_Bone_eng_R21
+    400278: fx_Bone_eng_R22
+    400280: fx_Dummy02
+    400282: fx_Dummy03
+    400284: fx_Dummy04
+    400286: fx_Dummy05
+    400288: fx_Dummy06
+    400290: fx_Dummy07
+    400292: fx_Dummy08
+    400294: fx_Dummy09
+    400296: fx_Dummy10
+    400298: fx_Dummy11
+    400300: fx_Dummy12
+    400302: fx_Dummy15
+    400304: fx_Dummy16
+    400306: fx_Dummy17
+    400308: fx_Dummy18
+    400310: fx_Dummy19
+    400312: fx_Dummy20
+    400314: fx_Dummy21
+    400316: fx_Dummy22
+    400318: fx_Dummy23
+    400320: fx_Dummy24
+    400322: fx_Dummy25
+    400324: fx_dummy_spine
+    400326: fx_dummy_spine_L
+    400328: fx_dummy_spine_R
+    400330: fx_IK Chain02
+    400332: fx_IK Chain03
+    400334: fx_IK Chain04
+    400336: fx_IK Chain05
+    400338: fx_IK Chain06
+    400340: fx_IK Chain07
+    400342: fx_IK Chain08
+    400344: fx_IK Chain09
+    400346: fx_IK Chain10
+    400348: fx_IK Chain11
+    400350: fx_IK Chain12
+    400352: fx_IK Chain14
+    400354: fx_IK Chain15
+    400356: fx_IK Chain16
+    400358: fx_IK Chain17
+    400360: fx_IK Chain18
+    400362: fx_IK Chain19
+    400364: fx_IK Chain20
+    400366: fx_IK Chain21
+    400368: fx_IK Chain22
+    400370: fx_IK Chain23
+    400372: fx_IK Chain24
+    400374: Point01
+    400376: Point02
+    4300000: etc_sha_lohan_01
+    4300002: etc_sha_lohan_02
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: etc_sha_lohan_01
+    13700002: etc_sha_lohan_02
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

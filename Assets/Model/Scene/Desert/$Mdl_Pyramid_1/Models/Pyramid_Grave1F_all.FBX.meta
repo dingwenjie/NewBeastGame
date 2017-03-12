@@ -1,0 +1,98 @@
+fileFormatVersion: 2
+guid: 3d4d531b86134a841912caff493e78a8
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Pyramid_Grave1F01
+    100002: Pyramid_Grave1F02
+    100004: Pyramid_Grave1F03
+    100006: Pyramid_Grave1F04
+    100008: Pyramid_Grave1F05
+    100010: Pyramid_Grave1F06
+    100012: //RootNode
+    400000: Pyramid_Grave1F01
+    400002: Pyramid_Grave1F02
+    400004: Pyramid_Grave1F03
+    400006: Pyramid_Grave1F04
+    400008: Pyramid_Grave1F05
+    400010: Pyramid_Grave1F06
+    400012: //RootNode
+    2300000: Pyramid_Grave1F01
+    2300002: Pyramid_Grave1F02
+    2300004: Pyramid_Grave1F03
+    2300006: Pyramid_Grave1F04
+    2300008: Pyramid_Grave1F05
+    2300010: Pyramid_Grave1F06
+    3300000: Pyramid_Grave1F01
+    3300002: Pyramid_Grave1F02
+    3300004: Pyramid_Grave1F03
+    3300006: Pyramid_Grave1F04
+    3300008: Pyramid_Grave1F05
+    3300010: Pyramid_Grave1F06
+    4300000: Pyramid_Grave1F01
+    4300002: Pyramid_Grave1F02
+    4300004: Pyramid_Grave1F05
+    4300006: Pyramid_Grave1F04
+    4300008: Pyramid_Grave1F06
+    4300010: Pyramid_Grave1F03
+    6400000: Pyramid_Grave1F01
+    6400002: Pyramid_Grave1F02
+    6400004: Pyramid_Grave1F03
+    6400006: Pyramid_Grave1F04
+    6400008: Pyramid_Grave1F05
+    6400010: Pyramid_Grave1F06
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

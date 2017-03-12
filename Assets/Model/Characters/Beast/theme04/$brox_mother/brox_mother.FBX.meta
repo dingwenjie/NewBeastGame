@@ -1,0 +1,245 @@
+fileFormatVersion: 2
+guid: 8c3ca1d3493d7a34ea49741d6599b3b5
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bip01
+    100002: Bip01 Footsteps
+    100004: Bip01 Head
+    100006: Bip01 HeadNub
+    100008: Bip01 L Calf
+    100010: Bip01 L Clavicle
+    100012: Bip01 L Finger0
+    100014: Bip01 L Finger0Nub
+    100016: Bip01 L Foot
+    100018: Bip01 L Forearm
+    100020: Bip01 L Hand
+    100022: Bip01 L HorseLink
+    100024: Bip01 L Thigh
+    100026: Bip01 L Toe0
+    100028: Bip01 L Toe0Nub
+    100030: Bip01 L UpperArm
+    100032: Bip01 Neck
+    100034: Bip01 Pelvis
+    100036: Bip01 R Calf
+    100038: Bip01 R Clavicle
+    100040: Bip01 R Finger0
+    100042: Bip01 R Finger0Nub
+    100044: Bip01 R Foot
+    100046: Bip01 R Forearm
+    100048: Bip01 R Hand
+    100050: Bip01 R HorseLink
+    100052: Bip01 R Thigh
+    100054: Bip01 R Toe0
+    100056: Bip01 R Toe0Nub
+    100058: Bip01 R UpperArm
+    100060: Bip01 Spine
+    100062: Bip01 Spine1
+    100064: Bip01 Spine2
+    100066: Bone01
+    100068: Bone02
+    100070: Bone03
+    100072: Bone04
+    100074: Bone05
+    100076: Bone06
+    100078: Bone07
+    100080: Bone08
+    100082: Bone09
+    100084: Bone10
+    100086: Bone11
+    100088: Bone12
+    100090: Bone13
+    100092: Bone14
+    100094: Bone15
+    100096: Bone16
+    100098: Bone17
+    100100: Bone18
+    100102: Bone19
+    100104: Bone21
+    100106: Bone22
+    100108: Bone23
+    100110: Bone26
+    100112: Bone27
+    100114: brox_mother
+    100116: //RootNode
+    100118: Dummy01
+    100120: Dummy02
+    100122: Dummy03
+    100124: Dummy04
+    100126: Dummy05
+    100128: Dummy06
+    100130: Dummy07
+    100132: Dummy08
+    100134: Dummy09
+    100136: Dummy10
+    100138: Dummy11
+    100140: Dummy12
+    100142: Dummy13
+    100144: Dummy14
+    100146: Dummy15
+    100148: Dummy16
+    100150: Dummy19
+    100152: Dummy20
+    100154: Dummy23
+    100156: Dummy24
+    100158: IK Chain01
+    100160: IK Chain02
+    100162: IK Chain03
+    100164: IK Chain04
+    100166: IK Chain05
+    100168: IK Chain06
+    100170: IK Chain07
+    100172: IK Chain08
+    100174: IK Chain09
+    100176: IK Chain10
+    100178: brox_mother00000
+    400000: Bip01
+    400002: Bip01 Footsteps
+    400004: Bip01 Head
+    400006: Bip01 HeadNub
+    400008: Bip01 L Calf
+    400010: Bip01 L Clavicle
+    400012: Bip01 L Finger0
+    400014: Bip01 L Finger0Nub
+    400016: Bip01 L Foot
+    400018: Bip01 L Forearm
+    400020: Bip01 L Hand
+    400022: Bip01 L HorseLink
+    400024: Bip01 L Thigh
+    400026: Bip01 L Toe0
+    400028: Bip01 L Toe0Nub
+    400030: Bip01 L UpperArm
+    400032: Bip01 Neck
+    400034: Bip01 Pelvis
+    400036: Bip01 R Calf
+    400038: Bip01 R Clavicle
+    400040: Bip01 R Finger0
+    400042: Bip01 R Finger0Nub
+    400044: Bip01 R Foot
+    400046: Bip01 R Forearm
+    400048: Bip01 R Hand
+    400050: Bip01 R HorseLink
+    400052: Bip01 R Thigh
+    400054: Bip01 R Toe0
+    400056: Bip01 R Toe0Nub
+    400058: Bip01 R UpperArm
+    400060: Bip01 Spine
+    400062: Bip01 Spine1
+    400064: Bip01 Spine2
+    400066: Bone01
+    400068: Bone02
+    400070: Bone03
+    400072: Bone04
+    400074: Bone05
+    400076: Bone06
+    400078: Bone07
+    400080: Bone08
+    400082: Bone09
+    400084: Bone10
+    400086: Bone11
+    400088: Bone12
+    400090: Bone13
+    400092: Bone14
+    400094: Bone15
+    400096: Bone16
+    400098: Bone17
+    400100: Bone18
+    400102: Bone19
+    400104: Bone21
+    400106: Bone22
+    400108: Bone23
+    400110: Bone26
+    400112: Bone27
+    400114: //RootNode
+    400116: brox_mother
+    400118: Dummy01
+    400120: Dummy02
+    400122: Dummy03
+    400124: Dummy04
+    400126: Dummy05
+    400128: Dummy06
+    400130: Dummy07
+    400132: Dummy08
+    400134: Dummy09
+    400136: Dummy10
+    400138: Dummy11
+    400140: Dummy12
+    400142: Dummy13
+    400144: Dummy14
+    400146: Dummy15
+    400148: Dummy16
+    400150: Dummy19
+    400152: Dummy20
+    400154: Dummy23
+    400156: Dummy24
+    400158: IK Chain01
+    400160: IK Chain02
+    400162: IK Chain03
+    400164: IK Chain04
+    400166: IK Chain05
+    400168: IK Chain06
+    400170: IK Chain07
+    400172: IK Chain08
+    400174: IK Chain09
+    400176: IK Chain10
+    400178: brox_mother00000
+    4300000: brox_mother
+    4300002: brox_mother00000
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: brox_mother
+    13700002: brox_mother00000
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

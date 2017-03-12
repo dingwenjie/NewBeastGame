@@ -1,0 +1,217 @@
+fileFormatVersion: 2
+guid: 05f9e2e4b5e609842bed3e96f371cf9e
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bip01
+    100002: Bip01 Footsteps
+    100004: Bip01 Head
+    100006: Bip01 HeadNub
+    100008: Bip01 L Calf
+    100010: Bip01 L Clavicle
+    100012: Bip01 L Finger0
+    100014: Bip01 L Finger0Nub
+    100016: Bip01 L Foot
+    100018: Bip01 L Forearm
+    100020: Bip01 L Hand
+    100022: Bip01 L Thigh
+    100024: Bip01 L Toe0
+    100026: Bip01 L Toe0Nub
+    100028: Bip01 L UpperArm
+    100030: Bip01 Neck
+    100032: Bip01 Pelvis
+    100034: Bip01 R Calf
+    100036: Bip01 R Clavicle
+    100038: Bip01 R Finger0
+    100040: Bip01 R Finger0Nub
+    100042: Bip01 R Foot
+    100044: Bip01 R Forearm
+    100046: Bip01 R Hand
+    100048: Bip01 R Thigh
+    100050: Bip01 R Toe0
+    100052: Bip01 R Toe0Nub
+    100054: Bip01 R UpperArm
+    100056: Bip01 Spine
+    100058: Bip01 Spine1
+    100060: Bone_cloth_B01
+    100062: Bone_cloth_B02
+    100064: Bone_cloth_B03
+    100066: Bone_cloth_B04
+    100068: Bone_cloth_B05
+    100070: Bone_cloth_B06
+    100072: Bone_cloth_BL01
+    100074: Bone_cloth_BL02
+    100076: Bone_cloth_BL03
+    100078: Bone_cloth_BL04
+    100080: Bone_cloth_BL05
+    100082: Bone_cloth_BL06
+    100084: Bone_cloth_BR01
+    100086: Bone_cloth_BR02
+    100088: Bone_cloth_BR03
+    100090: Bone_cloth_BR04
+    100092: Bone_cloth_BR05
+    100094: Bone_cloth_BR06
+    100096: Bone_cloth_F01
+    100098: Bone_cloth_F02
+    100100: Bone_cloth_F03
+    100102: Bone_cloth_F04
+    100104: Bone_cloth_F05
+    100106: Bone_cloth_FL01
+    100108: Bone_cloth_FL02
+    100110: Bone_cloth_FL03
+    100112: Bone_cloth_FL04
+    100114: Bone_cloth_FL05
+    100116: Bone_cloth_FL06
+    100118: Bone_cloth_FR01
+    100120: Bone_cloth_FR02
+    100122: Bone_cloth_FR03
+    100124: Bone_cloth_FR04
+    100126: Bone_cloth_FR05
+    100128: Bone_cloth_FR06
+    100130: Bone_ponytail01
+    100132: Bone_ponytail02
+    100134: Bone_ponytail03
+    100136: Bone_ponytail04
+    100138: Bone_ponytail05
+    100140: Bone_ponytail06
+    100142: Bone_ponytail07
+    100144: Bone_ponytail08
+    100146: dummy_shoulder_L
+    100148: dummy_shoulder_R
+    100150: //RootNode
+    100152: shadowassassin
+    400000: Bip01
+    400002: Bip01 Footsteps
+    400004: Bip01 Head
+    400006: Bip01 HeadNub
+    400008: Bip01 L Calf
+    400010: Bip01 L Clavicle
+    400012: Bip01 L Finger0
+    400014: Bip01 L Finger0Nub
+    400016: Bip01 L Foot
+    400018: Bip01 L Forearm
+    400020: Bip01 L Hand
+    400022: Bip01 L Thigh
+    400024: Bip01 L Toe0
+    400026: Bip01 L Toe0Nub
+    400028: Bip01 L UpperArm
+    400030: Bip01 Neck
+    400032: Bip01 Pelvis
+    400034: Bip01 R Calf
+    400036: Bip01 R Clavicle
+    400038: Bip01 R Finger0
+    400040: Bip01 R Finger0Nub
+    400042: Bip01 R Foot
+    400044: Bip01 R Forearm
+    400046: Bip01 R Hand
+    400048: Bip01 R Thigh
+    400050: Bip01 R Toe0
+    400052: Bip01 R Toe0Nub
+    400054: Bip01 R UpperArm
+    400056: Bip01 Spine
+    400058: Bip01 Spine1
+    400060: Bone_cloth_B01
+    400062: Bone_cloth_B02
+    400064: Bone_cloth_B03
+    400066: Bone_cloth_B04
+    400068: Bone_cloth_B05
+    400070: Bone_cloth_B06
+    400072: Bone_cloth_BL01
+    400074: Bone_cloth_BL02
+    400076: Bone_cloth_BL03
+    400078: Bone_cloth_BL04
+    400080: Bone_cloth_BL05
+    400082: Bone_cloth_BL06
+    400084: Bone_cloth_BR01
+    400086: Bone_cloth_BR02
+    400088: Bone_cloth_BR03
+    400090: Bone_cloth_BR04
+    400092: Bone_cloth_BR05
+    400094: Bone_cloth_BR06
+    400096: Bone_cloth_F01
+    400098: Bone_cloth_F02
+    400100: Bone_cloth_F03
+    400102: Bone_cloth_F04
+    400104: Bone_cloth_F05
+    400106: Bone_cloth_FL01
+    400108: Bone_cloth_FL02
+    400110: Bone_cloth_FL03
+    400112: Bone_cloth_FL04
+    400114: Bone_cloth_FL05
+    400116: Bone_cloth_FL06
+    400118: Bone_cloth_FR01
+    400120: Bone_cloth_FR02
+    400122: Bone_cloth_FR03
+    400124: Bone_cloth_FR04
+    400126: Bone_cloth_FR05
+    400128: Bone_cloth_FR06
+    400130: Bone_ponytail01
+    400132: Bone_ponytail02
+    400134: Bone_ponytail03
+    400136: Bone_ponytail04
+    400138: Bone_ponytail05
+    400140: Bone_ponytail06
+    400142: Bone_ponytail07
+    400144: Bone_ponytail08
+    400146: dummy_shoulder_L
+    400148: dummy_shoulder_R
+    400150: //RootNode
+    400152: shadowassassin
+    4300000: shadowassassin
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: shadowassassin
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

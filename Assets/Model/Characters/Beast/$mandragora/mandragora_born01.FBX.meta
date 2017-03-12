@@ -1,0 +1,130 @@
+fileFormatVersion: 2
+guid: 5581721068eedcf43ad944013a8cf924
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Bip01 Flower
+    100002: Bip01 Head
+    100004: Bip01 L Arm
+    100006: Bip01 L Foot
+    100008: Bip01 L Hand
+    100010: Bip01 Leaf01
+    100012: Bip01 Leaf02
+    100014: Bip01 R Arm
+    100016: Bip01 R Foot
+    100018: Bip01 R Hand
+    100020: Bip01 Spine
+    100022: Bip01 Spine01
+    100024: Bone03
+    100026: Bone13
+    100028: Bone14
+    100030: Bone16
+    100032: Bone18
+    100034: //RootNode
+    100036: Bip01
+    100038: Dummy001
+    100040: mandragora
+    100042: Plane001
+    400000: Bip01 Flower
+    400002: Bip01 Head
+    400004: Bip01 L Arm
+    400006: Bip01 L Foot
+    400008: Bip01 L Hand
+    400010: Bip01 Leaf01
+    400012: Bip01 Leaf02
+    400014: Bip01 R Arm
+    400016: Bip01 R Foot
+    400018: Bip01 R Hand
+    400020: Bip01 Spine
+    400022: Bip01 Spine01
+    400024: Bone03
+    400026: Bone13
+    400028: Bone14
+    400030: Bone16
+    400032: Bone18
+    400034: //RootNode
+    400036: Bip01
+    400038: Dummy001
+    400040: mandragora
+    400042: Plane001
+    2300000: Plane001
+    3300000: Plane001
+    4300000: mandragora
+    4300002: Plane001
+    7400000: born01
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: mandragora
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations:
+    - name: born01
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 70
+      wrapMode: 8
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      transformMask: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 1
+  userData: 

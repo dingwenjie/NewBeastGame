@@ -1,0 +1,239 @@
+fileFormatVersion: 2
+guid: 5c030d2bfb68b9541b60668cdff1ff8a
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Bip01
+    100002: Bip01 Head
+    100004: Bip01 L Hand
+    100006: Bip01 R Hand
+    100008: Bip01 Spine
+    100010: body
+    100012: body01_dummy
+    100014: Bone01
+    100016: Bone02
+    100018: Bone03
+    100020: Bone04
+    100022: Bone05
+    100024: Bone06
+    100026: Bone07
+    100028: Bone08
+    100030: Bone09
+    100032: Bone10
+    100034: Bone11
+    100036: Bone12
+    100038: Bone13
+    100040: Bone14
+    100042: Bone15
+    100044: Bone16
+    100046: Bone17
+    100048: Bone22
+    100050: Bone24
+    100052: connectBone01
+    100054: Dummy01
+    100056: Dummy02
+    100058: Dummy03
+    100060: Dummy04
+    100062: Dummy05
+    100064: Dummy06
+    100066: Dummy07
+    100068: head
+    100070: IK Chain01
+    100072: IK Chain02
+    100074: light_position
+    100076: Line01
+    100078: Line02
+    100080: lip_Bone11
+    100082: lip_Bone13
+    100084: lip_Bone25
+    100086: lip_Bone26
+    100088: lip_Bone27
+    100090: lip_Bone28
+    100092: lip_Bone29
+    100094: lip_Bone30
+    100096: lip_Bone31
+    100098: lip_Bone32
+    100100: lip_Bone33
+    100102: lip_Bone34
+    100104: Point01
+    100106: Point02
+    100108: Point03
+    100110: Point04
+    100112: Point05
+    100114: Point06
+    100116: Point07
+    100118: Point08
+    100120: Point09
+    100122: Point10
+    100124: Point11
+    100126: Point12
+    100128: //RootNode
+    100130: shellBone01
+    100132: shellBone02
+    100134: shellBone03
+    100136: shellBone04
+    100138: tail_body
+    100140: tail_body01_dummy
+    100142: tail_Bone03
+    100144: tail_Bone07
+    100146: tail_Bone09
+    100148: tail_Bone10
+    100150: tail_Bone11
+    100152: tail_Bone15
+    100154: tail_Bone25
+    100156: tail_Bone26
+    400000: Bip01
+    400002: Bip01 Head
+    400004: Bip01 L Hand
+    400006: Bip01 R Hand
+    400008: Bip01 Spine
+    400010: body
+    400012: body01_dummy
+    400014: Bone01
+    400016: Bone02
+    400018: Bone03
+    400020: Bone04
+    400022: Bone05
+    400024: Bone06
+    400026: Bone07
+    400028: Bone08
+    400030: Bone09
+    400032: Bone10
+    400034: Bone11
+    400036: Bone12
+    400038: Bone13
+    400040: Bone14
+    400042: Bone15
+    400044: Bone16
+    400046: Bone17
+    400048: Bone22
+    400050: Bone24
+    400052: connectBone01
+    400054: Dummy01
+    400056: Dummy02
+    400058: Dummy03
+    400060: Dummy04
+    400062: Dummy05
+    400064: Dummy06
+    400066: Dummy07
+    400068: head
+    400070: IK Chain01
+    400072: IK Chain02
+    400074: light_position
+    400076: Line01
+    400078: Line02
+    400080: lip_Bone11
+    400082: lip_Bone13
+    400084: lip_Bone25
+    400086: lip_Bone26
+    400088: lip_Bone27
+    400090: lip_Bone28
+    400092: lip_Bone29
+    400094: lip_Bone30
+    400096: lip_Bone31
+    400098: lip_Bone32
+    400100: lip_Bone33
+    400102: lip_Bone34
+    400104: Point01
+    400106: Point02
+    400108: Point03
+    400110: Point04
+    400112: Point05
+    400114: Point06
+    400116: Point07
+    400118: Point08
+    400120: Point09
+    400122: Point10
+    400124: Point11
+    400126: Point12
+    400128: //RootNode
+    400130: shellBone01
+    400132: shellBone02
+    400134: shellBone03
+    400136: shellBone04
+    400138: tail_body
+    400140: tail_body01_dummy
+    400142: tail_Bone03
+    400144: tail_Bone07
+    400146: tail_Bone09
+    400148: tail_Bone10
+    400150: tail_Bone11
+    400152: tail_Bone15
+    400154: tail_Bone25
+    400156: tail_Bone26
+    7400000: born01
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations:
+    - name: born01
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 120
+      wrapMode: 8
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      transformMask: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 1
+  userData: 

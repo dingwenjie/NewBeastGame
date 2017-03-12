@@ -1,0 +1,779 @@
+fileFormatVersion: 2
+guid: 7fe6de44a6ade4f4291173489cb65d5a
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bip01
+    100002: Bip01 Head
+    100004: Bip01 HeadNub
+    100006: Bip01 L Calf
+    100008: Bip01 L Clavicle
+    100010: Bip01 L Finger0
+    100012: Bip01 L Finger01
+    100014: Bip01 L Finger0Nub
+    100016: Bip01 L Finger1
+    100018: Bip01 L Finger11
+    100020: Bip01 L Finger1Nub
+    100022: Bip01 L Foot
+    100024: Bip01 L Forearm
+    100026: Bip01 L Hand
+    100028: Bip01 L Thigh
+    100030: Bip01 L Toe0
+    100032: Bip01 L Toe0Nub
+    100034: Bip01 L UpperArm
+    100036: Bip01 Neck
+    100038: Bip01 Pelvis
+    100040: Bip01 R Calf
+    100042: Bip01 R Clavicle
+    100044: Bip01 R Finger0
+    100046: Bip01 R Finger01
+    100048: Bip01 R Finger0Nub
+    100050: Bip01 R Finger1
+    100052: Bip01 R Finger11
+    100054: Bip01 R Finger1Nub
+    100056: Bip01 R Foot
+    100058: Bip01 R Forearm
+    100060: Bip01 R Hand
+    100062: Bip01 R Thigh
+    100064: Bip01 R Toe0
+    100066: Bip01 R Toe0Nub
+    100068: Bip01 R UpperArm
+    100070: Bip01 Spine
+    100072: Bip01 Spine1
+    100074: Bone07
+    100076: Bone14
+    100078: Bone20
+    100080: Bone_cape_L01
+    100082: Bone_cape_L02
+    100084: Bone_cape_L03
+    100086: Bone_cape_L04
+    100088: Bone_cape_L05
+    100090: Bone_cape_M01
+    100092: Bone_cape_M02
+    100094: Bone_cape_M03
+    100096: Bone_cape_M04
+    100098: Bone_cape_M05
+    100100: Bone_cape_R01
+    100102: Bone_cape_R02
+    100104: Bone_cape_R03
+    100106: Bone_cape_R04
+    100108: Bone_cape_R05
+    100110: Bone_hair01_01
+    100112: Bone_hair01_02
+    100114: Bone_hair02_01
+    100116: Bone_hair02_02
+    100118: Bone_hair02_start
+    100120: Bone_hair_start
+    100122: Bone_skirt_B01
+    100124: Bone_skirt_B02
+    100126: Bone_skirt_B03
+    100128: Bone_skirt_B04
+    100130: Bone_skirt_Bstart
+    100132: Bone_skirt_F01
+    100134: Bone_skirt_F02
+    100136: Bone_skirt_F03
+    100138: Bone_skirt_F04
+    100140: Bone_skirt_Fstart
+    100142: Bone_skirt_L01
+    100144: Bone_skirt_L02
+    100146: Bone_skirt_L03
+    100148: Bone_skirt_L04
+    100150: Bone_skirt_Lstart
+    100152: Bone_skirt_R01
+    100154: Bone_skirt_R02
+    100156: Bone_skirt_R03
+    100158: Bone_skirt_R04
+    100160: Bone_skirt_Rstart
+    100162: Dummy01
+    100164: Dummy03
+    100166: Dummy04
+    100168: Dummy05
+    100170: Dummy06
+    100172: Dummy07
+    100174: Dummy08
+    100176: Dummy09
+    100178: Dummy14
+    100180: Dummy15
+    100182: Dummy16
+    100184: Dummy19
+    100186: Dummy20
+    100188: Dummy21
+    100190: Dummy22
+    100192: Dummy23
+    100194: Dummy24
+    100196: Dummy29
+    100198: Dummy30
+    100200: Dummy33
+    100202: Dummy34
+    100204: Dummy35
+    100206: Dummy36
+    100208: Dummy37
+    100210: Dummy38
+    100212: Dummy49
+    100214: Dummy50
+    100216: Dummy51
+    100218: Dummy52
+    100220: Dummy54
+    100222: Dummy55
+    100224: Dummy56
+    100226: Dummy57
+    100228: Dummy58
+    100230: Dummy59
+    100232: Dummy60
+    100234: Dummy61
+    100236: Dummy62
+    100238: Dummy63
+    100240: Dummy64
+    100242: Dummy65
+    100244: Dummy66
+    100246: Dummy67
+    100248: Dummy68
+    100250: Dummy69
+    100252: Dummy70
+    100254: Dummy71
+    100256: Dummy72
+    100258: Dummy73
+    100260: Dummy74
+    100262: Dummy75
+    100264: Dummy76
+    100266: Dummy77
+    100268: dummy_right_weapon_at
+    100270: //RootNode
+    100272: IK Chain01
+    100274: IK Chain02
+    100276: IK Chain03
+    100278: IK Chain04
+    100280: IK Chain05
+    100282: IK Chain06
+    100284: IK Chain07
+    100286: IK Chain08
+    100288: IK Chain09
+    100290: IK Chain10
+    100292: IK Chain11
+    100294: IK Chain12
+    100296: IK Chain13
+    100298: IK Chain14
+    100300: IK Chain15
+    100302: IK Chain16
+    100304: IK Chain17
+    100306: IK Chain18
+    100308: IK Chain19
+    100310: IK Chain20
+    100312: IK Chain21
+    100314: IK Chain22
+    100316: IK Chain23
+    100318: IK Chain24
+    100320: IK Chain25
+    100322: IK Chain26
+    400000: Bip01
+    400002: Bip01 Head
+    400004: Bip01 HeadNub
+    400006: Bip01 L Calf
+    400008: Bip01 L Clavicle
+    400010: Bip01 L Finger0
+    400012: Bip01 L Finger01
+    400014: Bip01 L Finger0Nub
+    400016: Bip01 L Finger1
+    400018: Bip01 L Finger11
+    400020: Bip01 L Finger1Nub
+    400022: Bip01 L Foot
+    400024: Bip01 L Forearm
+    400026: Bip01 L Hand
+    400028: Bip01 L Thigh
+    400030: Bip01 L Toe0
+    400032: Bip01 L Toe0Nub
+    400034: Bip01 L UpperArm
+    400036: Bip01 Neck
+    400038: Bip01 Pelvis
+    400040: Bip01 R Calf
+    400042: Bip01 R Clavicle
+    400044: Bip01 R Finger0
+    400046: Bip01 R Finger01
+    400048: Bip01 R Finger0Nub
+    400050: Bip01 R Finger1
+    400052: Bip01 R Finger11
+    400054: Bip01 R Finger1Nub
+    400056: Bip01 R Foot
+    400058: Bip01 R Forearm
+    400060: Bip01 R Hand
+    400062: Bip01 R Thigh
+    400064: Bip01 R Toe0
+    400066: Bip01 R Toe0Nub
+    400068: Bip01 R UpperArm
+    400070: Bip01 Spine
+    400072: Bip01 Spine1
+    400074: Bone07
+    400076: Bone14
+    400078: Bone20
+    400080: Bone_cape_L01
+    400082: Bone_cape_L02
+    400084: Bone_cape_L03
+    400086: Bone_cape_L04
+    400088: Bone_cape_L05
+    400090: Bone_cape_M01
+    400092: Bone_cape_M02
+    400094: Bone_cape_M03
+    400096: Bone_cape_M04
+    400098: Bone_cape_M05
+    400100: Bone_cape_R01
+    400102: Bone_cape_R02
+    400104: Bone_cape_R03
+    400106: Bone_cape_R04
+    400108: Bone_cape_R05
+    400110: Bone_hair01_01
+    400112: Bone_hair01_02
+    400114: Bone_hair02_01
+    400116: Bone_hair02_02
+    400118: Bone_hair02_start
+    400120: Bone_hair_start
+    400122: Bone_skirt_B01
+    400124: Bone_skirt_B02
+    400126: Bone_skirt_B03
+    400128: Bone_skirt_B04
+    400130: Bone_skirt_Bstart
+    400132: Bone_skirt_F01
+    400134: Bone_skirt_F02
+    400136: Bone_skirt_F03
+    400138: Bone_skirt_F04
+    400140: Bone_skirt_Fstart
+    400142: Bone_skirt_L01
+    400144: Bone_skirt_L02
+    400146: Bone_skirt_L03
+    400148: Bone_skirt_L04
+    400150: Bone_skirt_Lstart
+    400152: Bone_skirt_R01
+    400154: Bone_skirt_R02
+    400156: Bone_skirt_R03
+    400158: Bone_skirt_R04
+    400160: Bone_skirt_Rstart
+    400162: Dummy01
+    400164: Dummy03
+    400166: Dummy04
+    400168: Dummy05
+    400170: Dummy06
+    400172: Dummy07
+    400174: Dummy08
+    400176: Dummy09
+    400178: Dummy14
+    400180: Dummy15
+    400182: Dummy16
+    400184: Dummy19
+    400186: Dummy20
+    400188: Dummy21
+    400190: Dummy22
+    400192: Dummy23
+    400194: Dummy24
+    400196: Dummy29
+    400198: Dummy30
+    400200: Dummy33
+    400202: Dummy34
+    400204: Dummy35
+    400206: Dummy36
+    400208: Dummy37
+    400210: Dummy38
+    400212: Dummy49
+    400214: Dummy50
+    400216: Dummy51
+    400218: Dummy52
+    400220: Dummy54
+    400222: Dummy55
+    400224: Dummy56
+    400226: Dummy57
+    400228: Dummy58
+    400230: Dummy59
+    400232: Dummy60
+    400234: Dummy61
+    400236: Dummy62
+    400238: Dummy63
+    400240: Dummy64
+    400242: Dummy65
+    400244: Dummy66
+    400246: Dummy67
+    400248: Dummy68
+    400250: Dummy69
+    400252: Dummy70
+    400254: Dummy71
+    400256: Dummy72
+    400258: Dummy73
+    400260: Dummy74
+    400262: Dummy75
+    400264: Dummy76
+    400266: Dummy77
+    400268: dummy_right_weapon_at
+    400270: //RootNode
+    400272: IK Chain01
+    400274: IK Chain02
+    400276: IK Chain03
+    400278: IK Chain04
+    400280: IK Chain05
+    400282: IK Chain06
+    400284: IK Chain07
+    400286: IK Chain08
+    400288: IK Chain09
+    400290: IK Chain10
+    400292: IK Chain11
+    400294: IK Chain12
+    400296: IK Chain13
+    400298: IK Chain14
+    400300: IK Chain15
+    400302: IK Chain16
+    400304: IK Chain17
+    400306: IK Chain18
+    400308: IK Chain19
+    400310: IK Chain20
+    400312: IK Chain21
+    400314: IK Chain22
+    400316: IK Chain23
+    400318: IK Chain24
+    400320: IK Chain25
+    400322: IK Chain26
+    7400000: skill02
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: skill02
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 45
+      wrapMode: 8
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bip01
+        weight: 1
+      - path: Bip01/Bip01 Pelvis
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 L Thigh
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 L Thigh/Bip01 L Calf
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 L Thigh/Bip01 L Calf/Bip01 L Foot
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 L Thigh/Bip01 L Calf/Bip01 L Foot/Bip01
+          L Toe0
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 L Thigh/Bip01 L Calf/Bip01 L Foot/Bip01
+          L Toe0/Bip01 L Toe0Nub
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 R Thigh
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 R Thigh/Bip01 R Calf
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 R Thigh/Bip01 R Calf/Bip01 R Foot
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 R Thigh/Bip01 R Calf/Bip01 R Foot/Bip01
+          R Toe0
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 R Thigh/Bip01 R Calf/Bip01 R Foot/Bip01
+          R Toe0/Bip01 R Toe0Nub
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Head
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Head/Bip01
+          HeadNub
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Head/Bone_hair02_start
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Head/Bone_hair02_start/Bone_hair02_01
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Head/Bone_hair02_start/Bone_hair02_01/Bone_hair02_02
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Head/Bone_hair02_start/Dummy16
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Head/Bone_hair02_start/Dummy16/Dummy09
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Head/Bone_hair02_start/Dummy16/Dummy09/IK
+          Chain26
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Head/Bone_hair_start
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Head/Bone_hair_start/Bone_hair01_01
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Head/Bone_hair_start/Bone_hair01_01/Bone_hair01_02
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Head/Bone_hair_start/Dummy04
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Head/Bone_hair_start/Dummy04/Dummy03
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Head/Bone_hair_start/Dummy04/Dummy03/IK
+          Chain25
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle/Bip01
+          L UpperArm
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle/Bip01
+          L UpperArm/Bip01 L Forearm
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle/Bip01
+          L UpperArm/Bip01 L Forearm/Bip01 L Hand
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle/Bip01
+          L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L Finger0
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle/Bip01
+          L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L Finger0/Bip01 L Finger01
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle/Bip01
+          L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L Finger0/Bip01 L Finger01/Bip01
+          L Finger0Nub
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle/Bip01
+          L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L Finger1
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle/Bip01
+          L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L Finger1/Bip01 L Finger11
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle/Bip01
+          L UpperArm/Bip01 L Forearm/Bip01 L Hand/Bip01 L Finger1/Bip01 L Finger11/Bip01
+          L Finger1Nub
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01
+          R UpperArm
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01
+          R UpperArm/Bip01 R Forearm
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01
+          R UpperArm/Bip01 R Forearm/Bip01 R Hand
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01
+          R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R Finger0
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01
+          R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R Finger0/Bip01 R Finger01
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01
+          R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R Finger0/Bip01 R Finger01/Bip01
+          R Finger0Nub
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01
+          R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R Finger1
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01
+          R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R Finger1/Bip01 R Finger11
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01
+          R UpperArm/Bip01 R Forearm/Bip01 R Hand/Bip01 R Finger1/Bip01 R Finger11/Bip01
+          R Finger1Nub
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Bstart
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Bstart/Bone_skirt_B01
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Bstart/Bone_skirt_B01/Bone_skirt_B02
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Bstart/Bone_skirt_B01/Bone_skirt_B02/Bone_skirt_B03
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Bstart/Bone_skirt_B01/Bone_skirt_B02/Bone_skirt_B03/Bone_skirt_B04
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Bstart/Bone_skirt_B01/Bone_skirt_B02/Dummy14
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Bstart/Bone_skirt_B01/Bone_skirt_B02/Dummy14/Dummy15
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Bstart/Bone_skirt_B01/Bone_skirt_B02/Dummy14/Dummy15/IK
+          Chain22
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Bstart/Bone_skirt_B01/Dummy29
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Bstart/Bone_skirt_B01/Dummy29/Dummy30
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Bstart/Bone_skirt_B01/Dummy29/Dummy30/IK
+          Chain21
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Bstart/Dummy06
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Bstart/Dummy06/Dummy05
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Bstart/Dummy06/Dummy05/IK Chain20
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Fstart
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Fstart/Bone_skirt_F01
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Fstart/Bone_skirt_F01/Bone_skirt_F02
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Fstart/Bone_skirt_F01/Bone_skirt_F02/Bone_skirt_F03
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Fstart/Bone_skirt_F01/Bone_skirt_F02/Bone_skirt_F03/Bone_skirt_F04
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Fstart/Bone_skirt_F01/Bone_skirt_F02/Dummy33
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Fstart/Bone_skirt_F01/Bone_skirt_F02/Dummy33/Dummy34
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Fstart/Bone_skirt_F01/Bone_skirt_F02/Dummy33/Dummy34/IK
+          Chain19
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Fstart/Bone_skirt_F01/Dummy49
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Fstart/Bone_skirt_F01/Dummy49/Dummy50
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Fstart/Bone_skirt_F01/Dummy49/Dummy50/IK
+          Chain18
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Fstart/Dummy35
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Fstart/Dummy35/Dummy36
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Fstart/Dummy35/Dummy36/IK Chain17
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Lstart
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Lstart/Bone_skirt_L01
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Lstart/Bone_skirt_L01/Bone_skirt_L02
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Lstart/Bone_skirt_L01/Bone_skirt_L02/Bone_skirt_L03
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Lstart/Bone_skirt_L01/Bone_skirt_L02/Bone_skirt_L03/Bone_skirt_L04
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Lstart/Bone_skirt_L01/Bone_skirt_L02/Dummy23
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Lstart/Bone_skirt_L01/Bone_skirt_L02/Dummy23/Dummy24
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Lstart/Bone_skirt_L01/Bone_skirt_L02/Dummy23/Dummy24/IK
+          Chain13
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Lstart/Bone_skirt_L01/Dummy37
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Lstart/Bone_skirt_L01/Dummy37/Dummy38
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Lstart/Bone_skirt_L01/Dummy37/Dummy38/IK
+          Chain12
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Lstart/Dummy51
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Lstart/Dummy51/Dummy52
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Lstart/Dummy51/Dummy52/IK Chain11
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Rstart
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Rstart/Bone_skirt_R01
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Rstart/Bone_skirt_R01/Bone_skirt_R02
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Rstart/Bone_skirt_R01/Bone_skirt_R02/Bone_skirt_R03
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Rstart/Bone_skirt_R01/Bone_skirt_R02/Bone_skirt_R03/Bone_skirt_R04
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Rstart/Bone_skirt_R01/Bone_skirt_R02/Dummy08
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Rstart/Bone_skirt_R01/Bone_skirt_R02/Dummy08/Dummy07
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Rstart/Bone_skirt_R01/Bone_skirt_R02/Dummy08/Dummy07/IK
+          Chain16
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Rstart/Bone_skirt_R01/Dummy19
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Rstart/Bone_skirt_R01/Dummy19/Dummy20
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Rstart/Bone_skirt_R01/Dummy19/Dummy20/IK
+          Chain15
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Rstart/Dummy21
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Rstart/Dummy21/Dummy22
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bone_skirt_Rstart/Dummy21/Dummy22/IK Chain14
+        weight: 1
+      - path: Bip01/Dummy01
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_L01
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_L01/Bone_cape_L02
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_L01/Bone_cape_L02/Bone_cape_L03
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_L01/Bone_cape_L02/Bone_cape_L03/Bone_cape_L04
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_L01/Bone_cape_L02/Bone_cape_L03/Bone_cape_L04/Bone_cape_L05
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_L01/Bone_cape_L02/Bone_cape_L03/Bone_cape_L04/Bone_cape_L05/Bone14
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_L01/Bone_cape_L02/Bone_cape_L03/Bone_cape_L04/Dummy59
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_L01/Bone_cape_L02/Bone_cape_L03/Bone_cape_L04/Dummy59/Dummy58
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_L01/Bone_cape_L02/Bone_cape_L03/Bone_cape_L04/Dummy59/Dummy58/IK
+          Chain08
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_L01/Bone_cape_L02/Bone_cape_L03/Dummy57
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_L01/Bone_cape_L02/Bone_cape_L03/Dummy57/Dummy56
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_L01/Bone_cape_L02/Bone_cape_L03/Dummy57/Dummy56/IK
+          Chain07
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_L01/Bone_cape_L02/Dummy69
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_L01/Bone_cape_L02/Dummy69/Dummy62
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_L01/Bone_cape_L02/Dummy69/Dummy62/IK Chain06
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_L01/Dummy55
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_L01/Dummy55/Dummy54
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_L01/Dummy55/Dummy54/IK Chain05
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_M01
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_M01/Bone_cape_M02
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_M01/Bone_cape_M02/Bone_cape_M03
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_M01/Bone_cape_M02/Bone_cape_M03/Bone_cape_M04
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_M01/Bone_cape_M02/Bone_cape_M03/Bone_cape_M04/Bone_cape_M05
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_M01/Bone_cape_M02/Bone_cape_M03/Bone_cape_M04/Bone_cape_M05/Bone07
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_M01/Bone_cape_M02/Bone_cape_M03/Bone_cape_M04/Dummy67
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_M01/Bone_cape_M02/Bone_cape_M03/Bone_cape_M04/Dummy67/Dummy68
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_M01/Bone_cape_M02/Bone_cape_M03/Bone_cape_M04/Dummy67/Dummy68/IK
+          Chain24
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_M01/Bone_cape_M02/Bone_cape_M03/Dummy65
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_M01/Bone_cape_M02/Bone_cape_M03/Dummy65/Dummy66
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_M01/Bone_cape_M02/Bone_cape_M03/Dummy65/Dummy66/IK
+          Chain23
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_M01/Bone_cape_M02/Dummy63
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_M01/Bone_cape_M02/Dummy63/Dummy64
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_M01/Bone_cape_M02/Dummy63/Dummy64/IK Chain10
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_M01/Dummy61
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_M01/Dummy61/Dummy60
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_M01/Dummy61/Dummy60/IK Chain09
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_R01
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_R01/Bone_cape_R02
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_R01/Bone_cape_R02/Bone_cape_R03
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_R01/Bone_cape_R02/Bone_cape_R03/Bone_cape_R04
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_R01/Bone_cape_R02/Bone_cape_R03/Bone_cape_R04/Bone_cape_R05
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_R01/Bone_cape_R02/Bone_cape_R03/Bone_cape_R04/Bone_cape_R05/Bone20
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_R01/Bone_cape_R02/Bone_cape_R03/Bone_cape_R04/Dummy75
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_R01/Bone_cape_R02/Bone_cape_R03/Bone_cape_R04/Dummy75/Dummy76
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_R01/Bone_cape_R02/Bone_cape_R03/Bone_cape_R04/Dummy75/Dummy76/IK
+          Chain04
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_R01/Bone_cape_R02/Bone_cape_R03/Dummy73
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_R01/Bone_cape_R02/Bone_cape_R03/Dummy73/Dummy74
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_R01/Bone_cape_R02/Bone_cape_R03/Dummy73/Dummy74/IK
+          Chain03
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_R01/Bone_cape_R02/Dummy71
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_R01/Bone_cape_R02/Dummy71/Dummy72
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_R01/Bone_cape_R02/Dummy71/Dummy72/IK Chain02
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_R01/Dummy77
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_R01/Dummy77/Dummy70
+        weight: 1
+      - path: Bip01/Dummy01/Bone_cape_R01/Dummy77/Dummy70/IK Chain01
+        weight: 1
+      - path: Bip01/dummy_right_weapon_at
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

@@ -1,0 +1,262 @@
+fileFormatVersion: 2
+guid: ee390fd1a5ffaf34d86c22937bf54152
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Bip01
+    100002: Bip01 Head
+    100004: Bip01 L Hand
+    100006: Bip01 R Hand
+    100008: Bip01 Spine
+    100010: body
+    100012: body01_dummy
+    100014: Bone01
+    100016: Bone02
+    100018: Bone03
+    100020: Bone04
+    100022: Bone05
+    100024: Bone06
+    100026: Bone07
+    100028: Bone08
+    100030: Bone09
+    100032: Bone10
+    100034: Bone11
+    100036: Bone12
+    100038: Bone13
+    100040: Bone14
+    100042: Bone15
+    100044: Bone16
+    100046: Bone17
+    100048: Bone22
+    100050: Bone24
+    100052: connectBone01
+    100054: Dummy01
+    100056: Dummy02
+    100058: Dummy03
+    100060: Dummy04
+    100062: Dummy05
+    100064: Dummy06
+    100066: Dummy07
+    100068: dummy_ptop_body
+    100070: head
+    100072: IK Chain01
+    100074: IK Chain02
+    100076: kunkun_body
+    100078: kunkun_mud
+    100080: kunkun_shell
+    100082: kunkun_tail
+    100084: kunkun_tail_shell
+    100086: light_position
+    100088: Line01
+    100090: Line02
+    100092: lip_Bone11
+    100094: lip_Bone13
+    100096: lip_Bone25
+    100098: lip_Bone26
+    100100: lip_Bone27
+    100102: lip_Bone28
+    100104: lip_Bone29
+    100106: lip_Bone30
+    100108: lip_Bone31
+    100110: lip_Bone32
+    100112: lip_Bone33
+    100114: lip_Bone34
+    100116: Object01
+    100118: Object02
+    100120: Object04
+    100122: Object07
+    100124: Particle View 01
+    100126: Point01
+    100128: Point02
+    100130: Point03
+    100132: Point04
+    100134: Point05
+    100136: Point06
+    100138: Point07
+    100140: Point08
+    100142: Point09
+    100144: Point10
+    100146: Point11
+    100148: Point12
+    100150: Point13
+    100152: //RootNode
+    100154: shellBone01
+    100156: shellBone02
+    100158: shellBone03
+    100160: shellBone04
+    100162: tail_body
+    100164: tail_body01_dummy
+    100166: tail_Bone03
+    100168: tail_Bone07
+    100170: tail_Bone09
+    100172: tail_Bone10
+    100174: tail_Bone11
+    100176: tail_Bone15
+    100178: tail_Bone25
+    100180: tail_Bone26
+    400000: Bip01
+    400002: Bip01 Head
+    400004: Bip01 L Hand
+    400006: Bip01 R Hand
+    400008: Bip01 Spine
+    400010: body
+    400012: body01_dummy
+    400014: Bone01
+    400016: Bone02
+    400018: Bone03
+    400020: Bone04
+    400022: Bone05
+    400024: Bone06
+    400026: Bone07
+    400028: Bone08
+    400030: Bone09
+    400032: Bone10
+    400034: Bone11
+    400036: Bone12
+    400038: Bone13
+    400040: Bone14
+    400042: Bone15
+    400044: Bone16
+    400046: Bone17
+    400048: Bone22
+    400050: Bone24
+    400052: connectBone01
+    400054: Dummy01
+    400056: Dummy02
+    400058: Dummy03
+    400060: Dummy04
+    400062: Dummy05
+    400064: Dummy06
+    400066: Dummy07
+    400068: dummy_ptop_body
+    400070: head
+    400072: IK Chain01
+    400074: IK Chain02
+    400076: kunkun_body
+    400078: kunkun_mud
+    400080: kunkun_shell
+    400082: kunkun_tail
+    400084: kunkun_tail_shell
+    400086: light_position
+    400088: Line01
+    400090: Line02
+    400092: lip_Bone11
+    400094: lip_Bone13
+    400096: lip_Bone25
+    400098: lip_Bone26
+    400100: lip_Bone27
+    400102: lip_Bone28
+    400104: lip_Bone29
+    400106: lip_Bone30
+    400108: lip_Bone31
+    400110: lip_Bone32
+    400112: lip_Bone33
+    400114: lip_Bone34
+    400116: Object01
+    400118: Object02
+    400120: Object04
+    400122: Object07
+    400124: Particle View 01
+    400126: Point01
+    400128: Point02
+    400130: Point03
+    400132: Point04
+    400134: Point05
+    400136: Point06
+    400138: Point07
+    400140: Point08
+    400142: Point09
+    400144: Point10
+    400146: Point11
+    400148: Point12
+    400150: Point13
+    400152: //RootNode
+    400154: shellBone01
+    400156: shellBone02
+    400158: shellBone03
+    400160: shellBone04
+    400162: tail_body
+    400164: tail_body01_dummy
+    400166: tail_Bone03
+    400168: tail_Bone07
+    400170: tail_Bone09
+    400172: tail_Bone10
+    400174: tail_Bone11
+    400176: tail_Bone15
+    400178: tail_Bone25
+    400180: tail_Bone26
+    2300000: dummy_ptop_body
+    3300000: dummy_ptop_body
+    4300000: dummy_ptop_body
+    4300002: kunkun_tail
+    4300004: kunkun_tail_shell
+    4300006: kunkun_body
+    4300008: kunkun_shell
+    4300010: kunkun_mud
+    4300012: Object01
+    4300014: Object02
+    4300016: Object04
+    4300018: Object07
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: kunkun_body
+    13700002: kunkun_mud
+    13700004: kunkun_shell
+    13700006: kunkun_tail
+    13700008: kunkun_tail_shell
+    13700010: Object01
+    13700012: Object02
+    13700014: Object04
+    13700016: Object07
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 1
+  userData: 

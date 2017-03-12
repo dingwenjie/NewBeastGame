@@ -1,0 +1,233 @@
+fileFormatVersion: 2
+guid: 316ab7420ad0c7647b2cff0671cef1fe
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bip01
+    100002: Bip01 Footsteps
+    100004: Bip01 Head
+    100006: Bip01 HeadNub
+    100008: Bip01 L Calf
+    100010: Bip01 L Clavicle
+    100012: Bip01 L Finger0
+    100014: Bip01 L Finger01
+    100016: Bip01 L Finger0Nub
+    100018: Bip01 L Finger1
+    100020: Bip01 L Finger11
+    100022: Bip01 L Finger1Nub
+    100024: Bip01 L Foot
+    100026: Bip01 L Forearm
+    100028: Bip01 L Hand
+    100030: Bip01 L Thigh
+    100032: Bip01 L Toe0
+    100034: Bip01 L Toe0Nub
+    100036: Bip01 L UpperArm
+    100038: Bip01 Neck
+    100040: Bip01 Pelvis
+    100042: Bip01 R Calf
+    100044: Bip01 R Clavicle
+    100046: Bip01 R Finger0
+    100048: Bip01 R Finger01
+    100050: Bip01 R Finger0Nub
+    100052: Bip01 R Finger1
+    100054: Bip01 R Finger11
+    100056: Bip01 R Finger1Nub
+    100058: Bip01 R Foot
+    100060: Bip01 R Forearm
+    100062: Bip01 R Hand
+    100064: Bip01 R Thigh
+    100066: Bip01 R Toe0
+    100068: Bip01 R Toe0Nub
+    100070: Bip01 R UpperArm
+    100072: Bip01 Spine
+    100074: Bip01 Spine1
+    100076: bone_cloth01
+    100078: bone_cloth02
+    100080: bone_cloth03
+    100082: bone_cloth_hand_L01
+    100084: bone_cloth_hand_L02
+    100086: bone_cloth_hand_L03
+    100088: bone_cloth_hand_L04
+    100090: bone_cloth_hand_L05
+    100092: bone_cloth_hand_L06
+    100094: bone_cloth_hand_R01
+    100096: bone_cloth_hand_R02
+    100098: bone_cloth_hand_R03
+    100100: bone_cloth_hand_R04
+    100102: bone_cloth_hand_R05
+    100104: bone_cloth_hand_R06
+    100106: bone_hair_B01
+    100108: bone_hair_B02
+    100110: bone_hair_B03
+    100112: bone_hair_B04
+    100114: bone_hair_B05
+    100116: bone_hair_B06
+    100118: bone_hair_B07
+    100120: bone_hair_B08
+    100122: bone_hair_B09
+    100124: bone_hair_L01
+    100126: bone_hair_L02
+    100128: bone_hair_L03
+    100130: bone_hair_L04
+    100132: bone_hair_L05
+    100134: bone_hair_L06
+    100136: bone_hair_L07
+    100138: bone_hair_R01
+    100140: bone_hair_R02
+    100142: bone_hair_R03
+    100144: bone_hair_R04
+    100146: bone_hair_R05
+    100148: bone_hair_R06
+    100150: bone_hair_R07
+    100152: bone_position
+    100154: dummy_fx
+    100156: dummy_weapon
+    100158: //RootNode
+    100160: elf_thalosus_01
+    100162: elf_thalosus_weapon
+    100164: Point_hand_L
+    100166: Point_hand_R
+    400000: Bip01
+    400002: Bip01 Footsteps
+    400004: Bip01 Head
+    400006: Bip01 HeadNub
+    400008: Bip01 L Calf
+    400010: Bip01 L Clavicle
+    400012: Bip01 L Finger0
+    400014: Bip01 L Finger01
+    400016: Bip01 L Finger0Nub
+    400018: Bip01 L Finger1
+    400020: Bip01 L Finger11
+    400022: Bip01 L Finger1Nub
+    400024: Bip01 L Foot
+    400026: Bip01 L Forearm
+    400028: Bip01 L Hand
+    400030: Bip01 L Thigh
+    400032: Bip01 L Toe0
+    400034: Bip01 L Toe0Nub
+    400036: Bip01 L UpperArm
+    400038: Bip01 Neck
+    400040: Bip01 Pelvis
+    400042: Bip01 R Calf
+    400044: Bip01 R Clavicle
+    400046: Bip01 R Finger0
+    400048: Bip01 R Finger01
+    400050: Bip01 R Finger0Nub
+    400052: Bip01 R Finger1
+    400054: Bip01 R Finger11
+    400056: Bip01 R Finger1Nub
+    400058: Bip01 R Foot
+    400060: Bip01 R Forearm
+    400062: Bip01 R Hand
+    400064: Bip01 R Thigh
+    400066: Bip01 R Toe0
+    400068: Bip01 R Toe0Nub
+    400070: Bip01 R UpperArm
+    400072: Bip01 Spine
+    400074: Bip01 Spine1
+    400076: bone_cloth01
+    400078: bone_cloth02
+    400080: bone_cloth03
+    400082: bone_cloth_hand_L01
+    400084: bone_cloth_hand_L02
+    400086: bone_cloth_hand_L03
+    400088: bone_cloth_hand_L04
+    400090: bone_cloth_hand_L05
+    400092: bone_cloth_hand_L06
+    400094: bone_cloth_hand_R01
+    400096: bone_cloth_hand_R02
+    400098: bone_cloth_hand_R03
+    400100: bone_cloth_hand_R04
+    400102: bone_cloth_hand_R05
+    400104: bone_cloth_hand_R06
+    400106: bone_hair_B01
+    400108: bone_hair_B02
+    400110: bone_hair_B03
+    400112: bone_hair_B04
+    400114: bone_hair_B05
+    400116: bone_hair_B06
+    400118: bone_hair_B07
+    400120: bone_hair_B08
+    400122: bone_hair_B09
+    400124: bone_hair_L01
+    400126: bone_hair_L02
+    400128: bone_hair_L03
+    400130: bone_hair_L04
+    400132: bone_hair_L05
+    400134: bone_hair_L06
+    400136: bone_hair_L07
+    400138: bone_hair_R01
+    400140: bone_hair_R02
+    400142: bone_hair_R03
+    400144: bone_hair_R04
+    400146: bone_hair_R05
+    400148: bone_hair_R06
+    400150: bone_hair_R07
+    400152: bone_position
+    400154: dummy_fx
+    400156: dummy_weapon
+    400158: //RootNode
+    400160: elf_thalosus_01
+    400162: elf_thalosus_weapon
+    400164: Point_hand_L
+    400166: Point_hand_R
+    4300000: elf_thalosus_weapon
+    4300002: elf_thalosus_01
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: elf_thalosus_01
+    13700002: elf_thalosus_weapon
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

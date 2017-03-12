@@ -1,0 +1,303 @@
+fileFormatVersion: 2
+guid: bbf033885c4ae164a957864814f9c840
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Ball
+    100002: //RootNode
+    100004: Bip01
+    100006: Bip01 Head
+    100008: Bip01 Spine
+    100010: body
+    100012: Bone02
+    100014: Bone03e
+    100016: Bone04
+    100018: Bone05
+    100020: Bone06
+    100022: Bone08
+    100024: Bone10
+    100026: Bone11
+    100028: Bone13
+    100030: Bone14
+    100032: Bone16
+    100034: Bone17
+    100036: Bone19
+    100038: Bone20
+    100040: Bone22
+    100042: Bone23
+    100044: Bone24e
+    100046: Bone25
+    100048: Bone26e
+    100050: Bone28e
+    100052: Bone29
+    100054: Bone31e
+    100056: breath_01
+    100058: breath_02
+    100060: breath_03
+    100062: breath_down
+    100064: breath_up
+    100066: Dummy03
+    100068: Dummy04
+    100070: Dummy05
+    100072: Dummy08
+    100074: Dummy09
+    100076: IK Chain01
+    100078: IK Chain04
+    100080: IK Chain05
+    100082: IK Chain10
+    100084: Point01
+    100086: Point02
+    100088: Point03
+    100090: Point04
+    100092: Point05
+    400000: Ball
+    400002: //RootNode
+    400004: Bip01
+    400006: Bip01 Head
+    400008: Bip01 Spine
+    400010: body
+    400012: Bone02
+    400014: Bone03e
+    400016: Bone04
+    400018: Bone05
+    400020: Bone06
+    400022: Bone08
+    400024: Bone10
+    400026: Bone11
+    400028: Bone13
+    400030: Bone14
+    400032: Bone16
+    400034: Bone17
+    400036: Bone19
+    400038: Bone20
+    400040: Bone22
+    400042: Bone23
+    400044: Bone24e
+    400046: Bone25
+    400048: Bone26e
+    400050: Bone28e
+    400052: Bone29
+    400054: Bone31e
+    400056: breath_01
+    400058: breath_02
+    400060: breath_03
+    400062: breath_down
+    400064: breath_up
+    400066: Dummy03
+    400068: Dummy04
+    400070: Dummy05
+    400072: Dummy08
+    400074: Dummy09
+    400076: IK Chain01
+    400078: IK Chain04
+    400080: IK Chain05
+    400082: IK Chain10
+    400084: Point01
+    400086: Point02
+    400088: Point03
+    400090: Point04
+    400092: Point05
+    7400000: idle01
+    7400002: walk01
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: idle01
+      takeName: Take 001
+      firstFrame: 100
+      lastFrame: 148
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: walk01
+      takeName: Take 001
+      firstFrame: -36
+      lastFrame: 148
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bip01
+        weight: 1
+      - path: Bip01/body
+        weight: 1
+      - path: Bip01/body/breath_up
+        weight: 1
+      - path: Bip01/body/breath_up/Bip01 Spine
+        weight: 1
+      - path: Bip01/body/breath_up/Bip01 Spine/Bone02
+        weight: 1
+      - path: Bip01/body/breath_up/Bip01 Spine/Bone02/Bone03e
+        weight: 1
+      - path: Bip01/body/breath_up/Bip01 Spine/Bone04
+        weight: 1
+      - path: Bip01/body/breath_up/Bip01 Spine/Bone04/Bone28e
+        weight: 1
+      - path: Bip01/body/breath_up/Bone05
+        weight: 1
+      - path: Bip01/body/breath_up/Bone05/Bone06
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/Ball
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/Bone10
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/Bone10/Bone11
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/Bone13
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/Bone13/Bone14
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/Bone16
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/Bone16/Bone17
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/Bone19
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/Bone19/Bone20
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/Bone25
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/Bone25/Bone26e
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/Bone25/Dummy08
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/Bone25/Dummy08/Dummy04
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/Bone25/Dummy08/Dummy04/IK Chain05
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/Bone31e
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/breath_01
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/breath_02
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/breath_03
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/Point01
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/Point02
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/Point03
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/Point04
+        weight: 1
+      - path: Bip01/body/breath_up/Bone08/Bip01 Head/Point05
+        weight: 1
+      - path: Bip01/body/breath_up/Bone22
+        weight: 1
+      - path: Bip01/body/breath_up/Bone22/Bone23
+        weight: 1
+      - path: Bip01/body/breath_up/Bone22/Bone23/Bone24e
+        weight: 1
+      - path: Bip01/body/breath_up/Bone22/Dummy09
+        weight: 1
+      - path: Bip01/body/breath_up/Bone22/Dummy09/Dummy05
+        weight: 1
+      - path: Bip01/body/breath_up/Bone22/Dummy09/Dummy05/IK Chain04
+        weight: 1
+      - path: Bip01/body/breath_up/breath_down
+        weight: 1
+      - path: Bip01/body/breath_up/Dummy03
+        weight: 1
+      - path: Bip01/body/breath_up/Dummy03/IK Chain01
+        weight: 1
+      - path: Bip01/body/breath_up/Dummy03/IK Chain10
+        weight: 1
+      - path: Bone29
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 1
+  userData: 
