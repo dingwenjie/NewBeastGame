@@ -16,8 +16,14 @@ using Client.UI.UICommon;
 public class DlgFlyTextSysInfoBehaviour : DlgBehaviourBase
 {
     public IXUIList m_List_Info = null;
+    public IXUIButton b = null;
     public override void Init()
     {
-        this.m_List_Info = base.GetUIObject("List_SystemInfo") as IXUIList;
+        base.Init();
+        this.m_List_Info = base.GetUIObject("list_SystemInfo") as IXUIList;
+        if (this.m_List_Info == null)
+        {
+            Debug.Log("this.m_List_Info == null");
+        }
     }
 }

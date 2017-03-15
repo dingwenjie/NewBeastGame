@@ -101,6 +101,8 @@ public class ClientMain : Singleton<ClientMain>
         Singleton<UITipConfigMgr>.singleton.Init();
         Singleton<NetworkManager>.singleton.Init();
         Singleton<AudioManager>.singleton.Init();
+        //DlgBase<DlgFlyText, DlgFlyTextBehaviour>.singleton.SetVisible(true);
+        DlgBase<DlgFlyTextSysInfo, DlgFlyTextSysInfoBehaviour>.singleton.SetVisible(true);
     }
     public void PreInit()
     {
@@ -204,7 +206,9 @@ public class ClientMain : Singleton<ClientMain>
     /// <param name="bSuccess"></param>
     private void OnBeforeStartGameResourceLoadFinished(bool bSuccess)
     {
-        Singleton<ClientMain>.singleton.ChangeGameState(EnumGameState.eState_Login);
+        DlgBase<DlgFlyText, DlgFlyTextBehaviour>.singleton.AddSystemInfo("fwfqwfqwf");
+       // DlgBase<DlgLogin, DlgLoginBehaviour>.singleton.SetVisible(true);
+        //Singleton<ClientMain>.singleton.ChangeGameState(EnumGameState.eState_Login);
         //Singleton<ClientMain>.singleton.ChangeGameState(EnumGameState.eState_CreatPlayer);
     }
     public void RegisterCallBackOnChangedFinished(Action callBackWhenChangeFinished)
