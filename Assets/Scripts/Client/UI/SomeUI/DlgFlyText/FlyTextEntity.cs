@@ -135,8 +135,8 @@ internal class FlyTextEntity
         this.m_bActive = true;
         this.m_unTargetBeastId = unTargetHeroId;
         this.m_uiListItem = flyTextItem;
-        this.m_uiLabel = (this.m_uiListItem.GetUIObject("Label_FlyText") as IXUILabel);
-        this.m_uiSprite = (this.m_uiListItem.GetUIObject("Sprite_Shadow") as IXUISprite);
+        this.m_uiLabel = (this.m_uiListItem.GetUIObject("lb_flytext") as IXUILabel);
+        this.m_uiSprite = (this.m_uiListItem.GetUIObject("sp_bg") as IXUISprite);
         if (null == this.m_uiLabel)
         {
             this.m_uiLabel = WidgetFactory.CreateWidget<IXUILabel>();
@@ -145,6 +145,7 @@ internal class FlyTextEntity
         if (null == this.m_uiSprite)
         {
             this.m_uiSprite = WidgetFactory.CreateWidget<IXUISprite>();
+            XLog.Log.Debug("null == m_uiSprite ");
         }
     }
 }
