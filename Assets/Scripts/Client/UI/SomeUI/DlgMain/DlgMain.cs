@@ -77,6 +77,7 @@ public class DlgMain : DlgBase<DlgMain,DlgMainBehaviour>
         //this.uiBehaviour.m_Button_Attack.RegisterPressDownEventHandler(new PressDownEventHandler(this.OnClickDownNormalAttack));
         //this.uiBehaviour.m_Button_Attack.RegisterPressUpEventHandler(new PressUpEventHandler(this.OnClickUpNormalAttack));
         this.uiBehaviour.m_Button_Attack.RegisterClickEventHandler(new ButtonClickEventHandler(this.OnClickDownNormalAttack));
+        this.uiBehaviour.m_Button_Finish.RegisterClickEventHandler(new ButtonClickEventHandler(this.OnButtonFinishClick));
     }
     #endregion
     #region 公有方法
@@ -241,7 +242,7 @@ public class DlgMain : DlgBase<DlgMain,DlgMainBehaviour>
     {
         if (base.Prepared)
         {
-            base.uiBehaviour.m_Button_Finish.SetVisible(false);
+            base.uiBehaviour.m_Button_Finish.SetVisible(enable);
             if (eRoleStage == EClientRoleStage.ROLE_STAGE_MOVE || eRoleStage == EClientRoleStage.ROLE_STAGE_REMOVE)
             {
                 base.uiBehaviour.m_Label_Finish.SetText("Stop");
@@ -339,6 +340,7 @@ public class DlgMain : DlgBase<DlgMain,DlgMainBehaviour>
     /// <returns></returns>
     private bool OnButtonFinishClick(IXUIButton button)
     {
+        Debug.Log("Finished");
         Singleton<OpStateManager>.singleton.OnButtonFinishClick();
         return true;
     }

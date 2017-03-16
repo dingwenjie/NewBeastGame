@@ -127,6 +127,7 @@ namespace Client.GameMain.OpState.Stage
         {
             if (bOK)
             {
+                //发送结束玩家战斗阶段，如果玩家已经移动过了，然后会接收到服务器发送给我们另外一个玩家的开始阶段
                 Singleton<NetworkManager>.singleton.SendFinishRoleStage(EClientRoleStage.ROLE_STAGE_ACTION);
                 DlgBase<DlgMain, DlgMainBehaviour>.singleton.EnableButtonFinish(false, EClientRoleStage.ROLE_STAGE_ACTION);
             }

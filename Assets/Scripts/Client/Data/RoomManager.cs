@@ -48,6 +48,7 @@ namespace Client.Data
         private List<PlayerData> m_listEnemyPlayers = new List<PlayerData>();//敌方玩家
         private Dictionary<uint, CBeastData> m_listLeagueBeasts = new Dictionary<uint, CBeastData>();//league阵营的神兽数据
         private Dictionary<uint, CBeastData> m_listEmpireBeasts = new Dictionary<uint, CBeastData>();//empire阵营的神兽数据
+        private Dictionary<long, List<BeastData>> m_dicPlayerInGameBeastData = new Dictionary<long, List<BeastData>>();//每个玩家对应的在游戏中的神兽数据
         private static PlayerData s_playerRoleDataError = new PlayerData(0u, ECampType.CAMP_INVALID);//静态错误的玩家数据
         private CampData[] m_CampDatas = null;//阵营数据信息
         #endregion
@@ -175,6 +176,16 @@ namespace Client.Data
         public List<PlayerData> EnemyPlayerDatas
         {
             get { return this.m_listEnemyPlayers; }
+        }
+        /// <summary>
+        /// 玩家在游戏内对应的神兽数据
+        /// </summary>
+        public Dictionary<long, List<BeastData>> PlayerInGameBeastData
+        {
+            get
+            {
+                return this.m_dicPlayerInGameBeastData;
+            }
         }
         /// <summary>
         /// 玩家自己的数据信息
@@ -324,6 +335,7 @@ namespace Client.Data
                     playerData.IsReconnect = (data.m_btIsReconnecting == 1);
                 }
                 empireList.Add(playerData);
+                this.m_dicPlayerInGameBeastData[data.m_unPlayerID] = new List<BeastData>();
             }
             //再初始化league方玩家的信息
             for (int i = 0; i < oLeagueMemberList.Count; i++)
@@ -353,6 +365,7 @@ namespace Client.Data
                     playerData.IsReconnect = (data.m_btIsReconnecting == 1);
                 }
                 leagueList.Add(playerData);
+                this.m_dicPlayerInGameBeastData[data.m_unPlayerID] = new List<BeastData>();
             }
             if (ECampType.CAMP_LEAGUE == Singleton<PlayerRole>.singleton.CampType)
             {
@@ -478,6 +491,14 @@ namespace Client.Data
             BeastData beastData = this.GetBeastData(beastId);
             if (playerData != null && beastData != null)
             {
+                if (this.m_dicPlayerInGameBeastData.ContainsKey(playerData.PlayerId))
+                {
+                    this.m_dicPlayerInGameBeastData[playerData.PlayerId].Add(beastData);
+                }
+                else
+                {
+                    m_log.Error("没有找到玩家ID对应的神兽数据");
+                }
                 DataBeastlist dataList = null;
                 GameData<DataBeastlist>.dataMap.TryGetValue(beastData.BeastTypeId, out dataList);
                 if (dataList != null)
@@ -889,6 +910,10 @@ namespace Client.Data
                 }
             }
         }
+        /// <summary>
+        /// 如果是该玩家的战斗阶段，就停止该玩家战斗阶段
+        /// </summary>
+        /// <param name="beastId"></param>
         public void StopBeastRound(long beastId)
         {
             if (this.m_unInRoundBeastId == beastId || this.m_unInRoundBeastId == 0)

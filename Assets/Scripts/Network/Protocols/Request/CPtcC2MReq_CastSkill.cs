@@ -21,9 +21,6 @@ public class CPtcC2MReq_CastSkill : CProtocol
     public int m_dwSkillId;
     public long m_dwTargetRoleId;
     public CVector3 m_oTargetPos;
-    public int m_dwTargetSkillId;
-    public int m_dwTargetEquipId;
-    public byte m_btSelectIndex;
     #endregion
     #region 构造方法
     public CPtcC2MReq_CastSkill() : base(1031)
@@ -34,10 +31,18 @@ public class CPtcC2MReq_CastSkill : CProtocol
     #region 公共方法
     public override CByteStream DeSerialize(CByteStream bs)
     {
+        bs.Read(ref this.m_dwRoleId);
+        bs.Read(ref this.m_dwSkillId);
+        bs.Read(ref this.m_dwTargetRoleId);
+        bs.Read(this.m_oTargetPos);
         return bs;
     }
     public override CByteStream Serialize(CByteStream bs)
     {
+        bs.Write(this.m_dwRoleId);
+        bs.Write(this.m_dwSkillId);
+        bs.Write(this.m_dwTargetRoleId);
+        bs.Write(this.m_oTargetPos);
         return bs;
     }
     public override void Process()

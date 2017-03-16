@@ -2,6 +2,7 @@
 using System.Collections;
 using Utility;
 using Client.UI;
+using Client.UI.UICommon;
 using Client.Data;
 using Client.Common;
 using Game;
@@ -27,6 +28,7 @@ namespace Client.GameMain.OpState.Stage
             //清除所有的格子
             Singleton<HexagonManager>.singleton.ClearAllHexagon();
             UIManager.singleton.SetCursor(Singleton<RoomManager>.singleton.IsObserver ? enumCursorType.eCursorType_Normal : enumCursorType.eCursorType_Disable);
+            DlgBase<DlgMain, DlgMainBehaviour>.singleton.EnableButtonFinish(false, EClientRoleStage.ROLE_STAGE_ACTION);
             CSceneMgr.singleton.ControlColliderEnable(true);
         }
         public override void OnLeave()

@@ -76,7 +76,7 @@ public abstract class UseSkillBase
     {
         if (!this.m_bClickLocked)
         {
-            this.UpdateState();
+            //this.UpdateState();
         }
     }
     public virtual void UpdateState()

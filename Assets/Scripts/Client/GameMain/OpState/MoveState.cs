@@ -31,6 +31,7 @@ namespace Client.GameMain.OpState.Stage
         public override void OnEnter()
         {
             UIManager.singleton.SetCursor(enumCursorType.eCursorType_Move);
+            DlgBase<DlgMain, DlgMainBehaviour>.singleton.EnableButtonFinish(true, EClientRoleStage.ROLE_STAGE_MOVE);
             CVector3 pos = Singleton<BeastRole>.singleton.Beast.Pos;
             int maxMoveDis = Singleton<BeastRole>.singleton.Beast.MaxMoveDis;
             this.m_listHexs.Clear();

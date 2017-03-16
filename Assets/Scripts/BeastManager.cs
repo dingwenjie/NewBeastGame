@@ -242,6 +242,21 @@ public class BeastManager
         }
     }
     /// <summary>
+    /// 神兽使用技能
+    /// </summary>
+    /// <param name="beastId"></param>
+    /// <param name="type"></param>
+    /// <param name="skillId"></param>
+    /// <param name="param"></param>
+    public void OnUseSkill(long beastId,EnumSkillType type,int skillId,UseSkillParam param)
+    {
+        Beast beast = this.GetBeastById(beastId);
+        if (beast != null)
+        {
+            beast.OnUseSkill(type, skillId, param);
+        }
+    }
+    /// <summary>
     /// 神兽血量改变
     /// </summary>
     /// <param name="beastId"></param>

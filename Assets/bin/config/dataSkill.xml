@@ -303,8 +303,8 @@
   <SkillList>
     <ID_i>1</ID_i>
     <Name_s>普通攻击</Name_s>
-    <UseDisMin_i>1</UseDisMin_i>
-    <UseDis_i>3</UseDis_i>
+    <UseDisMin_i>10</UseDisMin_i>
+    <UseDis_i>10</UseDis_i>
     <Cooldown_i>2</Cooldown_i>
     <SmallIcon_s></SmallIcon_s>
     <Icon_s>0</Icon_s>

@@ -111,7 +111,7 @@ internal abstract class FlyTextManagerBase
         flyText.Label.SetText(strText);
         flyText.TimeStart = Time.time;
         flyText.Target = beast;
-        if (beast != null)
+        if (beast != null && !beast.IsError)
         {
             Vector3 realPos = beast.RealPos3D;
             realPos.y += 2.5f;

@@ -64,7 +64,6 @@ public class SkillGameManager
     /// <returns></returns>
     public static bool Init()
     {
-        Debug.Log("INIt");
         SkillGameManager.m_dicAllSkillBase.Clear();
         SkillGameManager.Register(new SkillNone());
         SkillGameManager.Register(new SkillNormalAttack());
@@ -192,6 +191,9 @@ public class SkillGameManager
             skillById.CDTime = byteCD;
         }
     }
+    /// <summary>
+    /// 神兽血量改变
+    /// </summary>
     public void OnBeastHpChange()
     {
         foreach (var skill in this.m_listSkillData)
@@ -200,6 +202,22 @@ public class SkillGameManager
             if (skillStrategy != null)
             {
                 skillStrategy.OnBeastHpChange(this.m_unMasterBeastId);
+            }
+        }
+    }
+    /// <summary>
+    /// 使用技能
+    /// </summary>
+    /// <param name="skillId"></param>
+    /// <param name="param"></param>
+    public void OnUseSkill(int skillId,UseSkillParam param)
+    {
+        if (SkillGameManager.m_dicAllSkillBase.ContainsKey(skillId))
+        {
+            SkillBase skill = SkillGameManager.m_dicAllSkillBase[skillId];
+            if (skill != null)
+            {
+                skill.OnUse(param);
             }
         }
     }

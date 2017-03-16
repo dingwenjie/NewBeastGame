@@ -45,7 +45,7 @@ public class UseSkill_NormalAttack : UseSkillBase
         if (skill != null)
         {
             this.m_listValidTargetPos = skill.GetValidTargetHexs(Singleton<BeastRole>.singleton.Id);
-            Debug.Log(this.m_listValidTargetPos == null);
+            Debug.Log("PosList" + this.m_listValidTargetBeastId.Count);
             this.m_listValidTargetBeastId = skill.GetValidTargetPlayers(Singleton<BeastRole>.singleton.Id);
         }
         Beast beast = Singleton<BeastManager>.singleton.GetBeastById(Singleton<BeastRole>.singleton.Id);

@@ -20,6 +20,7 @@ public class SubActionState_Disable : SubActionStateBase
     public override void OnEnter()
     {
         DlgBase<DlgMain, DlgMainBehaviour>.singleton.HighlightSkills(EnumSkillType.eSkillType_Skill, false);
+        DlgBase<DlgMain, DlgMainBehaviour>.singleton.EnableButtonFinish(false, EClientRoleStage.ROLE_STAGE_ACTION);
         UIManager.singleton.ResetCurTouchState();
     }
     public override void OnLeave()

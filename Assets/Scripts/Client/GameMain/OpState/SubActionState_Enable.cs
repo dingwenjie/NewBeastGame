@@ -26,6 +26,7 @@ namespace Client.GameMain.OpState.Stage
             //取得能使用的技能，然后高亮显示
             List<int> canUseSkill = Singleton<BeastRole>.singleton.GetCanUseSkillOrEquip(EnumSkillType.eSkillType_Skill);
             DlgBase<DlgMain, DlgMainBehaviour>.singleton.HighlightSkills(EnumSkillType.eSkillType_Skill, canUseSkill);
+            DlgBase<DlgMain, DlgMainBehaviour>.singleton.EnableButtonFinish(true,EClientRoleStage.ROLE_STAGE_ACTION);
             UIManager.singleton.SetCursor(enumCursorType.eCursorType_Normal);
             //显示选择技能提示消息
         }

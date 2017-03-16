@@ -29,10 +29,38 @@ public class CptM2CNtf_CDResult : CProtocol
     }
     public override CByteStream Serialize(CByteStream bs)
     {
+        int num = 0;
+        bs.Read(ref num);
+        for (int i = 0; i < num; i++)
+        {
+            long value = 0;
+            bs.Read(ref value);
+            this.playerIds.Add(value);
+        }
+        int num1 = 0;
+        bs.Read(ref num1);
+        for (int i = 0; i < num1; i++)
+        {
+            int value = 0;
+            bs.Read(ref value);
+            this.cds.Add(value);
+        }
         return bs;
     }
     public override CByteStream DeSerialize(CByteStream bs)
     {
+        int num = playerIds.Count;
+        bs.Write(num);
+        for (int i = 0; i < num; i++)
+        {
+            bs.Write(this.playerIds[i]);
+        }
+        int num1 = cds.Count;
+        bs.Write(num1);
+        for (int i = 0; i < num1; i++)
+        {
+            bs.Write(this.cds[i]);
+        }
         return bs;
     }
 }

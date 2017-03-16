@@ -206,9 +206,9 @@ public class ClientMain : Singleton<ClientMain>
     /// <param name="bSuccess"></param>
     private void OnBeforeStartGameResourceLoadFinished(bool bSuccess)
     {
-        DlgBase<DlgFlyText, DlgFlyTextBehaviour>.singleton.AddSystemInfo("fwfqwfqwf");
+        //DlgBase<DlgFlyText, DlgFlyTextBehaviour>.singleton.AddSystemInfo("fwfqwfqwf");
        // DlgBase<DlgLogin, DlgLoginBehaviour>.singleton.SetVisible(true);
-        //Singleton<ClientMain>.singleton.ChangeGameState(EnumGameState.eState_Login);
+        Singleton<ClientMain>.singleton.ChangeGameState(EnumGameState.eState_Login);
         //Singleton<ClientMain>.singleton.ChangeGameState(EnumGameState.eState_CreatPlayer);
     }
     public void RegisterCallBackOnChangedFinished(Action callBackWhenChangeFinished)

@@ -616,6 +616,16 @@ public class Beast : IBeast, IDisposable
                 this.m_skillManager.AddSkill(skillData, false, ESkillActivateType.SKILL_ACTIVATE_TYPE_INVALID);
             }
         }
+        DataSkill data = GameData<DataSkill>.dataMap[1];
+        if (data != null)
+        {
+            int MaxAttackDis = data.UseDis;
+            this.m_nMaxAttackDis = MaxAttackDis;
+        }
+        else
+        {
+            m_log.Error("找不到该技能的配置文件,SKillID:" + 1);
+        }
     }
     #endregion
     #region 公有方法
@@ -782,6 +792,19 @@ public class Beast : IBeast, IDisposable
         }
     }
     /// <summary>
+    /// 神兽使用技能，根据不同的技能类型用不同的技能管理器
+    /// </summary>
+    /// <param name="type"></param>
+    /// <param name="skillId"></param>
+    /// <param name="param"></param>
+    public void OnUseSkill(EnumSkillType type,int skillId,UseSkillParam param)
+    {
+        if (type == EnumSkillType.eSkillType_Skill)
+        {
+            this.m_skillManager.OnUseSkill(skillId, param);
+        }
+    }
+    /// <summary>
     /// 血量改变
     /// </summary>
     /// <param name="hp"></param>
@@ -816,6 +839,13 @@ public class Beast : IBeast, IDisposable
     public void RefreshAura()
     {
         List<EAura> list = new List<EAura>();
+    }
+    /// <summary>
+    /// 重新设置声音播放频率
+    /// </summary>
+    public void ResetMomentForVoiceInRound()
+    {
+        this.m_fVoiceInRoundMoment = Time.time + UnityEngine.Random.Range(10, 15);
     }
     /// <summary>
     /// 播放动画

@@ -5,6 +5,7 @@ using Client.Data;
 using Utility;
 using Client.Common;
 using Game;
+using Client.GameMain;
 namespace Client.Skill
 {
     /// <summary>
@@ -268,6 +269,41 @@ namespace Client.Skill
                 else
                 {
                     return EnumErrorCodeCheckUse.eCheckErr_NoneTarget;
+                }
+            }
+        }
+        /// <summary>
+        /// 技能使用
+        /// </summary>
+        /// <param name="param"></param>
+        public virtual void OnUse(UseSkillParam param)
+        {
+            this.m_log.Debug("OnUse:" + this.m_unskillId);
+            UseSkillEvent useSkillEvent = new UseSkillEvent();
+            useSkillEvent.DurationTime = 1f;
+            useSkillEvent.UseSkillParam = param;
+            Singleton<ActEventManager>.singleton.AddEvent(useSkillEvent);
+        }
+        /// <summary>
+        /// 具体技能使用表现
+        /// </summary>
+        /// <param name="useSkillParam"></param>
+        public virtual void OnUseSkillAction(UseSkillParam useSkillParam)
+        {
+            if (useSkillParam != null)
+            {
+                Beast beast = Singleton<BeastManager>.singleton.GetBeastById(useSkillParam.m_dwRoleId);
+                if (beast != null)
+                {
+                    Vector3 forward = beast.Forward;
+                    if (useSkillParam.m_dwTargetRoleId > 0 && useSkillParam.m_dwTargetRoleId != useSkillParam.m_dwRoleId)
+                    {
+                        Beast targetBeast = Singleton<BeastManager>.singleton.GetBeastById(useSkillParam.m_dwTargetRoleId);
+                        if (targetBeast != null)
+                        {
+                            forward = beast.RealPos3D - targetBeast.RealPos3D;
+                        }
+                    }
                 }
             }
         }
