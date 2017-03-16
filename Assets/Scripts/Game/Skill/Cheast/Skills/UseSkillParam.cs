@@ -11,7 +11,7 @@ using Game;
 //----------------------------------------------------------------*/
 #endregion
 /// <summary>
-/// 释放技能的数据结构
+/// 使用技能（装备）的数据结构
 /// </summary>
 public class UseSkillParam
 {

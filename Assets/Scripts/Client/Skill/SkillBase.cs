@@ -308,6 +308,34 @@ namespace Client.Skill
             }
         }
         /// <summary>
+        /// 技能释放开始
+        /// </summary>
+        /// <param name="unMasterBeastId"></param>
+        /// <param name="unSkillId"></param>
+        public virtual void OnCastSkillBegin(long unMasterBeastId, int unSkillId)
+        {
+
+        }
+        /// <summary>
+        /// 技能释放中
+        /// </summary>
+        /// <param name="castSkillParam"></param>
+        public virtual void Cast(CastSkillParam castSkillParam)
+        {
+            DataSkill skillData = GameData<DataSkill>.dataMap[castSkillParam.unTargetSkillID];
+            Beast beast = Singleton<BeastManager>.singleton.GetBeastById(castSkillParam.m_unMasterBeastId);
+
+        }
+        /// <summary>
+        /// 技能释放结束
+        /// </summary>
+        /// <param name="unMasterBeastId"></param>
+        /// <param name="unSkillId"></param>
+        public virtual void OnCastSkillEnd(long unMasterBeastId, int unSkillId)
+        {
+
+        }
+        /// <summary>
         /// 取得技能的范围所以格子
         /// </summary>
         /// <param name="beastId"></param>

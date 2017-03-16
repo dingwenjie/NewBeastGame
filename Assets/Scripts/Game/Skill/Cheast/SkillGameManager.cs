@@ -4,6 +4,7 @@ using Utility.Export;
 using Utility;
 using Client.Skill;
 using Client.Common;
+using System;
 #region 模块信息
 /*----------------------------------------------------------------
 // 模块名：SkillGameManager
@@ -219,6 +220,47 @@ public class SkillGameManager
             {
                 skill.OnUse(param);
             }
+        }
+    }
+    /// <summary>
+    /// 释放技能
+    /// </summary>
+    /// <param name="skillId"></param>
+    /// <param name="param"></param>
+    public void OnCastSkill(int skillId,CastSkillParam param)
+    {
+        try
+        {
+            SkillGameData skillData = this.GetSkillById(skillId);
+            if (skillData != null && !skillData.IsError)
+            {
+                foreach (var current in this.m_listSkillData)
+                {
+                    SkillBase skillBegin = SkillGameManager.GetSkillBase(current.Id);
+                    if (skillBegin != null)
+                    {
+                        skillBegin.OnCastSkillBegin(this.m_unMasterBeastId, skillId);
+                    }
+                }
+                SkillBase skill = SkillGameManager.GetSkillBase(skillData.Id);
+                if (skill != null)
+                {
+                    param.unTargetSkillID = skillId;
+                    skill.Cast(param);
+                }
+                foreach (var current in this.m_listSkillData)
+                {
+                    SkillBase skillEnd = SkillGameManager.GetSkillBase(current.Id);
+                    if (skillEnd != null)
+                    {
+                        skillEnd.OnCastSkillBegin(this.m_unMasterBeastId, skillId);
+                    }
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            this.m_log.Fatal(e);
         }
     }
     /// <summary>

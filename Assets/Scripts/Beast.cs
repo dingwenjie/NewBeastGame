@@ -792,17 +792,27 @@ public class Beast : IBeast, IDisposable
         }
     }
     /// <summary>
-    /// 神兽使用技能，根据不同的技能类型用不同的技能管理器
+    /// 玩家使用技能，根据不同的技能类型用不同的技能管理器
     /// </summary>
     /// <param name="type"></param>
     /// <param name="skillId"></param>
     /// <param name="param"></param>
     public void OnUseSkill(EnumSkillType type,int skillId,UseSkillParam param)
     {
-        if (type == EnumSkillType.eSkillType_Skill)
-        {
-            this.m_skillManager.OnUseSkill(skillId, param);
-        }
+        //if (type == EnumSkillType.eSkillType_Skill)
+        //{
+        //    this.m_skillManager.OnUseSkill(skillId, param);
+        //}
+    }
+    /// <summary>
+    /// 神兽释放技能
+    /// </summary>
+    /// <param name="beastId"></param>
+    /// <param name="skillId"></param>
+    /// <param name="param"></param>
+    public void OnCastSkill(long beastId, int skillId, CastSkillParam param)
+    {
+        this.m_skillManager.OnCastSkill(skillId, param);
     }
     /// <summary>
     /// 血量改变

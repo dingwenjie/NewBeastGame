@@ -242,7 +242,7 @@ public class BeastManager
         }
     }
     /// <summary>
-    /// 神兽使用技能
+    /// 玩家使用技能
     /// </summary>
     /// <param name="beastId"></param>
     /// <param name="type"></param>
@@ -254,6 +254,20 @@ public class BeastManager
         if (beast != null)
         {
             beast.OnUseSkill(type, skillId, param);
+        }
+    }
+    /// <summary>
+    /// 神兽释放技能
+    /// </summary>
+    /// <param name="beastId"></param>
+    /// <param name="skillId"></param>
+    /// <param name="param"></param>
+    public void OnBeastCastSkill(long beastId, int skillId, CastSkillParam param)
+    {
+        Beast beast = this.GetBeastById(beastId);
+        if (beast != null)
+        {
+            
         }
     }
     /// <summary>
