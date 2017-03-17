@@ -538,4 +538,11 @@ namespace Client.Common
         eSubActionState_Enable,
         eSubActionState_SkillUse
     }
+    /// <summary>
+    /// 顺序播放类型
+    /// </summary>
+    public enum enumSequenceType
+    {
+        e_Sequence_Skill = 1
+    }
 }
