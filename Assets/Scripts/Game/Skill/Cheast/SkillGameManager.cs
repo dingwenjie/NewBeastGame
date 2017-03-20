@@ -101,6 +101,26 @@ public class SkillGameManager
         }
     }
     /// <summary>
+    /// 取得技能延迟
+    /// </summary>
+    /// <param name="skillID"></param>
+    /// <param name="attakerId"></param>
+    /// <param name="beAttacker"></param>
+    /// <param name="targetPos"></param>
+    /// <returns></returns>
+    public static float GetSkillDuration(int skillID,long attakerId, List<long> beAttacker, Vector3 targetPos)
+    {
+        SkillBase skill = SkillGameManager.GetSkillBase(skillID);
+        if (skill != null)
+        {
+            return skill.GetDuration(attakerId, beAttacker, targetPos);
+        }
+        else
+        {
+            return 0;
+        }
+    }
+    /// <summary>
     /// 通过技能id获取技能数据
     /// </summary>
     /// <param name="unSkillId"></param>
@@ -261,6 +281,26 @@ public class SkillGameManager
         catch (Exception e)
         {
             this.m_log.Fatal(e);
+        }
+    }
+    /// <summary>
+    /// 神兽释放技能表现
+    /// </summary>
+    /// <param name="skillId"></param>
+    /// <param name="param"></param>
+    public void OnCastSkillAction(int skillId, CastSkillParam param)
+    {
+        try
+        {
+            SkillBase skill = SkillGameManager.GetSkillBase(skillId);
+            if (skill != null)
+            {
+
+            }
+        }
+        catch (Exception e)
+        {
+            this.m_log.Fatal(e.ToString());
         }
     }
     /// <summary>

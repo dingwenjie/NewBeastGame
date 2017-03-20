@@ -815,6 +815,16 @@ public class Beast : IBeast, IDisposable
         this.m_skillManager.OnCastSkill(skillId, param);
     }
     /// <summary>
+    /// 神兽释放技能表现
+    /// </summary>
+    /// <param name="beastId"></param>
+    /// <param name="skillId"></param>
+    /// <param name="param"></param>
+    public void OnCastSkillAction(long beastId, int skillId, CastSkillParam param)
+    {
+
+    }
+    /// <summary>
     /// 血量改变
     /// </summary>
     /// <param name="hp"></param>
@@ -877,6 +887,51 @@ public class Beast : IBeast, IDisposable
         if (null != this.m_beastBehaviour)
         {
             this.m_beastBehaviour.StopAnim(strAnimName);
+        }
+    }
+    /// <summary>
+    /// 根据技能id取得技能Show的数据
+    /// </summary>
+    /// <param name="skillId"></param>
+    /// <returns></returns>
+    public DataSkillShow GetSkillShow(int skillId)
+    {
+        //按理来讲应该和皮肤结合起来取得不同的skill
+        DataSkillShow data = null;
+        //如果是普通攻击，那么就返回普通攻击的DataSkillShow的数据,具体的索引是根据神兽的类型id * 100来取得的
+        if (skillId == 1)
+        {
+            data = GameData<DataSkillShow>.dataMap[this.m_dwBeastTypeId * 100];
+        }
+        else
+        {
+            data = GameData<DataSkillShow>.dataMap[skillId];
+        }
+        return data;
+    }
+    /// <summary>
+    /// 取得动画的时间长度
+    /// </summary>
+    /// <param name="anim"></param>
+    /// <returns></returns>
+    public float GetAnimPlayTime(string anim)
+    {
+        if (!string.IsNullOrEmpty(anim))
+        {
+            if (this.m_beastBehaviour != null)
+            {
+                return this.m_beastBehaviour.GetAnimPlayTime(anim);
+            }
+            else
+            {
+                this.m_log.Error("Beast 没有绑定m_beastBehaviour");
+                return 0;
+            }
+        }
+        else
+        {
+            this.m_log.Error(anim + "字符为空");
+            return 0f;
         }
     }
     /// <summary>

@@ -26,6 +26,7 @@ public class Triggerable : IDisposable
     {
         get; set;
     }
+    #region 子类重写方法
     /// <summary>
     /// 触发事件
     /// </summary>
@@ -33,6 +34,9 @@ public class Triggerable : IDisposable
     {
 
     }
+    /// <summary>
+    /// 事件完成回调函数
+    /// </summary>
     public virtual void FinishCallback()
     {
 
@@ -53,6 +57,11 @@ public class Triggerable : IDisposable
             }
         }
     }
+    public virtual void Dispose(bool disposed)
+    {
+
+    }
+    #endregion
     public bool IsFinished()
     {
         if (this.m_bFinished)
@@ -84,8 +93,5 @@ public class Triggerable : IDisposable
         this.Dispose(true);
         GC.SuppressFinalize(this);
     }
-    public virtual void Dispose(bool disposed)
-    {
 
-    }
 }

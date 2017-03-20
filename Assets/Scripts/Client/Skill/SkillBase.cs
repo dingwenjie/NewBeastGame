@@ -242,7 +242,41 @@ namespace Client.Skill
         /// <returns></returns>
         public virtual string GetSkillAnimName(long beastId)
         {
-            return "attack";
+            //按理来说应该根据skillId来判断是那个skill
+            string anim = "attack";
+            if (this.m_unskillId == 1)
+            {
+                anim = "attack";
+            }
+            return anim;
+        }
+        /// <summary>
+        /// 取得技能动作的时间延迟
+        /// </summary>
+        /// <param name="attakerId"></param>
+        /// <param name="beAttacker"></param>
+        /// <param name="targetPos"></param>
+        /// <returns></returns>
+        public virtual float GetDuration(long attakerId,List<long> beAttacker,Vector3 targetPos)
+        {
+            float result = 0;
+            Beast beast = Singleton<BeastManager>.singleton.GetBeastById(attakerId);
+            if (beast != null)
+            {
+                DataSkillShow data = beast.GetSkillShow(this.m_unskillId);
+                if (data != null && data.ID == 1)
+                {
+                    if (string.IsNullOrEmpty(data.AttackAction))
+                    {
+                        result = beast.GetAnimPlayTime(this.GetSkillAnimName(attakerId));
+                    }
+                    else
+                    {
+                        result = beast.GetAnimPlayTime(data.AttackAction);
+                    }
+                }
+            }
+            return result;
         }
         /// <summary>
         /// 检测是否该神兽能使用该技能
@@ -283,6 +317,44 @@ namespace Client.Skill
             useSkillEvent.DurationTime = 1f;
             useSkillEvent.UseSkillParam = param;
             Singleton<ActEventManager>.singleton.AddEvent(useSkillEvent);
+        }
+        /// <summary>
+        /// 技能释放表现
+        /// </summary>
+        /// <param name="param"></param>
+        public virtual void OnCastAction(CastSkillParam param)
+        {
+            if (param != null)
+            {
+                long masterBeastId = param.m_unMasterBeastId;
+                Beast beast = Singleton<BeastManager>.singleton.GetBeastById(masterBeastId);
+                if (beast != null)
+                {
+                    DataSkillShow data = beast.GetSkillShow(this.m_unskillId);
+                    if (data != null)
+                    {
+                        if (this.IsActive)
+                        {
+                            if (!data.IsEffectForward)
+                            {
+                                this.AdjustAttackDirection(param, beast);
+                            }
+                            this.AdjustBeAttackerDirection(param, beast);
+                        }
+                        if (data.ID == 1)
+                        {
+                            if (string.IsNullOrEmpty(data.AttackAction))
+                            {
+                                beast.PlayAnim(this.GetSkillAnimName(masterBeastId));
+                            }
+                            else
+                            {
+                                beast.PlayAnim(data.AttackAction);
+                            }
+                        }
+                    }
+                }
+            }
         }
         /// <summary>
         /// 具体技能使用表现
@@ -351,6 +423,58 @@ namespace Client.Skill
                 Singleton<ClientMain>.singleton.scene.GetNearNodesIgnoreObstruct(useDistanceMin, useDistance, beast.Pos, ref result, true, true);
             }
             return result;
+        }
+        /// <summary>
+        /// 调整攻击者的方向
+        /// </summary>
+        /// <param name="param"></param>
+        /// <param name="masteBeast"></param>
+        public virtual void AdjustAttackDirection(CastSkillParam param,Beast masteBeast)
+        {
+            Vector2 forward = Vector2.zero;
+            if (null == param)
+            {
+                return;
+            }
+            if (param.listTargetRoleID.Count > 0)
+            {
+                if (param.listTargetRoleID[0] != masteBeast.Id)
+                {
+                    Beast beAttacker = Singleton<BeastManager>.singleton.GetBeastById(param.listTargetRoleID[0]);
+                    if (beAttacker != null)
+                    {
+                        forward = beAttacker.RealPos2D - masteBeast.RealPos2D;
+                        masteBeast.Forward = forward;
+                    }
+                }
+            }
+            else
+            {
+                Vector2 targetPos = Hexagon.GetHexPosByIndex(param.vec3TargetPos.nRow, param.vec3TargetPos.nCol, Space.World);
+                forward = targetPos - masteBeast.RealPos2D;
+                masteBeast.Forward = forward;
+            }
+        }
+        /// <summary>
+        /// 调整被攻击者的方向
+        /// </summary>
+        /// <param name="param"></param>
+        /// <param name="masteBeast"></param>
+        public virtual void AdjustBeAttackerDirection(CastSkillParam param, Beast masteBeast)
+        {
+            Vector2 forward = Vector2.zero;
+            if (param != null)
+            {
+                foreach (var current in param.listTargetRoleID)
+                {
+                    Beast beast = Singleton<BeastManager>.singleton.GetBeastById(current);
+                    if (beast != null)
+                    {
+                        forward = masteBeast.RealPos2D - beast.RealPos2D;
+                        beast.Forward = forward; 
+                    }
+                }
+            }
         }
         /// <summary>
         /// 取得攻击范围内的所有格子

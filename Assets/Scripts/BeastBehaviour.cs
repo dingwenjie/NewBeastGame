@@ -283,6 +283,29 @@ public class BeastBehaviour : MonoBehaviour
         }
     }
     /// <summary>
+    /// 取得该动画的时间长度
+    /// </summary>
+    /// <param name="strAnim"></param>
+    /// <returns></returns>
+    public float GetAnimPlayTime(string strAnim)
+    {
+        float time = 0;
+        if (!string.IsNullOrEmpty(strAnim) && this.m_anim != null && this.m_anim[strAnim] != null)
+        {
+            AnimationState state = this.m_anim[strAnim];
+            if (state != null)
+            {
+                time = state.length;
+            }
+        }
+        else
+        {
+            time = 0;
+            this.m_log.Error(string.Format("GetAnimPlayTime:{0} has Worrn", strAnim));
+        }
+        return time;
+    }
+    /// <summary>
     /// 给模型删除材质
     /// </summary>
     /// <param name="material"></param>

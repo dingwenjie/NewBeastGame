@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <dataSkillShow>
+    <ID_i>0</ID_i>
+    <ShowId_i>0</ShowId_i>
+    <Name_s>fefe</Name_s>
+    <AttackAction_s>0</AttackAction_s>
+    <AttackAnimStartDelayTime_f></AttackAnimStartDelayTime_f>
+  </dataSkillShow> 
+ </root>
