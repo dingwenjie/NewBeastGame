@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Utility;
 using GameClient.Platform;
 using Client;
+using Client.Data;
 using Client.Common;
 using Client.UI.UICommon;
 using Client.UI;
@@ -143,6 +144,7 @@ public class ClientMain : Singleton<ClientMain>
         Singleton<OpStateManager>.singleton.Update();
         UIManager.singleton.Update();
         Singleton<CWindowHandle>.singleton.Update();
+        Singleton<SequenceShowManager>.singleton.Update();
     }
     public void ChangeGameState(EnumGameState eGameState)
     {

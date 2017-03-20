@@ -543,6 +543,7 @@ namespace Client.Common
     /// </summary>
     public enum enumSequenceType
     {
-        e_Sequence_Skill = 1
+        e_Sequence_Skill = 1,
+        e_Sequence_Equip,
     }
 }
