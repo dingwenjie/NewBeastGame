@@ -52,4 +52,19 @@ public class DataSkillShow : GameData<DataSkillShow>
     {
         get; set;
     }
+    /// <summary>
+    /// 攻击者的技能特效ID
+    /// </summary>
+    public int AttackerEffectId
+    {
+        get; set;
+    }
+    /// <summary>
+    /// 被攻击者的技能特效ID
+    /// </summary>
+    public int BeAttackerEffectId
+    {
+        get; set;
+    }
 }
+

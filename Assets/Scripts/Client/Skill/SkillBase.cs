@@ -6,6 +6,7 @@ using Utility;
 using Client.Common;
 using Game;
 using Client.GameMain;
+using Client.Effect;
 namespace Client.Skill
 {
     /// <summary>
@@ -250,6 +251,27 @@ namespace Client.Skill
             }
             return anim;
         }
+        /// <summary>
+        /// 取得攻击动作播放的时间
+        /// </summary>
+        /// <returns></returns>
+        public virtual float GetHitTime(long attackerId,long targetId,Vector3 vTargetPos)
+        {
+            int attackerEffectId = 0;
+            int BeAttackerEffectId = 0;
+            this.GetEffectId(attackerId, ref attackerEffectId, ref BeAttackerEffectId);
+            float effectTime = 0;
+            if (targetId > 0)
+            {
+                effectTime = EffectManager.Instance.GetEffectHitTime(attackerEffectId, attackerId, targetId);
+            }
+            else
+            {
+                effectTime = EffectManager.Instance.GetEffectHitTime(attackerEffectId, attackerId, vTargetPos);
+            }
+            return effectTime;
+        }
+
         /// <summary>
         /// 取得技能动作的时间延迟
         /// </summary>
@@ -514,6 +536,49 @@ namespace Client.Skill
                 list.Add(beast.Id);
             }
             return list;
+        }
+        #endregion
+        #region 共有方法
+        /// <summary>
+        /// 根据神兽ID取得技能攻击的特效
+        /// </summary>
+        /// <param name="beastId"></param>
+        /// <param name="attackerEffectId"></param>
+        /// <param name="beAttackerEffectId"></param>
+        /// <returns></returns>
+        public bool GetEffectId(long beastId,ref int attackerEffectId,ref int beAttackerEffectId)
+        {
+            Beast beast = Singleton<BeastManager>.singleton.GetBeastById(beastId);
+            if (null == beast)
+            {
+                return false;
+            }
+            //如果普通攻击的话，要根据神兽类型id * 100取得DataSkillShow
+            else if (this.m_unskillId == 1)
+            {
+                DataSkillShow data = beast.GetSkillShow(beast.BeastTypeId * 100);
+                if (data != null)
+                {
+                    attackerEffectId = data.AttackerEffectId;
+                    beAttackerEffectId = data.BeAttackerEffectId;
+                    return true;
+                }
+                else
+                {
+                    this.m_log.Debug("找不到该技能");
+                }
+            }
+            else
+            {
+                DataSkillShow data = beast.GetSkillShow(this.m_unskillId);
+                if (data != null)
+                {
+                    attackerEffectId = data.AttackerEffectId;
+                    beAttackerEffectId = data.BeAttackerEffectId;
+                    return true;
+                }
+            }
+            return false;
         }
         #endregion
     }

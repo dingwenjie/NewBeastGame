@@ -824,6 +824,10 @@ public class Beast : IBeast, IDisposable
     {
 
     }
+    public void OnBeAttack()
+    {
+
+    }
     /// <summary>
     /// 血量改变
     /// </summary>

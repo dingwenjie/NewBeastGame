@@ -121,6 +121,26 @@ public class SkillGameManager
         }
     }
     /// <summary>
+    /// 获取技能特效的播放时间
+    /// </summary>
+    /// <param name="skillId"></param>
+    /// <param name="attackerId"></param>
+    /// <param name="targetId"></param>
+    /// <param name="vTargetPos"></param>
+    /// <returns></returns>
+    public static float GetSkillHitTime(int skillId,long attackerId, long targetId, Vector3 vTargetPos)
+    {
+        SkillBase skill = SkillGameManager.GetSkillBase(skillId);
+        if (skill != null)
+        {
+            return skill.GetHitTime(attackerId, targetId, vTargetPos);
+        }
+        else
+        {
+            return -1;
+        }
+    }
+    /// <summary>
     /// 通过技能id获取技能数据
     /// </summary>
     /// <param name="unSkillId"></param>
