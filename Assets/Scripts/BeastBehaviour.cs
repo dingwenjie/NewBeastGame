@@ -306,6 +306,30 @@ public class BeastBehaviour : MonoBehaviour
         return time;
     }
     /// <summary>
+    /// 取得受击动画的时间长度
+    /// </summary>
+    /// <param name="nHpChange"></param>
+    /// <param name="bSpaceAnim"></param>
+    /// <param name="bDuraAnim"></param>
+    /// <returns></returns>
+    public float GetAnimPlayTime(int nHpChange, bool bSpaceAnim, bool bDuraAnim)
+    {
+        float result = 0;
+        if (bSpaceAnim)
+        {
+            result = this.GetAnimPlayTime("BeAttack");
+        }
+        else if (bDuraAnim)
+        {
+            result = this.GetAnimPlayTime("BeAttack01");
+        }
+        else if (nHpChange < -2)
+        {
+            result = this.GetAnimPlayTime("BeAttack02");
+        }
+        return result;
+    }
+    /// <summary>
     /// 给模型删除材质
     /// </summary>
     /// <param name="material"></param>
@@ -464,6 +488,31 @@ public class BeastBehaviour : MonoBehaviour
         {
             Debug.Log("Play Idle");
             this.PlayAnim("Idle");
+        }
+    }
+    /// <summary>
+    /// 受击动作表现
+    /// </summary>
+    /// <param name="nHpChange"></param>
+    /// <param name="bSpaceAnim"></param>
+    /// <param name="bDuraAnim"></param>
+    public void OnBeAttack(int nHpChange, bool bSpaceAnim, bool bDuraAnim)
+    {
+        if (bSpaceAnim)
+        {
+            this.PlayAnim("BeAttack");
+        }
+        else if (bDuraAnim)
+        {
+            this.PlayAnim("BeAttack01");
+        }
+        else if (nHpChange < -2)
+        {
+            this.PlayAnim("BeAttack02");
+        }
+        else
+        {
+            this.PlayAnim("BeAttack");
         }
     }
 	#endregion

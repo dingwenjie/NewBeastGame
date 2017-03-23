@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using Effect.Export;
+using Effect;
 #region 模块信息
 /*----------------------------------------------------------------
 // 模块名EffectManager
@@ -34,6 +35,18 @@ namespace Client.Effect
             return 0;
         }
         /// <summary>
+        /// 取得技能攻击特效的存活时间(目标神兽 + 技能类型)
+        /// </summary>
+        /// <param name="effectId"></param>
+        /// <param name="castId"></param>
+        /// <param name="targetId"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public float GetEffectHitTime(int effectId, long castId, long targetId,EffectInstanceType type)
+        {
+            return 0;
+        }
+        /// <summary>
         /// 取得技能攻击特效的存活时间（目标地点）
         /// </summary>
         /// <param name="effectId"></param>
@@ -41,6 +54,18 @@ namespace Client.Effect
         /// <param name="targetPos"></param>
         /// <returns></returns>
         public float GetEffectHitTime(int effectId, long castId, Vector3 targetPos)
+        {
+            return 0;
+        }
+        /// <summary>
+        /// 取得技能攻击特效的存活时间（目标地点 + 技能类型）
+        /// </summary>
+        /// <param name="effectId"></param>
+        /// <param name="castId"></param>
+        /// <param name="targetPos"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public float GetEffectHitTime(int effectId, long castId, Vector3 targetPos, EffectInstanceType type)
         {
             return 0;
         }

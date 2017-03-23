@@ -15,6 +15,10 @@ using Utility;
 /// </summary>
 public class BeAttackSkillTrigger : Triggerable
 {
+    public bool ShowAnim
+    {
+        get; set;
+    }
     public long AttackerId
     {
         get; set;
@@ -23,8 +27,33 @@ public class BeAttackSkillTrigger : Triggerable
     {
         get; set;
     }
+    public int HpChange
+    {
+        get; set;
+    }
+    public bool IsSpaceAnim
+    {
+        get; set;
+    }
+    public bool IsDuraAnim
+    {
+        get; set;
+    }
     public override void Trigger()
     {
         Beast beast = Singleton<BeastManager>.singleton.GetBeastById(AttackerId);
+        if (beast != null && this.ShowAnim)
+        {
+            beast.OnBeAttack(HpChange, IsSpaceAnim, IsDuraAnim);
+        }
+    }
+    public float GetDuration()
+    {
+        Beast beast = Singleton<BeastManager>.singleton.GetBeastById(AttackerId);
+        if (beast != null)
+        {
+            return beast.GetAnimPlayTime(HpChange, IsSpaceAnim, IsDuraAnim);
+        }
+        return 0.2f;
     }
 }

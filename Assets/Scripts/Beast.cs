@@ -824,9 +824,18 @@ public class Beast : IBeast, IDisposable
     {
 
     }
-    public void OnBeAttack()
+    /// <summary>
+    /// 受击动画表现
+    /// </summary>
+    /// <param name="nHpChange"></param>
+    /// <param name="bSpaceAnim"></param>
+    /// <param name="bDura"></param>
+    public void OnBeAttack(int nHpChange,bool bSpaceAnim,bool bDuraAnim)
     {
-
+        if (this.m_beastBehaviour != null)
+        {
+            this.m_beastBehaviour.OnBeAttack(nHpChange, bSpaceAnim, bDuraAnim);
+        }
     }
     /// <summary>
     /// 血量改变
@@ -936,6 +945,18 @@ public class Beast : IBeast, IDisposable
         {
             this.m_log.Error(anim + "字符为空");
             return 0f;
+        }
+    }
+    public float GetAnimPlayTime(int nHpChange,bool bSpaceAnim,bool bDuraAnim)
+    {
+        if (this.m_beastBehaviour != null)
+        {
+            return this.m_beastBehaviour.GetAnimPlayTime(nHpChange,bSpaceAnim,bDuraAnim);
+        }
+        else
+        {
+            this.m_log.Error("Beast 没有绑定m_beastBehaviour");
+            return 0;
         }
     }
     /// <summary>

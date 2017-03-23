@@ -66,5 +66,33 @@ public class DataSkillShow : GameData<DataSkillShow>
     {
         get; set;
     }
+    /// <summary>
+    /// 攻击跳跃速度
+    /// </summary>
+    public float AttackJumpSpeed
+    {
+        get; set;
+    }
+    /// <summary>
+    /// 被攻击次数
+    /// </summary>
+    public int BeAttackCount
+    {
+        get; set;
+    }
+    /// <summary>
+    /// 受击动作的间隔时间
+    /// </summary>
+    public string BeAttackSpaceTime
+    {
+        get; set;
+    }
+    /// <summary>
+    /// 被攻击延迟时间
+    /// </summary>
+    public float BeAttackDuraTime
+    {
+        get; set;
+    }
 }
 

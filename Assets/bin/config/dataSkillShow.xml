@@ -8,5 +8,9 @@
     <AttackAnimStartDelayTime_f>3</AttackAnimStartDelayTime_f>
     <AttackerEffectId_i>0</AttackerEffectId_i>
     <BeAttackerEffectId_i>0</BeAttackerEffectId_i>
+    <AttackJumpSpeed_f>2</AttackJumpSpeed_f>
+    <BeAttackCount_i>0</BeAttackCount_i>
+    <BeAttackSpaceTime_s>2;3;4</BeAttackSpaceTime_s>
+    <BeAttackDuraTime_f>2</BeAttackDuraTime_f>
   </dataSkillShow> 
  </root>

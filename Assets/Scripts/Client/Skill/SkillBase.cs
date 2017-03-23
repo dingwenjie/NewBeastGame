@@ -7,6 +7,7 @@ using Client.Common;
 using Game;
 using Client.GameMain;
 using Client.Effect;
+using Effect;
 namespace Client.Skill
 {
     /// <summary>
@@ -271,7 +272,30 @@ namespace Client.Skill
             }
             return effectTime;
         }
-
+        /// <summary>
+        /// 取得攻击动作播放的时间
+        /// </summary>
+        /// <param name="attackerId"></param>
+        /// <param name="targetId"></param>
+        /// <param name="vTargetPos"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public virtual float GetHitTime(long attackerId, long targetId, Vector3 vTargetPos, EffectInstanceType type)
+        {
+            int attackerEffectId = 0;
+            int BeAttackerEffectId = 0;
+            this.GetEffectId(attackerId, ref attackerEffectId, ref BeAttackerEffectId);
+            float effectTime = 0;
+            if (targetId > 0)
+            {
+                effectTime = EffectManager.Instance.GetEffectHitTime(attackerEffectId, attackerId, targetId,type);
+            }
+            else
+            {
+                effectTime = EffectManager.Instance.GetEffectHitTime(attackerEffectId, attackerId, vTargetPos,type);
+            }
+            return effectTime;
+        }
         /// <summary>
         /// 取得技能动作的时间延迟
         /// </summary>
