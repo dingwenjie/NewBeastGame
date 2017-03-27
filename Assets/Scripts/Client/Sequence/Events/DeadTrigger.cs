@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using Utility;
 #region 模块信息
 /*----------------------------------------------------------------
 // 模块名DeadTrigger
@@ -30,6 +31,10 @@ public class DeadTrigger : Triggerable
     }
     public override void Trigger()
     {
-        
+        Singleton<BeastManager>.singleton.OnBeastDeadAction(this.BeAttackId);
+        if (this.BeAttackId != this.AttackerId)
+        {
+
+        }
     }
 }

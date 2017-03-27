@@ -4,6 +4,7 @@ using Utility.Export;
 using Utility;
 using Client.Common;
 using Game;
+using System;
 #region 模块信息
 /*----------------------------------------------------------------
 // 模块名：BeastManager
@@ -315,7 +316,7 @@ public class BeastManager
         Beast beast = this.GetBeastById(beAttackerId);
         if (beast != null)
         {
-            beast.on
+            beast.OnDeadAction();
         }
     }
     /// <summary>
@@ -464,7 +465,23 @@ public class BeastManager
         }
         return true;
     }
-	#endregion
-	#region 私有方法
-	#endregion
+    #endregion
+    #region Unity原生的方法
+    public void Update()
+    {
+        try
+        {
+            foreach (var b in m_dicAllBeastId.Values)
+            {
+                b.Update();
+            }
+        }
+        catch (Exception e)
+        {
+            this.m_log.Fatal(e);
+        }
+    }
+    #endregion
+    #region 私有方法
+    #endregion
 }

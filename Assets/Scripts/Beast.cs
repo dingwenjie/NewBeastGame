@@ -892,8 +892,13 @@ public class Beast : IBeast, IDisposable
         if (data != null)
         {
             ActDeadWork work = new ActDeadWork(this.Id, data.DeadDelay, data.DeadFadeoutDepth, data.DeadFadeout, data.DeadEffect);
+            float delayTime = data.DeadFadeout + data.DeadDelay;
+            delayTime = Math.Max(this.GetAnimPlayTime("dead"), delayTime);
+            work.LifeTime = delayTime;
             this.m_actWorkManager.AddWork(work);
         }
+        //下面停止buff特效，然后播放基地扣血
+
     }
     /// <summary>
     /// 神兽添加到场景中结束的处理

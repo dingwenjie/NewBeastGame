@@ -22,9 +22,13 @@ public abstract class ActWork
     {
         get { return this.m_fStartTime; }
     }
+    /// <summary>
+    /// Work的生命周期
+    /// </summary>
     public float LifeTime
     {
         get { return this.m_DuraTime; }
+        set { this.m_DuraTime = value; }
     }
     public bool IsFinished
     {
