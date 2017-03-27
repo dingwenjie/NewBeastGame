@@ -39,6 +39,13 @@ public class BeAttackSkillTrigger : Triggerable
     {
         get; set;
     }
+    /// <summary>
+    /// 主要被攻击的神兽Id，因为有些技能是AOE
+    /// </summary>
+    public long MainBeAttcker
+    {
+        get;set;
+    }
     public override void Trigger()
     {
         Beast beast = Singleton<BeastManager>.singleton.GetBeastById(AttackerId);

@@ -491,6 +491,16 @@ public class BeastBehaviour : MonoBehaviour
         }
     }
     /// <summary>
+    /// 播放死亡动画
+    /// </summary>
+    public void OnDead()
+    {
+        if (this.m_anim != null)
+        {
+            this.PlayAnim("Dead");
+        }
+    }
+    /// <summary>
     /// 受击动作表现
     /// </summary>
     /// <param name="nHpChange"></param>

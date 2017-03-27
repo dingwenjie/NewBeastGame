@@ -298,6 +298,27 @@ public class BeastManager
         }
     }
     /// <summary>
+    /// 血量改变，刷新角色头顶的血量信息
+    /// </summary>
+    /// <param name="beastId"></param>
+    /// <param name="hpChange"></param>
+    public void OnBeastHpChangeAction(long beastId, int hpChange)
+    {
+        Beast beast = this.GetBeastById(beastId);
+        if (beast != null)
+        {
+            beast.RefreshRoleHpInfo(hpChange);
+        }
+    }
+    public void OnBeastDeadAction(long beAttackerId)
+    {
+        Beast beast = this.GetBeastById(beAttackerId);
+        if (beast != null)
+        {
+            beast.on
+        }
+    }
+    /// <summary>
     /// 神兽进入战斗阶段
     /// </summary>
     /// <param name="unBeastId"></param>

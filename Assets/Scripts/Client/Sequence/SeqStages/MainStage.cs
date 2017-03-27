@@ -25,6 +25,7 @@ public class MainStage : SeqBuilder
     public List<CVector3> TargetPos;//攻击目标位置
     public Dictionary<long, List<KeyValuePair<int, int>>> HpChangeInfo = new Dictionary<long, List<KeyValuePair<int, int>>>(); //血量改变的信息
     public HashSet<long> MissInfo = new HashSet<long>();//攻击MIss的信息
+    public Dictionary<long, long> DeadList = new Dictionary<long, long>();//死亡列表,key=BeAttackId,value=AttackerId
     public override void BuildSeq()
     {
         float time2;
@@ -142,10 +143,64 @@ public class MainStage : SeqBuilder
                     }
                     else
                     {
+                        trigger.Duration = trigger.GetDuration();
+
+                    }
+                    trigger.MainBeAttcker = beAttacker;
+                    trigger.ShowAnim = ShowAnim;
+                    if (this.HpChangeInfo[beAttacker].Count > 0)
+                    {
+                        trigger.HpChange = this.HpChangeInfo[beAttacker][0].Key - this.HpChangeInfo[beAttacker][0].Value;
+                    }
+                    base.AddEvent(trigger);
+                    if (i == attackCount - 1)
+                    {
+                        float fStartTime1 = data.BeAttackDuraTime > 0 ? trigger.StartTime + trigger.Duration : allTime;
 
                     }
                 }
             }
+        }
+    }
+    /// <summary>
+    /// 建立扣血表现事件
+    /// </summary>
+    private float BuildHpChangeShow(float fStartTime,long beAttacker)
+    {
+        float time = fStartTime;
+        if (this.HpChangeInfo.ContainsKey(beAttacker))
+        {
+            if (!this.MissInfo.Contains(beAttacker))
+            {
+                for (int i = 0; i < this.HpChangeInfo[beAttacker].Count; i++)
+                {
+                    KeyValuePair<int, int> hpKeyValue = this.HpChangeInfo[beAttacker][i];
+                    HpChangeTrigger trigger = new HpChangeTrigger();
+                    trigger.AttackId = this.AttackerId;
+                    trigger.BeAttackId = beAttacker;
+                    trigger.StartTime = fStartTime;
+                    trigger.HpValue = hpKeyValue.Key;
+                    trigger.OgrinHpValue = hpKeyValue.Value;
+                    trigger.Duration = trigger.GetDuration();
+                    base.AddEvent(trigger);
+                    time = trigger.StartTime + trigger.Duration;
+                }
+            }
+        }
+        return time;
+    }
+    /// <summary>
+    /// 创建被攻击者死亡的表现
+    /// </summary>
+    /// <param name="beAttackId"></param>
+    /// <param name="fStartTime"></param>
+    /// <returns></returns>
+    private float BuildBeAttackDeadShow(long beAttackId,float fStartTime)
+    {
+        float time = fStartTime;
+        if (this.DeadList.ContainsKey(beAttackId))
+        {
+            ActDeadWork deadWork = new ActDeadWork(beAttackId,Time.time,0.2f,3f,)
         }
     }
     /// <summary>

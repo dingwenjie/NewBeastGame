@@ -546,4 +546,13 @@ namespace Client.Common
         e_Sequence_Skill = 1,
         e_Sequence_Equip,
     }
+    /// <summary>
+    /// 血量改变类型，有普通和流血
+    /// </summary>
+    public enum enumHpChangeType
+    {
+        e_HpChangeType_Invalid,
+        e_HpChangeType_Normal,//普通扣血加血
+        e_HpChangeType_Bleed//流血类型
+    }
 }

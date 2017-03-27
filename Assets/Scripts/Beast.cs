@@ -24,7 +24,6 @@ public class Beast : IBeast, IDisposable
     #region 字段
     private IXLog m_log = XLog.GetLog<Beast>();
     private const string m_BCName = "";
-    private bool m_bHideHeadInfo = false;
     private int m_nPassiveSkillTEft = 0;
     private long m_unPlayerId = 0;
     private long m_unBeastId = 0;
@@ -35,7 +34,8 @@ public class Beast : IBeast, IDisposable
     private CVector3 m_vec3HexPos = new CVector3();
     private BeastBehaviour m_beastBehaviour = null;
     private AvatarTool m_avatar = new AvatarTool();
-    private SkillGameManager m_skillManager = null;
+    private SkillGameManager m_skillManager = null;//技能管理器
+    private ActWorkManager m_actWorkManager = null;//行为表现管理器
     private List<int> m_listTargetHeroSkillID = new List<int>();
     private List<int> m_listTargetHeroEquipID = new List<int>();
     private List<int> m_listBeastOriginActivedSkillID = new List<int>();
@@ -51,6 +51,7 @@ public class Beast : IBeast, IDisposable
     private int m_suitId = 0;
     private bool m_bDead = false;
     private bool m_bEverDead = false;//是否曾经死过
+    private bool m_bHideHeadInfo = false;//是否掩藏角色头顶的血量等信息
     private bool m_bModelLoaded = false;
     private bool m_bVisible = false;//是否模型可见
     private bool m_bInRound = false;
@@ -509,6 +510,22 @@ public class Beast : IBeast, IDisposable
         get { return this.m_unMoney; }
     }
     /// <summary>
+    /// 是否掩藏角色头部信息
+    /// </summary>
+    public bool HideHeadInfo
+    {
+        get
+        {
+            return this.m_bHideHeadInfo;
+        }
+        set
+        {
+            this.m_bHideHeadInfo = value;
+            //让角色头部信息掩藏掉
+        }
+    }
+
+    /// <summary>
     /// 神兽拥有的技能
     /// </summary>
     public List<SkillGameData> Skills
@@ -572,6 +589,7 @@ public class Beast : IBeast, IDisposable
         {
             this.m_bIsErrorBeast = true;
             this.m_skillManager = new SkillGameManager(0);
+            this.m_actWorkManager = new ActWorkManager();
         }
         else
         {
@@ -610,6 +628,7 @@ public class Beast : IBeast, IDisposable
             this.m_unHp = beastData.Hp;
             this.m_suitId = beastData.SuitId;
             this.m_skillManager = new SkillGameManager(this.m_unBeastId);
+            this.m_actWorkManager = new ActWorkManager();
             this.m_skillManager.AddSkill(1, false);
             foreach (var skillData in beastData.Skills)
             {
@@ -845,6 +864,7 @@ public class Beast : IBeast, IDisposable
     {
         this.OnHpChange(hp, this.m_unHpMax);
     }
+
     /// <summary>
     /// 血量改变
     /// </summary>
@@ -861,6 +881,19 @@ public class Beast : IBeast, IDisposable
         this.m_skillManager.OnBeastHpChange();
         //刷新头像信息
         //刷新tab信息
+    }
+    public void OnDeadAction()
+    {
+        if (this.m_beastBehaviour != null)
+        {
+            this.m_beastBehaviour.OnDead();
+        }
+        DataBeastlist data = GameData<DataBeastlist>.dataMap[this.BeastTypeId];
+        if (data != null)
+        {
+            ActDeadWork work = new ActDeadWork(this.Id, data.DeadDelay, data.DeadFadeoutDepth, data.DeadFadeout, data.DeadEffect);
+            this.m_actWorkManager.AddWork(work);
+        }
     }
     /// <summary>
     /// 神兽添加到场景中结束的处理
@@ -1157,6 +1190,14 @@ public class Beast : IBeast, IDisposable
         }
        // DlgBase<DlgHeadInfo, DlgHeadInfoBehaviour>.singleton.OnPlayerEnterRoleStage(this, this.m_eRoleStage, unTimeLimit);
     }
+   /// <summary>
+   /// 刷新角色头顶的血条信息
+   /// </summary>
+    public void RefreshRoleHpInfo(int unhp)
+    {
+        //刷新角色头顶的血条信息
+
+    }
     /// <summary>
     /// 设置模型是否可见
     /// </summary>
@@ -1206,7 +1247,16 @@ public class Beast : IBeast, IDisposable
     {
 
     }
-	#endregion
+    #endregion
+    #region Unity原生方法
+    public void Update()
+    {
+        if (this.m_actWorkManager != null)
+        {
+            this.m_actWorkManager.Update();
+        }
+    }
+    #endregion
     #region 析构方法
     ~Beast()
     {

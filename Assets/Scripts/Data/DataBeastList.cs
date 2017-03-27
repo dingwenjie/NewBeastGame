@@ -150,6 +150,9 @@ public class DataBeastlist : GameData<DataBeastlist>
         get;
         private set;
     }
+    /// <summary>
+    /// 死亡之后延迟多久之后开始
+    /// </summary>
     public float DeadDelay
     {
         get;
@@ -160,6 +163,9 @@ public class DataBeastlist : GameData<DataBeastlist>
         get;
         private set;
     }
+    /// <summary>
+    /// 死亡之后进入地面的深度
+    /// </summary>
     public float DeadFadeoutDepth
     {
         get;
