@@ -21,7 +21,7 @@ public class MainStage : SeqBuilder
     public enumSequenceType showType = enumSequenceType.e_Sequence_Skill;
     public long AttackerId;//攻击者ID
     public int SkillId;//技能ID
-    public List<long> BeAttacker;//被攻击者的ID
+    public List<long> BeAttackerList;//被攻击者的ID
     public List<CVector3> BeAttackPosList;//攻击目标位置
     public Dictionary<long, List<KeyValuePair<int, int>>> HpChangeInfo = new Dictionary<long, List<KeyValuePair<int, int>>>(); //血量改变的信息
     public HashSet<long> MissInfo = new HashSet<long>();//攻击MIss的信息
@@ -73,7 +73,7 @@ public class MainStage : SeqBuilder
             AttackSkillTrigger trigger = new AttackSkillTrigger();
             trigger.SkillId = this.SkillId;
             trigger.AttackerId = this.AttackerId;
-            trigger.BeAttackerId = this.BeAttacker;
+            trigger.BeAttackerId = this.BeAttackerList;
             trigger.BeAttackerPos = this.BeAttackPosList;
             trigger.StartTime = time + delayTime;
             trigger.Duration = trigger.GetDuration();
@@ -245,9 +245,63 @@ public class MainStage : SeqBuilder
         }
         return allTime;
     }
-    private float BuildCameraMoveShow(float fStartTime,ref float fAnimCtrTime,DataSkillShow data)
+    private float BuildCameraAnimShow(float fStartTime,ref float fAnimCtrTime,DataSkillShow data)
     {
-
+        float time = fStartTime;
+        if (data != null)
+        {
+            if (this.CameraAnimEft == 0)
+            {
+                if (data.CameraMove == 1)
+                {
+                    this.record = new CameraMoveRecord();
+                    CameraGoTrigger cameraGoTrigger = new CameraGoTrigger();
+                    cameraGoTrigger.record = this.record;
+                    cameraGoTrigger.StartTime = time;
+                    cameraGoTrigger.AttackerId = this.AttackerId;
+                    cameraGoTrigger.BeAttackIdList = this.BeAttackerList;
+                    cameraGoTrigger.Duration = data.CameraMoveDurationTime;
+                    base.AddEvent(cameraGoTrigger);
+                    time = cameraGoTrigger.StartTime + cameraGoTrigger.Duration;
+                }
+            }
+            else
+            {
+                CameraAnimTrigger cameraAnimTrigger = new CameraAnimTrigger();
+                cameraAnimTrigger.StartTime = time;
+                cameraAnimTrigger.EffectId = this.CameraAnimEft;
+                cameraAnimTrigger.PlayerId = this.AttackerId;
+                cameraAnimTrigger.Duration = cameraAnimTrigger.GetDuration();
+                base.AddEvent(cameraAnimTrigger);
+                fAnimCtrlEndtime = cameraAnimTrigger.StartTime + EffectManager.singleton.GetEffectCameraControlTime(this.CameraAnimEft);
+                num = cameraAnimTrigger.StartTime + EffectManager.singleton.GetEffectCameraControlDelay(this.CameraAnimEft);
+            }
+        }
+    }
+    private float BuildScreenBlurShow(float fStartTime,DataSkillShow dataSkillShow,bool bEnter)
+    {
+        float time = fStartTime;
+        if (dataSkillShow != null)
+        {
+            if (dataSkillShow.ScreenBlur == 1)
+            {
+                ScreenBlurTrigger screenBlurTrigger = new ScreenBlurTrigger();
+                screenBlurTrigger.m_vAffectedPlayer.AddRange(this.BeAttackerList);
+                if (!screenBlurTrigger.m_vAffectedPlayer.Contains(this.AttackerId))
+                {
+                    screenBlurTrigger.m_vAffectedPlayer.Add(this.AttackerId);
+                }
+                screenBlurTrigger.StartTime = time;
+                screenBlurTrigger.bindPlayerID = this.AttackerId;
+                screenBlurTrigger.endDisable = !bEnter;
+                screenBlurTrigger.m_fStartAlpha = (bEnter ? 0f : (dataSkillShow.BlackDepth * 0.5f));
+                screenBlurTrigger.m_fEndAlpha = (bEnter ? (dataSkillShow.BlackDepth * 0.5f) : 0f);
+                screenBlurTrigger.Duration = (bEnter ? dataSkillShow.ScreenBlurDurationTime1 : dataSkillShow.ScreenBlurDurationTime2);
+                base.AddEvent(screenBlurTrigger);
+                time = screenBlurTrigger.StartTime + screenBlurTrigger.Duration;
+            }
+        }
+        return time;
     }
     /// <summary>
     /// 创建被攻击者的技能攻击特效（包括Miss漂浮文字和特效表现）

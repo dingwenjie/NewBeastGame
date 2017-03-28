@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Effect.Export;
 using Effect;
 using Client.UI.UICommon;
+using Utility;
 #region 模块信息
 /*----------------------------------------------------------------
 // 模块名EffectManager
@@ -24,6 +25,19 @@ namespace Client.Effect
         {
             get { return m_sInstance; }
         }
+        #region 属性
+        public bool HighLight
+        {
+            get
+            {
+                return Singleton<EffectManagerImplement>.singleton.HighLight;
+            }
+            set
+            {
+                Singleton<EffectManagerImplement>.singleton.HighLight = value;
+            }
+        }
+        #endregion
         /// <summary>
         /// 取得技能攻击特效的存活时间(目标神兽)
         /// </summary>

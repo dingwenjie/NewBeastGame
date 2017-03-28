@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Utility;
 using Client.Data;
+using Client;
 #region 模块信息
 /*----------------------------------------------------------------
 // 模块名CameraGoTrigger
@@ -19,9 +20,9 @@ public class CameraGoTrigger : Triggerable
     public int SkillId = 0;
     public long AttackerId = 0;
     public float OffDis = 15f;
-
     public CameraMoveRecord record = null;
     public List<long> BeAttackIdList;
+
     public override void Trigger()
     {
         Beast attacker = Singleton<BeastManager>.singleton.GetBeastById(AttackerId);
@@ -39,15 +40,29 @@ public class CameraGoTrigger : Triggerable
                         disTemp = dis;
                     }
                 }
-                int distance = (int)(disTemp / 1.4721999943256379f);
-                if (this.record != null)
+            }
+            int distance = (int)(disTemp / 1.4721999943256379f);
+            if (this.record != null)
+            {
+                DataCameraDist data = DataCameraDist.GetDataByDistance(distance);
+                if (data != null)
                 {
-                    DataCameraDist data = DataCameraDist.GetDataByDistance(distance);
-                    if (data != null)
-                    {
-                        this.OffDis = data.CameraDist;
-                    }
+                    this.OffDis = data.CameraDist;
                 }
+                this.record.RecoverScale = CameraManager.Instance.Scale;
+                this.record.RecoverLookAtPos = CameraManager.Instance.LookAtPos;
+                this.record.RecoverCameraPos = CameraManager.Instance.GameNode.position;
+                this.record.RecoverDist = CameraManager.Instance.Distance;
+                this.record.RecorverDir = CameraManager.Instance.GameNode.forward;
+                CameraManager.Instance.CameraMoveEffect = false;
+                Vector3 recoverCameraPos = this.record.RecoverCameraPos;
+                Vector3 recoverLookAtPos = this.record.RecoverLookAtPos;
+                Vector3 destPos = attacker.MovingPos - this.OffDis * this.record.RecorverDir;
+                Vector3 movingPos = attacker.MovingPos;
+                float duration = this.Duration;
+                CameraMoveEvent work = new CameraMoveEvent(recoverCameraPos, destPos, recoverLookAtPos, movingPos, Time.time, duration);
+                attacker.AddWork(work);
+                CameraManager.Instance.Lock = true;
             }
         }
     }

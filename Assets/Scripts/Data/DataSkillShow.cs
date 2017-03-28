@@ -115,5 +115,33 @@ public class DataSkillShow : GameData<DataSkillShow>
     {
         get; set;
     }
+    /// <summary>
+    /// 屏幕特效
+    /// </summary>
+    public int ScreenBlur
+    {
+        get;set;
+    }
+    /// <summary>
+    /// 屏幕特效时间1
+    /// </summary>
+    public float ScreenBlurDurationTime1
+    {
+        get;set;
+    }
+    /// <summary>
+    /// 屏幕特效时间2
+    /// </summary>
+    public float ScreenBlurDurationTime2
+    {
+        get; set;
+    }
+    /// <summary>
+    /// 屏幕Alpha
+    /// </summary>
+    public float BlackDepth
+    {
+        get;set;
+    }
 }
 

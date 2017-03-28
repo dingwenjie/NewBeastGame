@@ -5,6 +5,7 @@ using Game;
 using Client.UI;
 using Utility;
 using Client.Data;
+using Effect;
 #region 模块信息
 /*----------------------------------------------------------------
 // 模块名：CameraManager
@@ -396,6 +397,38 @@ namespace Client
         {
 
         }
+        /// <summary>
+        /// 激活高亮摄像机
+        /// </summary>
+        public void StartEffectHighLightCameraEnable()
+        {
+            if (this.m_EffectHighLightCamera != null)
+            {
+                this.m_EffectHighLightCamera.gameObject.SetActive(true);
+            }
+        }
+        /// <summary>
+        /// 不激活高亮摄像机
+        /// </summary>
+        public void StopEffectHighLightCameraEnable()
+        {
+            if (this.m_EffectHighLightCamera != null)
+            {
+                this.m_EffectHighLightCamera.gameObject.SetActive(false);
+            }
+        }
+        /// <summary>
+        /// 设置高亮摄像机的深度depth
+        /// </summary>
+        /// <param name="depth"></param>
+        public void SetEffectCamearDepth(int depth)
+        {
+            if (this.m_EffectHighLightCamera != null)
+            {
+                this.m_EffectHighLightCamera.depth = (float)depth;
+            }
+        }
+
         #endregion
         #region 私有方法
         /// <summary>
