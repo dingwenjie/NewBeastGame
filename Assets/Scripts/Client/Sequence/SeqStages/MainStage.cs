@@ -22,10 +22,14 @@ public class MainStage : SeqBuilder
     public long AttackerId;//攻击者ID
     public int SkillId;//技能ID
     public List<long> BeAttacker;//被攻击者的ID
-    public List<CVector3> TargetPos;//攻击目标位置
+    public List<CVector3> BeAttackPosList;//攻击目标位置
     public Dictionary<long, List<KeyValuePair<int, int>>> HpChangeInfo = new Dictionary<long, List<KeyValuePair<int, int>>>(); //血量改变的信息
     public HashSet<long> MissInfo = new HashSet<long>();//攻击MIss的信息
     public Dictionary<long, long> DeadList = new Dictionary<long, long>();//死亡列表,key=BeAttackId,value=AttackerId
+    public long firstBloodBeastId = 0;//第一滴血的神兽ID；
+    public float LastDeadTime = -1;//最近死亡的时间
+    private CameraMoveRecord record;//摄像机移动记录
+    public int CameraAnimEft = 0;//摄像机的特效表现标示量，为0代表有特效
     public override void BuildSeq()
     {
         float time2;
@@ -70,7 +74,7 @@ public class MainStage : SeqBuilder
             trigger.SkillId = this.SkillId;
             trigger.AttackerId = this.AttackerId;
             trigger.BeAttackerId = this.BeAttacker;
-            trigger.BeAttackerPos = this.TargetPos;
+            trigger.BeAttackerPos = this.BeAttackPosList;
             trigger.StartTime = time + delayTime;
             trigger.Duration = trigger.GetDuration();
             base.AddEvent(trigger);
@@ -84,7 +88,7 @@ public class MainStage : SeqBuilder
         float allTime = fStartTime;
         if (data != null)
         {
-            Vector3 pos = this.TargetPos.Count > 0 ? Hexagon.GetHex3DPos(this.TargetPos[0], Space.World) : Vector3.zero;
+            Vector3 pos = this.BeAttackPosList.Count > 0 ? Hexagon.GetHex3DPos(this.BeAttackPosList[0], Space.World) : Vector3.zero;
             float hitTime = 0;
             //如果是普通攻击的话
             if (this.SkillId == 1)
@@ -200,8 +204,75 @@ public class MainStage : SeqBuilder
         float time = fStartTime;
         if (this.DeadList.ContainsKey(beAttackId))
         {
-            ActDeadWork deadWork = new ActDeadWork(beAttackId,Time.time,0.2f,3f,)
+            DeadTrigger trigger = new DeadTrigger();
+            if (beAttackId == this.firstBloodBeastId)
+            {
+                trigger.bIsFirstBoold = true;
+            }
+            trigger.BeAttackId = beAttackId;
+            trigger.AttackerId = this.DeadList[beAttackId];
+            trigger.StartTime = time;
+            if (this.LastDeadTime < trigger.StartTime)
+            {
+                this.LastDeadTime = trigger.StartTime;
+            }
+            trigger.Duration = trigger.GetDuration() + 1f;
+            base.AddEvent(trigger);
+            time = trigger.StartTime + trigger.Duration;
         }
+        return time;
+    }
+    /// <summary>
+    /// 创建摄像机震动的特效表现
+    /// </summary>
+    /// <param name="fStartTime"></param>
+    /// <param name="data"></param>
+    private float BuildCameraShakeShow(float fStartTime, DataSkillShow data)
+    {
+        float allTime = fStartTime;
+        if (this.CameraAnimEft == 0)
+        {
+            if (data != null && data.CameraMove == 1)
+            {
+                CameraBackSmoothTrigger trigger = new CameraBackSmoothTrigger();
+                trigger.AttackerId = this.AttackerId;
+                trigger.record = this.record;
+                trigger.StartTime = fStartTime;
+                trigger.Duration = data.CameraMoveDurationTime;
+                base.AddEvent(trigger);
+                allTime = Mathf.Max(allTime, trigger.StartTime + trigger.Duration);
+            }
+        }
+        return allTime;
+    }
+    private float BuildCameraMoveShow(float fStartTime,ref float fAnimCtrTime,DataSkillShow data)
+    {
+
+    }
+    /// <summary>
+    /// 创建被攻击者的技能攻击特效（包括Miss漂浮文字和特效表现）
+    /// </summary>
+    /// <param name="fStartTime"></param>
+    /// <param name="bMainBeAttack"></param>
+    /// <param name="BeAtttackerId"></param>
+    /// <returns></returns>
+    private float BuildBeAttackSkillEffectShow(float fStartTime, bool bMainBeAttack,long BeAtttackerId)
+    {
+
+        BeAttackSkillEffectTrigger trigger = new BeAttackSkillEffectTrigger();
+        trigger.StartTime = fStartTime;
+        trigger.MainBeAttacker = bMainBeAttack;
+        trigger.AttackerId = this.AttackerId;
+        trigger.BeAttackerId = BeAtttackerId;
+        trigger.BeAttackPos = this.BeAttackPosList;
+        trigger.SkillId = this.SkillId;
+        if (this.HpChangeInfo.ContainsKey(BeAtttackerId) && this.MissInfo.Contains(BeAtttackerId))
+        {
+            trigger.bShowMissEffect = true;
+        }
+        trigger.Duration = trigger.GetHitTime();
+        base.AddEvent(trigger);
+        return trigger.StartTime + trigger.Duration;
     }
     /// <summary>
     /// 取得攻击者和被攻击者之间的距离

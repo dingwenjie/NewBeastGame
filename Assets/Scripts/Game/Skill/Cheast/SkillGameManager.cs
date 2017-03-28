@@ -122,6 +122,18 @@ public class SkillGameManager
         }
     }
     /// <summary>
+    /// 取得技能攻击的特效ID，包括攻击者和被攻击者
+    /// </summary>
+    /// <param name="skillId"></param>
+    /// <param name="beastId"></param>
+    /// <param name="attackerEftId"></param>
+    /// <param name="beAttackerEftId"></param>
+    /// <returns></returns>
+    public static bool GetSkillAttackEffectId(int skillId,long beastId,ref int attackerEftId,ref int beAttackerEftId)
+    {
+        return SkillGameManager.m_dicAllSkillBase.ContainsKey(skillId) && SkillGameManager.m_dicAllSkillBase[skillId].GetEffectId(beastId, ref attackerEftId, ref beAttackerEftId);
+    }
+    /// <summary>
     /// 获取技能特效的播放时间
     /// </summary>
     /// <param name="skillId"></param>

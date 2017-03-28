@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <CameraDist>
+    <ID_i>0</ID_i>
+    <Distance_i>2</Distance_i>
+    <CameraDist_f>2.0</CameraDist_f>
+  </CameraDist>
+</root>

@@ -253,6 +253,13 @@ namespace Client
                 }
             }
         }
+        /// <summary>
+        /// 改变显示状态
+        /// </summary>
+        public void ChgShow()
+        {
+            this.m_bSHow = !this.m_bSHow;
+        }
         public void OnReSelectSkill()
         {
             CSceneMgr.singleton.ReviveResetCamera();

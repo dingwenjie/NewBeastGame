@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Effect.Export;
 using Effect;
+using Client.UI.UICommon;
 #region 模块信息
 /*----------------------------------------------------------------
 // 模块名EffectManager
@@ -66,6 +67,22 @@ namespace Client.Effect
         /// <param name="type"></param>
         /// <returns></returns>
         public float GetEffectHitTime(int effectId, long castId, Vector3 targetPos, EffectInstanceType type)
+        {
+            return 0;
+        }
+        /// <summary>
+        /// 播放特效
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="unCastId"></param>
+        /// <param name="vec3SrcPos"></param>
+        /// <param name="uiObjCast"></param>
+        /// <param name="unTargetId"></param>
+        /// <param name="vec3DestPos"></param>
+        /// <param name="uiObjTarget"></param>
+        /// <param name="vec3FixDir"></param>
+        /// <returns></returns>
+        public int PlayEffect(int id, long unCastId, Vector3 vec3SrcPos, IXUIObject uiObjCast, long unTargetId, Vector3 vec3DestPos, IXUIObject uiObjTarget, Vector3 vec3FixDir)
         {
             return 0;
         }

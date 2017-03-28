@@ -67,6 +67,13 @@ public class DataSkillShow : GameData<DataSkillShow>
         get; set;
     }
     /// <summary>
+    /// 如不是技能主被攻击者就显示这个被攻击特效ID
+    /// </summary>
+    public int SubHitEffectId
+    {
+        get; set;
+    }
+    /// <summary>
     /// 攻击跳跃速度
     /// </summary>
     public float AttackJumpSpeed
@@ -91,6 +98,20 @@ public class DataSkillShow : GameData<DataSkillShow>
     /// 被攻击延迟时间
     /// </summary>
     public float BeAttackDuraTime
+    {
+        get; set;
+    }
+    /// <summary>
+    /// 摄像机移动标示量，为1代表移动
+    /// </summary>
+    public int CameraMove
+    {
+        get; set;
+    }
+    /// <summary>
+    /// 摄像机移动的时间间隔
+    /// </summary>
+    public float CameraMoveDurationTime
     {
         get; set;
     }

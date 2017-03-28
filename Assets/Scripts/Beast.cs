@@ -941,6 +941,17 @@ public class Beast : IBeast, IDisposable
         }
     }
     /// <summary>
+    /// 向ActWorkManager里面添加一个work
+    /// </summary>
+    /// <param name="work"></param>
+    public void AddWork(ActWork work)
+    {
+        if (this.m_actWorkManager != null)
+        {
+            this.m_actWorkManager.AddWork(work);
+        }
+    }
+    /// <summary>
     /// 根据技能id取得技能Show的数据
     /// </summary>
     /// <param name="skillId"></param>

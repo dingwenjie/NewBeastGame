@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using Client.Data;
 using Utility;
 #region 模块信息
 /*----------------------------------------------------------------
@@ -29,6 +30,13 @@ public class DeadTrigger : Triggerable
     {
         get; set;
     }
+    /// <summary>
+    /// 是否是第一滴血
+    /// </summary>
+    public bool IsFirstBlood
+    {
+        get; set;
+    }
     public override void Trigger()
     {
         Singleton<BeastManager>.singleton.OnBeastDeadAction(this.BeAttackId);
@@ -36,5 +44,16 @@ public class DeadTrigger : Triggerable
         {
 
         }
+    }
+    public float GetDuration()
+    {
+        Beast beast = Singleton<BeastManager>.singleton.GetBeastById(this.BeAttackId);
+        DataBeastlist data = GameData<DataBeastlist>.dataMap[beast.BeastTypeId];
+        float time = 0;
+        if (beast != null && data != null)
+        {
+            time = data.DeadFadeout + data.DeadDelay;
+        }
+        return Mathf.Max(time, beast.GetAnimPlayTime("dead"));
     }
 }
