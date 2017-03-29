@@ -844,6 +844,15 @@ public class Beast : IBeast, IDisposable
 
     }
     /// <summary>
+    /// 技能释放特效表现
+    /// </summary>
+    /// <param name="unSkillId"></param>
+    /// <param name="castSkillParam"></param>
+    public void OnCastSkillEffect(int unSkillId, CastSkillParam castSkillParam)
+    {
+        this.m_skillManager.OnCastSkillEffect(unSkillId, castSkillParam);
+    }
+    /// <summary>
     /// 受击动画表现
     /// </summary>
     /// <param name="nHpChange"></param>

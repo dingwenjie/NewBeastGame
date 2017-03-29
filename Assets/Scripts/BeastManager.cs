@@ -286,6 +286,20 @@ public class BeastManager
         }
     }
     /// <summary>
+    /// 技能释放特效表现
+    /// </summary>
+    /// <param name="beastId"></param>
+    /// <param name="unSkillId"></param>
+    /// <param name="castSkillParam"></param>
+    public void OnBeastCastSkillEffect(long beastId, int unSkillId, CastSkillParam castSkillParam)
+    {
+        Beast beast = this.GetBeastById(beastId);
+        if (beast != null)
+        {
+            beast.OnCastSkillEffect(unSkillId, castSkillParam);
+        }
+    }
+    /// <summary>
     /// 神兽血量改变
     /// </summary>
     /// <param name="beastId"></param>

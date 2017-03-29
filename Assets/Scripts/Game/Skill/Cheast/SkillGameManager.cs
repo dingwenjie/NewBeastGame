@@ -358,6 +358,27 @@ public class SkillGameManager
         }
     }
     /// <summary>
+    /// 技能释放特效
+    /// </summary>
+    /// <param name="unSkillId"></param>
+    /// <param name="castSkillParam"></param>
+    public void OnCastSkillEffect(int unSkillId, CastSkillParam castSkillParam)
+    {
+        try
+        {
+            SkillBase skillStrategy = SkillGameManager.GetSkillBase(unSkillId);
+            if (null != skillStrategy)
+            {
+                skillStrategy.OnCastSkillEffect(castSkillParam);
+            }
+        }
+        catch (Exception ex)
+        {
+            this.m_log.Fatal(ex.ToString());
+        }
+    }
+
+    /// <summary>
     /// 添加技能
     /// </summary>
     /// <param name="unSkillId"></param>

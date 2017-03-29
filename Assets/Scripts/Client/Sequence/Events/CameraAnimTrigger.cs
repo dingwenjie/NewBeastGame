@@ -16,13 +16,13 @@ using Client.Effect;
 /// </summary>
 public class CameraAnimTrigger : Triggerable
 {
-    public long playerId;
+    public long PlayerId;
     public int EffectId;
     public override void Trigger()
     {
         if (EffectManager.Instance.GetEffectCameraControlType(this.EffectId) == 0)
         {
-            EffectManager.Instance.PlayEffect(this.EffectId, this.playerId, this.playerId);
+            EffectManager.Instance.PlayEffect(this.EffectId, this.PlayerId, this.PlayerId);
         }
     }
     public float GetDuration()

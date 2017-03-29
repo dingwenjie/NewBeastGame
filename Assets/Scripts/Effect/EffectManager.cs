@@ -45,7 +45,7 @@ namespace Client.Effect
         /// <param name="castId"></param>
         /// <param name="targetId"></param>
         /// <returns></returns>
-        public float GetEffectHitTime(int effectId,long castId,long targetId)
+        public float GetEffectHitTime(int effectId, long castId, long targetId)
         {
             return 0;
         }
@@ -57,7 +57,7 @@ namespace Client.Effect
         /// <param name="targetId"></param>
         /// <param name="type"></param>
         /// <returns></returns>
-        public float GetEffectHitTime(int effectId, long castId, long targetId,EffectInstanceType type)
+        public float GetEffectHitTime(int effectId, long castId, long targetId, EffectInstanceType type)
         {
             return 0;
         }
@@ -113,5 +113,24 @@ namespace Client.Effect
         {
             return 0;
         }
+        /// <summary>
+        /// 取得特效摄像机控制时间
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public float GetEffectCameraControlTime(int id)
+        {
+            return 0f;
+        }
+        /// <summary>
+        /// 取得特效摄像机控制延迟时间
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public float GetEffectCameraControlDelay(int id)
+        {
+            return 0f;
+        }
     }
 }
+

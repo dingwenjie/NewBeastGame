@@ -5,6 +5,7 @@ using Client.Data;
 using Utility;
 using Utility.Export;
 using Effect;
+using Client.Effect;
 using Game;
 /*----------------------------------------------------------------
 // 模块名：MainStage
@@ -80,6 +81,23 @@ public class MainStage : SeqBuilder
             base.AddEvent(trigger);
             time = trigger.StartTime + trigger.Duration;
             fStartTime = time;
+        }
+        return time;
+    }
+    private float BuildAttackSkillEffectShow(float fStartTime, int nGrade)
+    {
+        float time = fStartTime;
+        if (!GameConfig.singleton.NoAttackSkills.Contains(this.SkillId))
+        {
+            AttackSkillEffectTrigger attackSkillEffectTrigger = new AttackSkillEffectTrigger();
+            attackSkillEffectTrigger.SkillID = this.SkillId;
+            attackSkillEffectTrigger.AttackerId = this.AttackerId;
+            attackSkillEffectTrigger.ListBeAttackerId = this.BeAttackerList;
+            attackSkillEffectTrigger.ListBeAttackPos = this.BeAttackPosList;
+            attackSkillEffectTrigger.StartTime = time;
+            attackSkillEffectTrigger.Duration = attackSkillEffectTrigger.GetHitTime();
+            base.AddEvent(attackSkillEffectTrigger);
+            time = attackSkillEffectTrigger.StartTime + attackSkillEffectTrigger.Duration;
         }
         return time;
     }
@@ -245,7 +263,14 @@ public class MainStage : SeqBuilder
         }
         return allTime;
     }
-    private float BuildCameraAnimShow(float fStartTime,ref float fAnimCtrTime,DataSkillShow data)
+    /// <summary>
+    /// 创建摄像机移动特效
+    /// </summary>
+    /// <param name="fStartTime"></param>
+    /// <param name="fAnimCtrlEndtime"></param>
+    /// <param name="data"></param>
+    /// <returns></returns>
+    private float BuildCameraAnimShow(float fStartTime,ref float fAnimCtrlEndtime, DataSkillShow data)
     {
         float time = fStartTime;
         if (data != null)
@@ -273,10 +298,11 @@ public class MainStage : SeqBuilder
                 cameraAnimTrigger.PlayerId = this.AttackerId;
                 cameraAnimTrigger.Duration = cameraAnimTrigger.GetDuration();
                 base.AddEvent(cameraAnimTrigger);
-                fAnimCtrlEndtime = cameraAnimTrigger.StartTime + EffectManager.singleton.GetEffectCameraControlTime(this.CameraAnimEft);
-                num = cameraAnimTrigger.StartTime + EffectManager.singleton.GetEffectCameraControlDelay(this.CameraAnimEft);
+                fAnimCtrlEndtime = cameraAnimTrigger.StartTime + EffectManager.Instance.GetEffectCameraControlTime(this.CameraAnimEft);
+                time = cameraAnimTrigger.StartTime + EffectManager.Instance.GetEffectCameraControlDelay(this.CameraAnimEft);
             }
         }
+        return time;
     }
     private float BuildScreenBlurShow(float fStartTime,DataSkillShow dataSkillShow,bool bEnter)
     {

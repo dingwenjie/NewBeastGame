@@ -402,6 +402,10 @@ namespace Client.Skill
                 }
             }
         }
+        public virtual void OnCastSkillEffect(CastSkillParam castSkillParam)
+        {
+
+        }
         /// <summary>
         /// 具体技能使用表现
         /// </summary>
