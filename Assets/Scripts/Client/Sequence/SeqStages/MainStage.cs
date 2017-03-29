@@ -29,7 +29,7 @@ public class MainStage : SeqBuilder
     public long firstBloodBeastId = 0;//第一滴血的神兽ID；
     public float LastDeadTime = -1;//最近死亡的时间
     private CameraMoveRecord record;//摄像机移动记录
-    public int CameraAnimEft = 0;//摄像机的特效表现标示量，为0代表有特效
+    public int CameraAnimEft = 0;//摄像机的特效表现标示量，为0,1分别代表不同的特效
     public override void BuildSeq()
     {
         float time2;

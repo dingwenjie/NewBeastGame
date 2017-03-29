@@ -100,5 +100,18 @@ namespace Client.Effect
         {
             return 0;
         }
+        public int PlayEffect(int id, long unCastId, long unTargetId)
+        {
+            return 0;
+        }
+        /// <summary>
+        /// 取得特效摄像机跟随的类型
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public int GetEffectCameraControlType(int effectId)
+        {
+            return 0;
+        }
     }
 }
