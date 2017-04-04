@@ -143,5 +143,47 @@ public class DataSkillShow : GameData<DataSkillShow>
     {
         get;set;
     }
+    /// <summary>
+    /// 攻击者跳跃攻击前摇
+    /// </summary>
+    public float AttackJumpStartDelayTime
+    {
+        get;set;
+    }
+    /// <summary>
+    /// 攻击跳跃结束动画
+    /// </summary>
+    public string AttackJumpEndAnim
+    {
+        get;set;
+    }
+    /// <summary>
+    /// 攻击跳跃延迟动画
+    /// </summary>
+    public string AttackJumpDuraAnim
+    {
+        get;set;
+    }
+    /// <summary>
+    /// 跳跃特效
+    /// </summary>
+    public int AttackJumpEffect
+    {
+        get;set;
+    }
+    /// <summary>
+    /// 跳跃高度
+    /// </summary>
+    public float AttackJumpHeight
+    {
+        get;set;
+    }
+    /// <summary>
+    /// 攻击跳跃需要的时间
+    /// </summary>
+    public float AttackJumpTime
+    {
+        get;set;
+    }
 }
 

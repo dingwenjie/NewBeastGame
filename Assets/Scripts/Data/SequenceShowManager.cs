@@ -86,6 +86,32 @@ namespace Client.Data
         {
             this.m_eventHandlerOnPlayFinished = (Action)Delegate.Combine(this.m_eventHandlerOnPlayFinished, eventHandler);
         }
+        /// <summary>
+        /// 取得移动的时间
+        /// </summary>
+        /// <param name="unHeroId"></param>
+        /// <param name="nPosCount"></param>
+        /// <param name="bCountMoveTime"></param>
+        /// <returns></returns>
+        public float GetWalkMoveTime(long unHeroId, int nPosCount, bool bCountMoveTime)
+        {
+            float result;
+            if (bCountMoveTime && nPosCount > 1)
+            {
+                float num = 4f;
+                Beast heroById = Singleton<BeastManager>.singleton.GetBeastById(unHeroId);
+                if (heroById != null)
+                {
+                    num = heroById.Speed;
+                }
+                result = (float)(nPosCount - 1) * 0.85f * 1.732f / num;
+            }
+            else
+            {
+                result = 0f;
+            }
+            return result;
+        }
 
         public void Update()
         {

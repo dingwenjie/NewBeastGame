@@ -17,18 +17,18 @@ using System;
 /// <summary>
 /// 神兽管理器
 /// </summary>
-public class BeastManager 
+public class BeastManager
 {
-	#region 字段
+    #region 字段
     /// <summary>
     /// 缓存神兽字典
     /// </summary>
     private Dictionary<long, Beast> m_dicAllBeastId = new Dictionary<long, Beast>();
     private IXLog m_log = XLog.GetLog<BeastManager>();
     private static Beast s_beastErro = new Beast(null);
-	#endregion
-	#region 属性
-    public static Beast BeastError 
+    #endregion
+    #region 属性
+    public static Beast BeastError
     {
         get { return BeastManager.s_beastErro; }
     }
@@ -37,7 +37,7 @@ public class BeastManager
     /// </summary>
     public bool IsAllBeastNoDie
     {
-        get 
+        get
         {
             foreach (var current in this.m_dicAllBeastId.Values)
             {
@@ -49,10 +49,10 @@ public class BeastManager
             return true;
         }
     }
-	#endregion
-	#region 构造方法
-	#endregion
-	#region 公有方法
+    #endregion
+    #region 构造方法
+    #endregion
+    #region 公有方法
     /// <summary>
     /// 加载所有神兽模型
     /// </summary>
@@ -76,7 +76,7 @@ public class BeastManager
             this.m_dicAllBeastId[beast.Id] = beast;
             beast.SetVisible(false);
         }
-        else 
+        else
         {
             this.m_log.Error("beast == null");
         }
@@ -155,7 +155,17 @@ public class BeastManager
             if (beast != null)
             {
                 beast.Move(listPath);
-                
+            }
+        }
+    }
+    public void MoveBeastAction(long unBeastId, List<CVector3> listPath)
+    {
+        if (listPath.Count != 0)
+        {
+            Beast beast = this.GetBeastById(unBeastId);
+            if (beast != null)
+            {
+                beast.MoveAction(listPath);
             }
         }
     }
@@ -171,9 +181,9 @@ public class BeastManager
         {
             beast = this.m_dicAllBeastId[id];
         }
-        else 
+        else
         {
-            Debug.Log("Error:"+id);
+            Debug.Log("Error:" + id);
             beast = BeastManager.s_beastErro;
         }
         return beast;
@@ -249,7 +259,7 @@ public class BeastManager
     /// <param name="type"></param>
     /// <param name="skillId"></param>
     /// <param name="param"></param>
-    public void OnUseSkill(long beastId,EnumSkillType type,int skillId,UseSkillParam param)
+    public void OnUseSkill(long beastId, EnumSkillType type, int skillId, UseSkillParam param)
     {
         Beast beast = this.GetBeastById(beastId);
         if (beast != null)
@@ -268,7 +278,7 @@ public class BeastManager
         Beast beast = this.GetBeastById(beastId);
         if (beast != null)
         {
-            
+
         }
     }
     /// <summary>
@@ -331,6 +341,27 @@ public class BeastManager
         if (beast != null)
         {
             beast.OnDeadAction();
+        }
+    }
+    /// <summary>
+    /// 神兽跳跃动作表现
+    /// </summary>
+    /// <param name="unBeastId"></param>
+    /// <param name="vec3DestPos"></param>
+    /// <param name="delayTime"></param>
+    /// <param name="time"></param>
+    /// <param name="height"></param>
+    /// <param name="AttackerId"></param>
+    /// <param name="effectid"></param>
+    /// <param name="animName"></param>
+    /// <param name="strDuraAnim"></param>
+    /// <param name="bForward"></param>
+    public void JumpBeastAction(long unBeastId, CVector3 vec3DestPos, float delayTime, float time, float height, long AttackerId, int effectid, string animName, string strDuraAnim, bool bForward)
+    {
+        Beast beast = Singleton<BeastManager>.singleton.GetBeastById(unBeastId);
+        if (beast != null)
+        {
+            beast.JumpAction(vec3DestPos, delayTime, time, height, AttackerId, effectid, animName, strDuraAnim, bForward);
         }
     }
     /// <summary>

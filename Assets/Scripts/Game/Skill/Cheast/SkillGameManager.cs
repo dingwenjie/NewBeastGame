@@ -102,6 +102,16 @@ public class SkillGameManager
         }
     }
     /// <summary>
+    /// 该技能是否向前攻击
+    /// </summary>
+    /// <param name="skillId"></param>
+    /// <returns></returns>
+    public static bool IsAttackForward(int skillId)
+    {
+        SkillBase skill = SkillGameManager.GetSkillBase(skillId);
+        return skill != null && skill.IsAttackForward;
+    }
+    /// <summary>
     /// 取得技能延迟
     /// </summary>
     /// <param name="skillID"></param>

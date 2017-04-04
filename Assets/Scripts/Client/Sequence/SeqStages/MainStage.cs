@@ -31,6 +31,7 @@ public class MainStage : SeqBuilder
     public float LastDeadTime = -1;//最近死亡的时间
     private CameraMoveRecord record;//摄像机移动记录
     public int CameraAnimEft = 0;//摄像机的特效表现标示量，为0,1分别代表不同的特效
+    public List<PosChange> AttackerPosChanges = new List<PosChange>();//攻击者的位置改变
     public override void BuildSeq()
     {
         float time2;
@@ -44,6 +45,7 @@ public class MainStage : SeqBuilder
 
     public float BuildSkillAction()
     {
+        float allTime = this.LastAnimEndTime;
         float fLastAnimTime = this.LastAnimEndTime;
         Beast attackBeast = Singleton<BeastManager>.singleton.GetBeastById(this.AttackerId);
         DataSkillShow data;
@@ -55,7 +57,11 @@ public class MainStage : SeqBuilder
         {
             data = new DataSkillShow();
         }
-        this.BuildAttackSkillAnimShow(this.StartTime, ref fLastAnimTime, data);
+        allTime = this.BuildScreenBlurShow(allTime, data, true);
+        float fCameraAnimEndTime = 0f;
+        allTime = this.BuildCameraAnimShow(allTime, ref fCameraAnimEndTime, data);
+        this.BuildAttackSkillAnimShow(allTime, ref fLastAnimTime, data);
+        float fSkillEffectTime = this.BuildAttackSkillEffectShow(allTime);
     }
     #region 私有方法
     /// <summary>
@@ -84,7 +90,54 @@ public class MainStage : SeqBuilder
         }
         return time;
     }
-    private float BuildAttackSkillEffectShow(float fStartTime, int nGrade)
+    /// <summary>
+    /// 创建攻击者位置改变表现
+    /// </summary>
+    /// <param name="fStartTime"></param>
+    /// <param name="fAnimEndTime"></param>
+    /// <param name="dataSkillShow"></param>
+    /// <returns></returns>
+    private float BuildAttackPosChangeShow(float fStartTime, ref float fAnimEndTime, DataSkillShow dataSkillShow)
+    {
+        float time = fStartTime;
+        float delayTime = dataSkillShow == null ? 0f : dataSkillShow.AttackJumpStartDelayTime;
+        foreach (var current in this.AttackerPosChanges)
+        {
+            ChangePosTrigger trigger = new ChangePosTrigger();
+            trigger.controlData = current;
+            trigger.StartTime = time + delayTime;
+            if (dataSkillShow != null)
+            {
+                trigger.JumpEndAnim = dataSkillShow.AttackJumpEndAnim;
+                trigger.JumpDuraAnim = dataSkillShow.AttackJumpDuraAnim;
+                if (current.type == ChangePosType.e_Jump)
+                {
+                    trigger.Jumptime = ((dataSkillShow.AttackJumpSpeed <= 0f) ? dataSkillShow.AttackJumpTime : (this.GetDistanceByPos(current.DestPos[0]) / dataSkillShow.AttackJumpSpeed));
+                    trigger.EffectId = dataSkillShow.AttackJumpEffect;
+                    trigger.Height = dataSkillShow.AttackJumpHeight;
+                }
+                else if (current.type == ChangePosType.e_Walk)
+                {
+                    trigger.EffectId = dataSkillShow.AttackJumpEffect;
+                }
+            }
+            trigger.Duration = trigger.GetDuration();
+            trigger.SkillId = this.SkillId;
+            trigger.IsForward = SkillGameManager.IsAttackForward(this.SkillId);
+            if (!current.IgnoreDuration)
+            {
+                time = trigger.StartTime + trigger.Duration + 0.1f;
+                fAnimEndTime = time;
+            }
+            if (this.BeAttackerList.Count > 0 && this.AttackerId != this.BeAttackerList[0])
+            {
+                trigger.TargetPlayerID = this.BeAttackerList[0];
+            }
+            base.AddEvent(trigger);
+        }
+        return time;
+    }
+    private float BuildAttackSkillEffectShow(float fStartTime)
     {
         float time = fStartTime;
         if (!GameConfig.singleton.NoAttackSkills.Contains(this.SkillId))
@@ -382,5 +435,26 @@ public class MainStage : SeqBuilder
             return 0u;
         }
     }
-    #endregion 
+    /// <summary>
+    /// 攻击者距离目标位置的距离
+    /// </summary>
+    /// <param name="destPos"></param>
+    /// <returns></returns>
+    private uint GetDistanceByPos(CVector3 destPos)
+    {
+        uint result = 0u;
+        Beast heroById = Singleton<BeastManager>.singleton.GetBeastById(this.AttackerId);
+        if (null != heroById)
+        {
+            int nRow = 0;
+            int nCol = 0;
+            Hexagon.GetHexIndexByPos(heroById.MovingPos, out nRow, out nCol);
+            CVector3 cVector = new CVector3();
+            cVector.nRow = nRow;
+            cVector.nCol = nCol;
+            result = Singleton<ClientMain>.singleton.scene.CalDistance(cVector, destPos);
+        }
+        return result;
+    }
+    #endregion
 }

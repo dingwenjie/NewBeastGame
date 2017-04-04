@@ -555,4 +555,12 @@ namespace Client.Common
         e_HpChangeType_Normal,//普通扣血加血
         e_HpChangeType_Bleed//流血类型
     }
+    /// <summary>
+    /// 神兽改变坐标的类型
+    /// </summary>
+    public enum ChangePosType
+    {
+        e_Walk,
+        e_Jump
+    }
 }

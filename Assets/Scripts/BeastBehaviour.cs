@@ -193,6 +193,20 @@ public class BeastBehaviour : MonoBehaviour
             this.m_cachedTransform.forward = zero.normalized;
         }
     }
+    /// <summary>
+    /// Action坐标
+    /// </summary>
+    public CVector3 ActionHexPos
+    {
+        get
+        {
+            if (!this.m_vec3HexActionPos.IsValid())
+            {
+                this.m_vec3HexActionPos.CopyFrom(this.Beast.Pos);
+            }
+            return this.m_vec3HexActionPos;
+        }
+    }
     public Beast Beast
     {
         get

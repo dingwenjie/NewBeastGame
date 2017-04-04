@@ -285,6 +285,23 @@ public class Beast : IBeast, IDisposable
         set;
     }
     /// <summary>
+    /// 移动速度
+    /// </summary>
+    public float Speed
+    {
+        get
+        {
+            if (this.m_beastBehaviour != null)
+            {
+                return this.m_beastBehaviour.MoveSpeed;
+            }
+            else
+            {
+                return 4f;
+            }
+        }
+    }
+    /// <summary>
     /// 神兽的高度
     /// </summary>
     public float Height
@@ -714,7 +731,6 @@ public class Beast : IBeast, IDisposable
         this.m_vec3HexPos.nRow = listPath[0].nRow;
         this.OnMoveTo(this.m_vec3HexPos);
         this.m_beastBehaviour.Move(listPath);
-
     }
     public void OnMoveTo(CVector3 hexPos)
     {
@@ -915,6 +931,14 @@ public class Beast : IBeast, IDisposable
     public void OnAddBeastToSceneFinished()
     {
         this.RefreshAura();
+    }
+    /// <summary>
+    /// 刷新该坐标的特效表现
+    /// </summary>
+    /// <param name="vPos"></param>
+    public void UpdateTargetPosEffect(Vector3 vPos)
+    {
+
     }
     public void RefreshAura()
     {
@@ -1250,6 +1274,44 @@ public class Beast : IBeast, IDisposable
         else
         {
             this.m_beastBehaviour.SetPos(vec3DestPos);
+        }
+    }
+    public void MoveAction(List<CVector3> listVec3Path)
+    {
+        if (null == this.m_beastBehaviour)
+        {
+            this.m_log.Error("null == m_heroBehaviour");
+        }
+        else
+        {
+            this.m_beastBehaviour.Move(listVec3Path);
+        }
+    }
+}
+    /// <summary>
+    /// 跳跃到这个格子上
+    /// </summary>
+    /// <param name="vec3DestPos"></param>
+    /// <param name="delayTime"></param>
+    /// <param name="time"></param>
+    /// <param name="height"></param>
+    /// <param name="AttackedId"></param>
+    /// <param name="effectid"></param>
+    /// <param name="JumpAnim"></param>
+    /// <param name="strDuraAnim"></param>
+    /// <param name="bForward"></param>
+    public void JumpAction(CVector3 vec3DestPos, float delayTime, float time, float height, long AttackedId, int effectid, string JumpAnim, string strDuraAnim, bool bForward)
+    {
+        if (this.m_beastBehaviour == null)
+        {
+            this.m_log.Error("this.m_beastBehaviour == null");
+        }
+        else
+        {
+            Vector3 targetPos = Hexagon.GetHex3DPos(vec3DestPos, Space.World);
+            Vector3 startPos = Hexagon.GetHex3DPos(this.m_beastBehaviour.ActionHexPos, Space.World);
+            JumpWork work = new JumpWork(this.Id, startPos, targetPos, height, delayTime, time, AttackedId, effectid, JumpAnim, strDuraAnim, bForward);
+            this.AddWork(work);
         }
     }
     /// <summary>
