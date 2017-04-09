@@ -52,6 +52,13 @@ namespace Client.Data
             get;
             set;
         }
+        public bool CanRecevieMsg
+        {
+            get
+            {
+                return this.UseSeqShow && this.ShowList.Count > 0 && !this.ShowList[this.ShowList.Count - 1].Builded;
+            }
+        }
         public void Clear()
         {
             foreach (SequenceBase current in this.ShowList)
@@ -164,7 +171,17 @@ namespace Client.Data
                 this.m_log.Fatal(ex2.ToString());
             }
         }
-
+        #region OnMsg
+        public void OnMsg(CPtcM2CNtf_CastSkill msg)
+        {
+            this.NewShow(enumSequenceType.e_Sequence_Skill);
+            this.GetCurrentShow().OnMsg(msg);
+        }
+        public void OnMsg(CPtcM2CNtf_EndCastSkill msg)
+        {
+            this.GetCurrentShow().OnMsg(msg);
+        }
+        #endregion
 
         /// <summary>
         /// 创建一个新的顺序播放器，加到ShowList列表中

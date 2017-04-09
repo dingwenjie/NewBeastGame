@@ -33,14 +33,29 @@ public class DlgFlyTextSysInfo : DlgBase<DlgFlyTextSysInfo,DlgFlyTextSysInfoBeha
     {
         get
         {
-            return 65536;
+            return 65536u;
         }
     }
     public override int layer
     {
         get
         {
-            return 128;
+            return -6;
+        }
+    }
+    public override EnumDlgCamera ShowType
+    {
+        get
+        {
+            return EnumDlgCamera.Top;
+        }
+    }
+
+    public override bool IsPersist
+    {
+        get
+        {
+            return true;
         }
     }
     public override void Init()

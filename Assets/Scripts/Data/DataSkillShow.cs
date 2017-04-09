@@ -81,6 +81,13 @@ public class DataSkillShow : GameData<DataSkillShow>
         get; set;
     }
     /// <summary>
+    /// 被攻击者跳跃速度
+    /// </summary>
+    public float BeAttackJumpSpeed
+    {
+        get; set;
+    }
+    /// <summary>
     /// 被攻击次数
     /// </summary>
     public int BeAttackCount
@@ -158,11 +165,25 @@ public class DataSkillShow : GameData<DataSkillShow>
         get;set;
     }
     /// <summary>
+    /// 被攻击者跳跃结束的动画
+    /// </summary>
+    public string BeAttackJumpEndAnim
+    {
+        get;set;
+    }
+    /// <summary>
     /// 攻击跳跃延迟动画
     /// </summary>
     public string AttackJumpDuraAnim
     {
         get;set;
+    }
+    /// <summary>
+    /// 被攻击者跳跃延迟动画
+    /// </summary>
+    public string BeAttackJumpDuraAnim
+    {
+        get; set;
     }
     /// <summary>
     /// 跳跃特效
@@ -172,9 +193,23 @@ public class DataSkillShow : GameData<DataSkillShow>
         get;set;
     }
     /// <summary>
-    /// 跳跃高度
+    /// 被攻击者跳跃特效
+    /// </summary>
+    public int BeAttackJumpEffect
+    {
+        get;set;
+    }
+    /// <summary>
+    /// 攻击者跳跃高度
     /// </summary>
     public float AttackJumpHeight
+    {
+        get;set;
+    }
+    /// <summary>
+    /// 被攻击者跳跃高度
+    /// </summary>
+    public float BeAttackJumpHeight
     {
         get;set;
     }
@@ -182,6 +217,27 @@ public class DataSkillShow : GameData<DataSkillShow>
     /// 攻击跳跃需要的时间
     /// </summary>
     public float AttackJumpTime
+    {
+        get;set;
+    }
+    /// <summary>
+    /// 被攻击者跳跃需要的时间
+    /// </summary>
+    public float BeAttackJumpTime
+    {
+        get; set;
+    }
+    /// <summary>
+    /// 是否被攻击特效
+    /// </summary>
+    public bool BeAttackEffectHitPoint
+    {
+        get;set;
+    }
+    /// <summary>
+    /// 受击者后退开始延迟时间
+    /// </summary>
+    public float BeAttackJumpStartDelayTime
     {
         get;set;
     }

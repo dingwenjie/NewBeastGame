@@ -53,4 +53,8 @@ internal class SystemInfoFlyTextManager : FlyTextManagerBase,IFlyTextManager
         this.InitFlyText(flyTextEntity, strText, targetBeastId);
         return flyTextEntity;
     }
+    protected override void Translate(ref FlyTextEntity flyText, float fElapseTime)
+    {
+        
+    }
 }

@@ -60,6 +60,16 @@ namespace Client.Skill
             }
         }
         /// <summary>
+        /// 是否被攻击向前
+        /// </summary>
+        public virtual bool IsBeAttackForward
+        {
+            get
+            {
+                return true;
+            }
+        }
+        /// <summary>
         /// 技能图标
         /// </summary>
         public string IconFile

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Game;
 using Utility;
 using Client.Common;
+using Client.Data;
 using System;
 #region 模块信息
 /*----------------------------------------------------------------
@@ -22,9 +23,11 @@ public class CPtcM2CNtf_CastSkill : CProtocol
     public int m_dwSkillId;
     public long m_dwTargetRoleId;
     public CVector3 m_oTargetPos;
+    public List<long> m_oHurtList;
     public CPtcM2CNtf_CastSkill() : base(1034)
     {
         this.m_oTargetPos = new CVector3();
+        this.m_oHurtList = new List<long>();
     }
     public override CByteStream DeSerialize(CByteStream bs)
     {
@@ -32,6 +35,7 @@ public class CPtcM2CNtf_CastSkill : CProtocol
         bs.Read(ref this.m_dwSkillId);
         bs.Read(ref this.m_dwTargetRoleId);
         bs.Read(this.m_oTargetPos);
+        bs.Read(this.m_oHurtList);
         return bs;
     }
     public override CByteStream Serialize(CByteStream bs)
@@ -40,6 +44,7 @@ public class CPtcM2CNtf_CastSkill : CProtocol
         bs.Write(this.m_dwSkillId);
         bs.Write(this.m_dwTargetRoleId);
         bs.Write(this.m_oTargetPos);
+        bs.Write(this.m_oHurtList);
         return bs;
     }
     public override void Process()
@@ -54,6 +59,11 @@ public class CPtcM2CNtf_CastSkill : CProtocol
             useSkillParam.m_oTargetPos = this.m_oTargetPos;
 
             Singleton<BeastManager>.singleton.OnUseSkill(this.m_dwRoleId, EnumSkillType.eSkillType_Skill, this.m_dwSkillId, useSkillParam);
+            Singleton<SequenceShowManager>.singleton.UseSeqShow = true;
+            if (Singleton<SequenceShowManager>.singleton.UseSeqShow)
+            {
+                Singleton<SequenceShowManager>.singleton.OnMsg(this);
+            }
             //让神兽说出话
             Beast beast = Singleton<BeastManager>.singleton.GetBeastById(this.m_dwRoleId);
             if (beast != null)

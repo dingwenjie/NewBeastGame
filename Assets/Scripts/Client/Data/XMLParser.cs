@@ -67,10 +67,10 @@ public class XMLParser
                 {
                     tag = childNode.Name;
                 }
-                else 
+                else
                 {
                     var tagTial = childNode.Name.Substring(childNode.Name.Length - 2, 2);//截取最后两个字符
-                    if (tagTial == "_i" || tagTial == "_s" || tagTial == "_f" || tagTial == "_l" || tagTial == "k" || tagTial == "_m")
+                    if (tagTial == "_i" || tagTial == "_s" || tagTial == "_f" || tagTial == "_l" || tagTial == "k" || tagTial == "_m" || tagTial == "_b")
                     {
                         tag = childNode.Name.Substring(0, childNode.Name.Length - 2);
                     }

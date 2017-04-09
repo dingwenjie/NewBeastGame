@@ -118,8 +118,8 @@ MonoBehaviour:
   columns: 0
   direction: 0
   sorting: 0
-  pivot: 0
-  cellAlignment: 0
+  pivot: 4
+  cellAlignment: 4
   hideInactive: 1
   keepWithinPanel: 0
   padding: {x: 0, y: 0}

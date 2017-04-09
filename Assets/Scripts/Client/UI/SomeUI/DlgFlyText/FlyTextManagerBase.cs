@@ -18,7 +18,7 @@ internal abstract class FlyTextManagerBase
 {
 	#region 字段
     protected IXUIList m_uiList;
-    protected float m_fTotalTime;
+    protected float m_fTotalTime = 2f;
     protected LinkedList<FlyTextEntity> m_flyTextList = new LinkedList<FlyTextEntity>();
     protected bool m_bShow;
 	#endregion
@@ -120,6 +120,7 @@ internal abstract class FlyTextManagerBase
     }
     protected virtual void Translate(ref FlyTextEntity flyText, float fElapseTime)
     {
+
     }
 	#endregion
 	#region 私有方法

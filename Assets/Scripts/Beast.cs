@@ -1287,7 +1287,6 @@ public class Beast : IBeast, IDisposable
             this.m_beastBehaviour.Move(listVec3Path);
         }
     }
-}
     /// <summary>
     /// 跳跃到这个格子上
     /// </summary>

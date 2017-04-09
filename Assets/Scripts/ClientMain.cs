@@ -108,6 +108,7 @@ public class ClientMain : Singleton<ClientMain>
     public void PreInit()
     {
         this.m_log.Debug("ClientMain.PreInit()");
+        StringConfigMgr.singleton.Init();
         ResourceManager.singleton.Init(UnityGameEntry.Instance.GetComponent("GameResourceManager") as IResourceManager);
         SkillGameManager.Init();
     }

@@ -22,8 +22,8 @@ public class MainStage : SeqBuilder
     public enumSequenceType showType = enumSequenceType.e_Sequence_Skill;
     public long AttackerId;//攻击者ID
     public int SkillId;//技能ID
-    public List<long> BeAttackerList;//被攻击者的ID
-    public List<CVector3> BeAttackPosList;//攻击目标位置
+    public List<long> BeAttackerList = new List<long>();//被攻击者的ID
+    public List<CVector3> BeAttackPosList = new List<CVector3>();//攻击目标位置
     public Dictionary<long, List<KeyValuePair<int, int>>> HpChangeInfo = new Dictionary<long, List<KeyValuePair<int, int>>>(); //血量改变的信息
     public HashSet<long> MissInfo = new HashSet<long>();//攻击MIss的信息
     public Dictionary<long, long> DeadList = new Dictionary<long, long>();//死亡列表,key=BeAttackId,value=AttackerId
@@ -32,6 +32,7 @@ public class MainStage : SeqBuilder
     private CameraMoveRecord record;//摄像机移动记录
     public int CameraAnimEft = 0;//摄像机的特效表现标示量，为0,1分别代表不同的特效
     public List<PosChange> AttackerPosChanges = new List<PosChange>();//攻击者的位置改变
+    public Dictionary<long, List<PosChange>> BeAttackerPosChanges = new Dictionary<long, List<PosChange>>();//被攻击者的位置改变
     public override void BuildSeq()
     {
         float time2;
@@ -62,6 +63,25 @@ public class MainStage : SeqBuilder
         allTime = this.BuildCameraAnimShow(allTime, ref fCameraAnimEndTime, data);
         this.BuildAttackSkillAnimShow(allTime, ref fLastAnimTime, data);
         float fSkillEffectTime = this.BuildAttackSkillEffectShow(allTime);
+        this.BuildAttackPosChangeShow(allTime, ref fLastAnimTime, data);
+        bool flag = true;
+        bool beAttackEffect = data != null && data.BeAttackEffectHitPoint;
+        foreach (long current in this.BeAttackerList)
+        {
+            float fBeAttackAnimStartTime = 0;
+            float beAttackTime = this.BuildBeAttackSkillAnimShow(current, allTime, flag, data, ref fBeAttackAnimStartTime);
+            if (beAttackEffect)
+            {
+                fSkillEffectTime = fBeAttackAnimStartTime;
+            }
+            this.BuildBeAttackSkillEffectShow(fSkillEffectTime, true, current);
+            float beAttackPosChangeTime = this.BuildBeAttackPosChangeShow(current, allTime, data, ref fLastAnimTime);
+            float time = Mathf.Max(beAttackTime, beAttackPosChangeTime);
+            time = this.BuildBeAttackDeadShow(current, time);
+            flag = false;
+            allTime = Mathf.Max(allTime, time);
+        }
+        return allTime;
     }
     #region 私有方法
     /// <summary>
@@ -136,6 +156,55 @@ public class MainStage : SeqBuilder
             base.AddEvent(trigger);
         }
         return time;
+    }
+    /// <summary>
+    /// 创建被攻击者位置改变表现
+    /// </summary>
+    /// <param name="beAttackId"></param>
+    /// <param name="fStartTime"></param>
+    /// <param name="data"></param>
+    /// <param name="fAnimEndTime"></param>
+    /// <returns></returns>
+    private float BuildBeAttackPosChangeShow(long beAttackId, float fStartTime, DataSkillShow data, ref float fAnimEndTime)
+    {
+        float allTime = fStartTime;
+        float delayTime = data == null ? 0f : data.BeAttackJumpStartDelayTime;
+        Vector3 vec3DestPos = (this.BeAttackPosList.Count > 0) ? Hexagon.GetHex3DPos(this.BeAttackPosList[0], Space.World) : Vector3.zero;
+        float hitTime = SkillGameManager.GetSkillHitTime(this.SkillId, this.AttackerId, beAttackId, vec3DestPos,EffectInstanceType.Trace);
+        if (this.BeAttackerPosChanges.ContainsKey(beAttackId))
+        {
+            foreach (var current in this.BeAttackerPosChanges[beAttackId])
+            {
+                ChangePosTrigger trigger = new ChangePosTrigger();
+                trigger.SkillId = this.SkillId;
+                trigger.TargetPlayerID = this.AttackerId;
+                trigger.controlData.type = current.type;
+                trigger.controlData.PlayerId = current.PlayerId;
+                trigger.controlData.DestPos.AddRange(current.DestPos);
+                trigger.IsForward = SkillGameManager.IsBeAttackForward(this.SkillId);
+                if (null != data)
+                {
+                    trigger.JumpEndAnim = data.BeAttackJumpEndAnim;
+                    trigger.JumpDuraAnim = data.BeAttackJumpDuraAnim;
+                    if (current.type == ChangePosType.e_Jump)
+                    {
+                        trigger.Jumptime = ((data.BeAttackJumpSpeed <= 0f) ? data.BeAttackJumpTime : (this.GetDistanceByPos(current.DestPos[0]) / data.BeAttackJumpSpeed));
+                        trigger.Height = data.BeAttackJumpHeight;
+                        trigger.EffectId = data.BeAttackJumpEffect;
+                    }
+                    else if (current.type == ChangePosType.e_Walk)
+                    {
+                        trigger.EffectId = data.BeAttackJumpEffect;
+                    }
+                }
+                trigger.StartTime = allTime + delayTime + hitTime;
+                trigger.Duration = trigger.GetDuration();
+                base.AddEvent(trigger);
+                allTime = trigger.StartTime + trigger.Duration;
+                fAnimEndTime = allTime;
+            }
+        }
+        return allTime;
     }
     private float BuildAttackSkillEffectShow(float fStartTime)
     {
@@ -231,11 +300,13 @@ public class MainStage : SeqBuilder
                     if (i == attackCount - 1)
                     {
                         float fStartTime1 = data.BeAttackDuraTime > 0 ? trigger.StartTime + trigger.Duration : allTime;
-
+                        this.BuildHpChangeShow(fStartTime1, beAttacker);
                     }
+                    allTime = trigger.StartTime + trigger.Duration;
                 }
             }
         }
+        return allTime;
     }
     /// <summary>
     /// 建立扣血表现事件

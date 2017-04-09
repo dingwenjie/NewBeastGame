@@ -199,11 +199,11 @@ namespace Utility.Export
             }
             else if (type == typeof(bool))
             {
-                if (value == "0")
+                if (value == "false")
                 {
                     return false;
                 }
-                else if (value == "1")
+                else if (value == "true")
                 {
                     return true;
                 }

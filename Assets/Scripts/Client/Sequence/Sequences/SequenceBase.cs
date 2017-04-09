@@ -17,8 +17,8 @@ public abstract class SequenceBase
 {
     public enumSequenceType type = enumSequenceType.e_Sequence_Skill;
     public List<SeqBuilder> m_seqBuilders = new List<SeqBuilder>();
-    private bool m_bIsBuilded = false;
-    private bool m_bIsFinished = false;
+    protected bool m_bIsBuilded = false;
+    protected bool m_bIsFinished = false;
 
     public bool IsGameOver = false;
 
@@ -37,6 +37,7 @@ public abstract class SequenceBase
     public bool Builded
     {
         get { return this.m_bIsBuilded; }
+        set { this.m_bIsBuilded = value; }
     }
     public SequenceBase()
     {
@@ -66,6 +67,17 @@ public abstract class SequenceBase
     {
         return true;
     }
+
+    #region OnMsg
+    public virtual void OnMsg(CPtcM2CNtf_CastSkill msg)
+    {
+
+    }
+    public virtual void OnMsg(CPtcM2CNtf_EndCastSkill msg)
+    {
+
+    }
+    #endregion
     #endregion
 
 }
