@@ -99,7 +99,7 @@ namespace Client.UI
                 {
                     num = 12f;
                 }
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(5f);
                 this.Finish();
             }
         }

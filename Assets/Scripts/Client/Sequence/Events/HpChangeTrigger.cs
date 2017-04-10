@@ -61,6 +61,7 @@ public class HpChangeTrigger : Triggerable
             }
             else
             {
+                Debug.Log("AddHpEffect");
                 DlgBase<DlgFlyText, DlgFlyTextBehaviour>.singleton.AddHpEffect(changeHpValue, this.BeAttackId, EnumHpEffectType.eHpEffectType_Damage);
             }
         }

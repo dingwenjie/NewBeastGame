@@ -35,13 +35,14 @@ public class MainStage : SeqBuilder
     public Dictionary<long, List<PosChange>> BeAttackerPosChanges = new Dictionary<long, List<PosChange>>();//被攻击者的位置改变
     public override void BuildSeq()
     {
-        float time2;
+        float time2 = 0f;
         switch (this.showType)
         {
             case enumSequenceType.e_Sequence_Skill:
                 time2 = this.BuildSkillAction();
                 break;
         }
+        this.EndTime = time2;
     }
 
     public float BuildSkillAction()
@@ -58,9 +59,9 @@ public class MainStage : SeqBuilder
         {
             data = new DataSkillShow();
         }
-        allTime = this.BuildScreenBlurShow(allTime, data, true);
-        float fCameraAnimEndTime = 0f;
-        allTime = this.BuildCameraAnimShow(allTime, ref fCameraAnimEndTime, data);
+        //allTime = this.BuildScreenBlurShow(allTime, data, true);
+        //float fCameraAnimEndTime = 0f;
+        //allTime = this.BuildCameraAnimShow(allTime, ref fCameraAnimEndTime, data);
         this.BuildAttackSkillAnimShow(allTime, ref fLastAnimTime, data);
         float fSkillEffectTime = this.BuildAttackSkillEffectShow(allTime);
         this.BuildAttackPosChangeShow(allTime, ref fLastAnimTime, data);
@@ -106,7 +107,7 @@ public class MainStage : SeqBuilder
             trigger.Duration = trigger.GetDuration();
             base.AddEvent(trigger);
             time = trigger.StartTime + trigger.Duration;
-            fStartTime = time;
+            fAnimEndTime = time;
         }
         return time;
     }
@@ -428,6 +429,13 @@ public class MainStage : SeqBuilder
         }
         return time;
     }
+    /// <summary>
+    /// 开始屏幕模糊
+    /// </summary>
+    /// <param name="fStartTime"></param>
+    /// <param name="dataSkillShow"></param>
+    /// <param name="bEnter"></param>
+    /// <returns></returns>
     private float BuildScreenBlurShow(float fStartTime,DataSkillShow dataSkillShow,bool bEnter)
     {
         float time = fStartTime;

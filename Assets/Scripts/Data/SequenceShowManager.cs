@@ -181,6 +181,10 @@ namespace Client.Data
         {
             this.GetCurrentShow().OnMsg(msg);
         }
+        public void OnMsg(CptcM2CNtf_ChangeHp msg,int orgiHpVal)
+        {
+            this.GetCurrentShow().OnMsg(msg,orgiHpVal);
+        }
         #endregion
 
         /// <summary>

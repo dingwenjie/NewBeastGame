@@ -617,7 +617,7 @@ ModelImporter:
     400608: Point_R_forearm01
     400610: Point_R_forearm02
     400612: Point_R_forearm03
-    7400000: skill01
+    7400000: Attack
     9500000: //RootNode
     11100000: //RootNode
   materials:
@@ -637,7 +637,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: skill01
+      name: Attack
       takeName: Take 001
       firstFrame: 14
       lastFrame: 48

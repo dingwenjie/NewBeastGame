@@ -265,10 +265,10 @@ namespace Client.Skill
         public virtual string GetSkillAnimName(long beastId)
         {
             //按理来说应该根据skillId来判断是那个skill
-            string anim = "attack";
+            string anim = "Attack";
             if (this.m_unskillId == 1)
             {
-                anim = "attack";
+                anim = "Attack";
             }
             return anim;
         }
@@ -330,7 +330,7 @@ namespace Client.Skill
             if (beast != null)
             {
                 DataSkillShow data = beast.GetSkillShow(this.m_unskillId);
-                if (data != null && data.ID == 1)
+                if (data != null && data.SkillAction == 1)
                 {
                     if (string.IsNullOrEmpty(data.AttackAction))
                     {
@@ -393,6 +393,7 @@ namespace Client.Skill
             if (param != null)
             {
                 long masterBeastId = param.m_unMasterBeastId;
+                XLog.Log.Debug("OnCast:" + this.m_unskillId);
                 Beast beast = Singleton<BeastManager>.singleton.GetBeastById(masterBeastId);
                 if (beast != null)
                 {
@@ -407,7 +408,7 @@ namespace Client.Skill
                             }
                             this.AdjustBeAttackerDirection(param, beast);
                         }
-                        if (data.ID == 1)
+                        if (data.SkillAction == 1)
                         {
                             if (string.IsNullOrEmpty(data.AttackAction))
                             {

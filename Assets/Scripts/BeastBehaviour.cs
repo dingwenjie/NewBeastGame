@@ -524,7 +524,7 @@ public class BeastBehaviour : MonoBehaviour
     {
         if (bSpaceAnim)
         {
-            this.PlayAnim("BeAttack");
+            this.PlayAnim("knockback01");
         }
         else if (bDuraAnim)
         {

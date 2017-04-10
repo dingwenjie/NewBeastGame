@@ -77,6 +77,10 @@ public abstract class SequenceBase
     {
 
     }
+    public virtual void OnMsg(CptcM2CNtf_ChangeHp msg,int origHpVal)
+    {
+
+    }
     #endregion
     #endregion
 

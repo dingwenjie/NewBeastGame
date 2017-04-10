@@ -142,6 +142,7 @@ public class BeastRole : Singleton<BeastRole>
     public void OnHpChange(int hp)
     {
         //改变主界面的信息
+        DlgBase<DlgMain, DlgMainBehaviour>.singleton.RefreshPlayerRoleInfo();
         Singleton<OpStateManager>.singleton.OnHpChange();
     }
     /// <summary>

@@ -329,6 +329,7 @@ public class BeastManager
     /// <param name="hpChange"></param>
     public void OnBeastHpChangeAction(long beastId, int hpChange)
     {
+        Debug.Log("OnBeastHpChangeAction");
         Beast beast = this.GetBeastById(beastId);
         if (beast != null)
         {
@@ -441,6 +442,19 @@ public class BeastManager
     public ICollection<Beast> GetAllBeasts()
     {
         return this.m_dicAllBeastId.Values;
+    }
+    /// <summary>
+    /// 获得全部神兽ID
+    /// </summary>
+    /// <returns></returns>
+    public List<long> GetAllBeastIds()
+    {
+        List<long> ids = new List<long>();
+        foreach (var id in this.m_dicAllBeastId.Keys)
+        {
+            ids.Add(id);
+        }
+        return ids;
     }
     /// <summary>
     /// 取得对立的所有神兽列表ID

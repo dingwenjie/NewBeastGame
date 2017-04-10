@@ -607,6 +607,28 @@ namespace Client.Data
         {
             return this.GetCampData(Singleton<PlayerRole>.singleton.CampType);
         }
+        /// <summary>
+        /// 取得地方阵营数据
+        /// </summary>
+        /// <returns></returns>
+        public CampData GetEnemyCampData()
+        {
+            CampData campData;
+            if (Singleton<PlayerRole>.singleton.CampType == ECampType.CAMP_EMPIRE)
+            {
+                campData = this.GetCampData(ECampType.CAMP_LEAGUE);
+            }
+            else
+            {
+                campData = this.GetCampData(ECampType.CAMP_EMPIRE);
+            }
+            return campData;
+        }
+        /// <summary>
+        /// 取得谋反阵营的数据
+        /// </summary>
+        /// <param name="eCampType"></param>
+        /// <returns></returns>
         public CampData GetCampData(ECampType eCampType)
         {
             int num = (int)(eCampType - ECampType.CAMP_EMPIRE);

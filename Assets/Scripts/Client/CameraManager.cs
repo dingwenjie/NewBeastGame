@@ -390,12 +390,19 @@ namespace Client
             this.InitCameraPosDir();
             this.Reset();
         }
+        /// <summary>
+        /// 开始屏幕模糊
+        /// </summary>
         public void BeginScreenBlur()
-        { 
+        {
+            Debug.Log("BeginScreenBlur");
         }
+        /// <summary>
+        /// 结束屏幕模糊
+        /// </summary>
         public void EndScreenBlur()
         {
-
+            Debug.Log("EndScreenBlur");
         }
         /// <summary>
         /// 激活高亮摄像机

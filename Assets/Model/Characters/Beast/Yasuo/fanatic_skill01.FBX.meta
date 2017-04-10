@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 133b3bbdf9d6c734bb426a626afb37ac
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 16
   fileIDToRecycleName:
     100000: Bip01
     100002: Bip01 Head
@@ -113,7 +113,7 @@ ModelImporter:
     400104: Bone_skirt_R4
     400106: Dummy_weapon
     400108: //RootNode
-    7400000: skill01
+    7400000: Attack
     9500000: //RootNode
     11100000: //RootNode
   materials:
@@ -123,13 +123,17 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
     animationWrapMode: 0
+    extraExposedTransformPaths: []
     clipAnimations:
-    - name: skill01
+    - serializedVersion: 16
+      name: Attack
       takeName: Take 001
       firstFrame: 10
       lastFrame: 27
@@ -138,6 +142,7 @@ ModelImporter:
       level: 0
       cycleOffset: 0
       loop: 0
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -149,7 +154,10 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
+      events: []
       transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -176,7 +184,6 @@ ModelImporter:
   humanDescription:
     human: []
     skeleton: []
-    handles: []
     armTwist: .5
     foreArmTwist: .5
     upperLegTwist: .5
@@ -186,6 +193,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  additionalBone: 1
   animationType: 1
+  additionalBone: 1
   userData: 

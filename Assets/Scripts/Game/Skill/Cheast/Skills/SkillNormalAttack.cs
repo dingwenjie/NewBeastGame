@@ -97,7 +97,7 @@ namespace Client.Skill
         }
         public override string GetSkillAnimName(long beastId)
         {
-            string attack = "attack";
+            string attack = "Attack";
             return attack;
         }       
         #endregion

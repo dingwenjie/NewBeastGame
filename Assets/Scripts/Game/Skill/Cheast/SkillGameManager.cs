@@ -91,7 +91,6 @@ public class SkillGameManager
     public static SkillBase GetSkillBase(int unskillId)
     {
         SkillBase skillBase = null;
-        Debug.Log("需要取得的技能id" + unskillId+SkillGameManager.m_dicAllSkillBase.Count);
         if (SkillGameManager.m_dicAllSkillBase.TryGetValue(unskillId, out skillBase))
         {
             return skillBase;
@@ -369,7 +368,7 @@ public class SkillGameManager
             SkillBase skill = SkillGameManager.GetSkillBase(skillId);
             if (skill != null)
             {
-
+                skill.OnCastAction(param);
             }
         }
         catch (Exception e)

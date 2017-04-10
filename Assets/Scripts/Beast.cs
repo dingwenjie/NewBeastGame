@@ -5,6 +5,7 @@ using Game;
 using Utility.Export;
 using Utility;
 using Client.Data;
+using Client.UI.UICommon;
 using Client.Common;
 using GameClient.Audio;
 #region 模块信息
@@ -857,7 +858,7 @@ public class Beast : IBeast, IDisposable
     /// <param name="param"></param>
     public void OnCastSkillAction(long beastId, int skillId, CastSkillParam param)
     {
-
+        this.m_skillManager.OnCastSkillAction(skillId, param);
     }
     /// <summary>
     /// 技能释放特效表现
@@ -904,7 +905,11 @@ public class Beast : IBeast, IDisposable
             Singleton<BeastRole>.singleton.OnHpChange(hp);
         }
         this.m_skillManager.OnBeastHpChange();
-        //刷新头像信息
+        //刷新HUD信息
+        if (!Singleton<SequenceShowManager>.singleton.CanRecevieMsg)
+        {
+            DlgBase<DlgHeadInfo, DlgHeadInfoBehaviour>.singleton.Refresh(this);
+        }
         //刷新tab信息
     }
     public void OnDeadAction()
@@ -1015,6 +1020,7 @@ public class Beast : IBeast, IDisposable
         {
             if (this.m_beastBehaviour != null)
             {
+                Debug.Log("取得动画" + anim + "长度:" + this.m_beastBehaviour.GetAnimPlayTime(anim));
                 return this.m_beastBehaviour.GetAnimPlayTime(anim);
             }
             else
@@ -1259,7 +1265,7 @@ public class Beast : IBeast, IDisposable
         }
         this.m_bVisible = bVisible;
         //this.SetEffectVisible(bVisible);
-        //DlgBase<DlgHeadInfo, DlgHeadInfoBehaviour>.singleton.Refresh(this);
+        DlgBase<DlgHeadInfo, DlgHeadInfoBehaviour>.singleton.Refresh(this);
     }
     /// <summary>
     /// 移动到这个格子坐标的动作表现

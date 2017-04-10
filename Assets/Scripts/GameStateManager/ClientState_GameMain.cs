@@ -31,6 +31,7 @@ public class ClientState_GameMain : ClientState_Base
         {
             DlgBase<DlgMain, DlgMainBehaviour>.singleton.SetVisible(true);
         }
+        DlgBase<DlgHeadInfo, DlgHeadInfoBehaviour>.singleton.SetVisible(true);
         Singleton<RoomManager>.singleton.GameOver = false;
         DataMaplist mapData = GameData<DataMaplist>.dataMap[(int)Singleton<RoomManager>.singleton.MapId];
         if (mapData != null)

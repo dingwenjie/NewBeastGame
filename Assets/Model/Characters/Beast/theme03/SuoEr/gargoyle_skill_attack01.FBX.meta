@@ -121,7 +121,7 @@ ModelImporter:
     400112: Bip01 Xtra03
     400114: Bip01 Xtra03Nub
     400116: //RootNode
-    7400000: skill01
+    7400000: Attack
     9500000: //RootNode
     11100000: //RootNode
   materials:
@@ -141,7 +141,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: skill01
+      name: Attack
       takeName: Take 001
       firstFrame: 10
       lastFrame: 40

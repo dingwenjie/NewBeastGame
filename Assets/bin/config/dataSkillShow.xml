@@ -1,21 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <dataSkillShow>
-    <ID_i>1</ID_i>
+    <ID_i>0</ID_i>
+    <SkillAction_i>1</SkillAction_i>
     <ShowId_i>0</ShowId_i>
     <Name_s>fefe</Name_s>
-    <AttackAction_s>0</AttackAction_s>
+    <AttackAction_s>Attack</AttackAction_s>
     <IsEffectForward_b>true</IsEffectForward_b>
-    <AttackAnimStartDelayTime_f>3</AttackAnimStartDelayTime_f>
+    <AttackAnimStartDelayTime_f>0</AttackAnimStartDelayTime_f>
     <AttackerEffectId_i>0</AttackerEffectId_i>
     <BeAttackerEffectId_i>0</BeAttackerEffectId_i>
     <SubHitEffectId_i>0</SubHitEffectId_i>
     <AttackJumpSpeed_f>0.5</AttackJumpSpeed_f>
     <BeAttackJumpSpeed_f>0.5</BeAttackJumpSpeed_f>
     <BeAttackCount_i>1</BeAttackCount_i>
-    <BeAttackSpaceTime_s>2;3;4</BeAttackSpaceTime_s>
+    <BeAttackSpaceTime_s></BeAttackSpaceTime_s>
     <BeAttackDuraTime_f>2</BeAttackDuraTime_f>
-    <CameraMove_i>1</CameraMove_i>
+    <CameraMove_i>0</CameraMove_i>
     <CameraMoveDurationTime_f>0</CameraMoveDurationTime_f>
     <ScreenBlur_i>0</ScreenBlur_i>
     <ScreenBlurDurationTime1_f>0.5</ScreenBlurDurationTime1_f>
@@ -34,5 +35,186 @@
     <BeAttackJumpTime_f>0.5</BeAttackJumpTime_f>
     <BeAttackEffectHitPoint_b>true</BeAttackEffectHitPoint_b>
     <BeAttackJumpStartDelayTime_f>0.2</BeAttackJumpStartDelayTime_f>
-  </dataSkillShow> 
- </root>
+  </dataSkillShow>
+  <dataSkillShow>
+    <ID_i>100</ID_i>
+    <SkillAction_i>1</SkillAction_i>
+    <ShowId_i>0</ShowId_i>
+    <Name_s>fefe</Name_s>
+    <AttackAction_s>Attack</AttackAction_s>
+    <IsEffectForward_b>true</IsEffectForward_b>
+    <AttackAnimStartDelayTime_f>0</AttackAnimStartDelayTime_f>
+    <AttackerEffectId_i>0</AttackerEffectId_i>
+    <BeAttackerEffectId_i>0</BeAttackerEffectId_i>
+    <SubHitEffectId_i>0</SubHitEffectId_i>
+    <AttackJumpSpeed_f>0.5</AttackJumpSpeed_f>
+    <BeAttackJumpSpeed_f>0.5</BeAttackJumpSpeed_f>
+    <BeAttackCount_i>1</BeAttackCount_i>
+    <BeAttackSpaceTime_s></BeAttackSpaceTime_s>
+    <BeAttackDuraTime_f>2</BeAttackDuraTime_f>
+    <CameraMove_i>0</CameraMove_i>
+    <CameraMoveDurationTime_f>0</CameraMoveDurationTime_f>
+    <ScreenBlur_i>0</ScreenBlur_i>
+    <ScreenBlurDurationTime1_f>0.5</ScreenBlurDurationTime1_f>
+    <ScreenBlurDurationTime2_f>0.5</ScreenBlurDurationTime2_f>
+    <BlackDepth_f>0.5</BlackDepth_f>
+    <AttackJumpStartDelayTime_f>0.2</AttackJumpStartDelayTime_f>
+    <AttackJumpEndAnim_s>AttackJump</AttackJumpEndAnim_s>
+    <BeAttackJumpEndAnim_s>beAttackJump</BeAttackJumpEndAnim_s>
+    <AttackJumpDuraAnim_s>AttackJumpDura</AttackJumpDuraAnim_s>
+    <BeAttackJumpDuraAnim_s>BeAttackJumpDura</BeAttackJumpDuraAnim_s>
+    <AttackJumpEffect_i>0</AttackJumpEffect_i>
+    <BeAttackJumpEffect_i>0</BeAttackJumpEffect_i>
+    <AttackJumpHeight_f>0.2</AttackJumpHeight_f>
+    <BeAttackJumpHeight_f>0.2</BeAttackJumpHeight_f>
+    <AttackJumpTime_f>0.5</AttackJumpTime_f>
+    <BeAttackJumpTime_f>0.5</BeAttackJumpTime_f>
+    <BeAttackEffectHitPoint_b>true</BeAttackEffectHitPoint_b>
+    <BeAttackJumpStartDelayTime_f>0.2</BeAttackJumpStartDelayTime_f>
+  </dataSkillShow>
+  <dataSkillShow>
+    <ID_i>200</ID_i>
+    <SkillAction_i>1</SkillAction_i>
+    <ShowId_i>0</ShowId_i>
+    <Name_s>fefe</Name_s>
+    <AttackAction_s>Attack</AttackAction_s>
+    <IsEffectForward_b>true</IsEffectForward_b>
+    <AttackAnimStartDelayTime_f>0</AttackAnimStartDelayTime_f>
+    <AttackerEffectId_i>0</AttackerEffectId_i>
+    <BeAttackerEffectId_i>0</BeAttackerEffectId_i>
+    <SubHitEffectId_i>0</SubHitEffectId_i>
+    <AttackJumpSpeed_f>0.5</AttackJumpSpeed_f>
+    <BeAttackJumpSpeed_f>0.5</BeAttackJumpSpeed_f>
+    <BeAttackCount_i>1</BeAttackCount_i>
+    <BeAttackSpaceTime_s></BeAttackSpaceTime_s>
+    <BeAttackDuraTime_f>2</BeAttackDuraTime_f>
+    <CameraMove_i>0</CameraMove_i>
+    <CameraMoveDurationTime_f>0</CameraMoveDurationTime_f>
+    <ScreenBlur_i>0</ScreenBlur_i>
+    <ScreenBlurDurationTime1_f>0.5</ScreenBlurDurationTime1_f>
+    <ScreenBlurDurationTime2_f>0.5</ScreenBlurDurationTime2_f>
+    <BlackDepth_f>0.5</BlackDepth_f>
+    <AttackJumpStartDelayTime_f>0.2</AttackJumpStartDelayTime_f>
+    <AttackJumpEndAnim_s>AttackJump</AttackJumpEndAnim_s>
+    <BeAttackJumpEndAnim_s>beAttackJump</BeAttackJumpEndAnim_s>
+    <AttackJumpDuraAnim_s>AttackJumpDura</AttackJumpDuraAnim_s>
+    <BeAttackJumpDuraAnim_s>BeAttackJumpDura</BeAttackJumpDuraAnim_s>
+    <AttackJumpEffect_i>0</AttackJumpEffect_i>
+    <BeAttackJumpEffect_i>0</BeAttackJumpEffect_i>
+    <AttackJumpHeight_f>0.2</AttackJumpHeight_f>
+    <BeAttackJumpHeight_f>0.2</BeAttackJumpHeight_f>
+    <AttackJumpTime_f>0.5</AttackJumpTime_f>
+    <BeAttackJumpTime_f>0.5</BeAttackJumpTime_f>
+    <BeAttackEffectHitPoint_b>true</BeAttackEffectHitPoint_b>
+    <BeAttackJumpStartDelayTime_f>0.2</BeAttackJumpStartDelayTime_f>
+  </dataSkillShow>
+  <dataSkillShow>
+    <ID_i>300</ID_i>
+    <SkillAction_i>1</SkillAction_i>
+    <ShowId_i>0</ShowId_i>
+    <Name_s>fefe</Name_s>
+    <AttackAction_s>Attack</AttackAction_s>
+    <IsEffectForward_b>true</IsEffectForward_b>
+    <AttackAnimStartDelayTime_f>0</AttackAnimStartDelayTime_f>
+    <AttackerEffectId_i>0</AttackerEffectId_i>
+    <BeAttackerEffectId_i>0</BeAttackerEffectId_i>
+    <SubHitEffectId_i>0</SubHitEffectId_i>
+    <AttackJumpSpeed_f>0.5</AttackJumpSpeed_f>
+    <BeAttackJumpSpeed_f>0.5</BeAttackJumpSpeed_f>
+    <BeAttackCount_i>1</BeAttackCount_i>
+    <BeAttackSpaceTime_s></BeAttackSpaceTime_s>
+    <BeAttackDuraTime_f>2</BeAttackDuraTime_f>
+    <CameraMove_i>0</CameraMove_i>
+    <CameraMoveDurationTime_f>0</CameraMoveDurationTime_f>
+    <ScreenBlur_i>0</ScreenBlur_i>
+    <ScreenBlurDurationTime1_f>0.5</ScreenBlurDurationTime1_f>
+    <ScreenBlurDurationTime2_f>0.5</ScreenBlurDurationTime2_f>
+    <BlackDepth_f>0.5</BlackDepth_f>
+    <AttackJumpStartDelayTime_f>0.2</AttackJumpStartDelayTime_f>
+    <AttackJumpEndAnim_s>AttackJump</AttackJumpEndAnim_s>
+    <BeAttackJumpEndAnim_s>beAttackJump</BeAttackJumpEndAnim_s>
+    <AttackJumpDuraAnim_s>AttackJumpDura</AttackJumpDuraAnim_s>
+    <BeAttackJumpDuraAnim_s>BeAttackJumpDura</BeAttackJumpDuraAnim_s>
+    <AttackJumpEffect_i>0</AttackJumpEffect_i>
+    <BeAttackJumpEffect_i>0</BeAttackJumpEffect_i>
+    <AttackJumpHeight_f>0.2</AttackJumpHeight_f>
+    <BeAttackJumpHeight_f>0.2</BeAttackJumpHeight_f>
+    <AttackJumpTime_f>0.5</AttackJumpTime_f>
+    <BeAttackJumpTime_f>0.5</BeAttackJumpTime_f>
+    <BeAttackEffectHitPoint_b>true</BeAttackEffectHitPoint_b>
+    <BeAttackJumpStartDelayTime_f>0.2</BeAttackJumpStartDelayTime_f>
+  </dataSkillShow>
+  <dataSkillShow>
+    <ID_i>400</ID_i>
+    <SkillAction_i>1</SkillAction_i>
+    <ShowId_i>0</ShowId_i>
+    <Name_s>fefe</Name_s>
+    <AttackAction_s>Attack</AttackAction_s>
+    <IsEffectForward_b>true</IsEffectForward_b>
+    <AttackAnimStartDelayTime_f>0</AttackAnimStartDelayTime_f>
+    <AttackerEffectId_i>0</AttackerEffectId_i>
+    <BeAttackerEffectId_i>0</BeAttackerEffectId_i>
+    <SubHitEffectId_i>0</SubHitEffectId_i>
+    <AttackJumpSpeed_f>0.5</AttackJumpSpeed_f>
+    <BeAttackJumpSpeed_f>0.5</BeAttackJumpSpeed_f>
+    <BeAttackCount_i>1</BeAttackCount_i>
+    <BeAttackSpaceTime_s></BeAttackSpaceTime_s>
+    <BeAttackDuraTime_f>2</BeAttackDuraTime_f>
+    <CameraMove_i>0</CameraMove_i>
+    <CameraMoveDurationTime_f>0</CameraMoveDurationTime_f>
+    <ScreenBlur_i>0</ScreenBlur_i>
+    <ScreenBlurDurationTime1_f>0.5</ScreenBlurDurationTime1_f>
+    <ScreenBlurDurationTime2_f>0.5</ScreenBlurDurationTime2_f>
+    <BlackDepth_f>0.5</BlackDepth_f>
+    <AttackJumpStartDelayTime_f>0.2</AttackJumpStartDelayTime_f>
+    <AttackJumpEndAnim_s>AttackJump</AttackJumpEndAnim_s>
+    <BeAttackJumpEndAnim_s>beAttackJump</BeAttackJumpEndAnim_s>
+    <AttackJumpDuraAnim_s>AttackJumpDura</AttackJumpDuraAnim_s>
+    <BeAttackJumpDuraAnim_s>BeAttackJumpDura</BeAttackJumpDuraAnim_s>
+    <AttackJumpEffect_i>0</AttackJumpEffect_i>
+    <BeAttackJumpEffect_i>0</BeAttackJumpEffect_i>
+    <AttackJumpHeight_f>0.2</AttackJumpHeight_f>
+    <BeAttackJumpHeight_f>0.2</BeAttackJumpHeight_f>
+    <AttackJumpTime_f>0.5</AttackJumpTime_f>
+    <BeAttackJumpTime_f>0.5</BeAttackJumpTime_f>
+    <BeAttackEffectHitPoint_b>true</BeAttackEffectHitPoint_b>
+    <BeAttackJumpStartDelayTime_f>0.2</BeAttackJumpStartDelayTime_f>
+  </dataSkillShow>
+  <dataSkillShow>
+    <ID_i>500</ID_i>
+    <SkillAction_i>1</SkillAction_i>
+    <ShowId_i>0</ShowId_i>
+    <Name_s>fefe</Name_s>
+    <AttackAction_s>Attack</AttackAction_s>
+    <IsEffectForward_b>true</IsEffectForward_b>
+    <AttackAnimStartDelayTime_f>0</AttackAnimStartDelayTime_f>
+    <AttackerEffectId_i>0</AttackerEffectId_i>
+    <BeAttackerEffectId_i>0</BeAttackerEffectId_i>
+    <SubHitEffectId_i>0</SubHitEffectId_i>
+    <AttackJumpSpeed_f>0.5</AttackJumpSpeed_f>
+    <BeAttackJumpSpeed_f>0.5</BeAttackJumpSpeed_f>
+    <BeAttackCount_i>1</BeAttackCount_i>
+    <BeAttackSpaceTime_s></BeAttackSpaceTime_s>
+    <BeAttackDuraTime_f>2</BeAttackDuraTime_f>
+    <CameraMove_i>0</CameraMove_i>
+    <CameraMoveDurationTime_f>0</CameraMoveDurationTime_f>
+    <ScreenBlur_i>0</ScreenBlur_i>
+    <ScreenBlurDurationTime1_f>0.5</ScreenBlurDurationTime1_f>
+    <ScreenBlurDurationTime2_f>0.5</ScreenBlurDurationTime2_f>
+    <BlackDepth_f>0.5</BlackDepth_f>
+    <AttackJumpStartDelayTime_f>0.2</AttackJumpStartDelayTime_f>
+    <AttackJumpEndAnim_s>AttackJump</AttackJumpEndAnim_s>
+    <BeAttackJumpEndAnim_s>beAttackJump</BeAttackJumpEndAnim_s>
+    <AttackJumpDuraAnim_s>AttackJumpDura</AttackJumpDuraAnim_s>
+    <BeAttackJumpDuraAnim_s>BeAttackJumpDura</BeAttackJumpDuraAnim_s>
+    <AttackJumpEffect_i>0</AttackJumpEffect_i>
+    <BeAttackJumpEffect_i>0</BeAttackJumpEffect_i>
+    <AttackJumpHeight_f>0.2</AttackJumpHeight_f>
+    <BeAttackJumpHeight_f>0.2</BeAttackJumpHeight_f>
+    <AttackJumpTime_f>0.5</AttackJumpTime_f>
+    <BeAttackJumpTime_f>0.5</BeAttackJumpTime_f>
+    <BeAttackEffectHitPoint_b>true</BeAttackEffectHitPoint_b>
+    <BeAttackJumpStartDelayTime_f>0.2</BeAttackJumpStartDelayTime_f>
+  </dataSkillShow>
+
+</root>

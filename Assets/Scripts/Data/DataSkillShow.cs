@@ -16,12 +16,16 @@ using Client.Data;
 public class DataSkillShow : GameData<DataSkillShow>
 {
     public static string fileName = "dataSkillShow";
-    /// <summary>
-    /// 根据skillId来索引
-    /// </summary>
     public int ID
     {
         get; set;
+    }
+    /// <summary>
+    /// 技能对于的id
+    /// </summary>
+    public int SkillAction
+    {
+        get;set;
     }
     public int ShowId
     {

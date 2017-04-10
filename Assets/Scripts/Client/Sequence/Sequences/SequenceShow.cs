@@ -78,6 +78,7 @@ public class SequenceShow : SequenceBase
     {
         this.mainStage.AttackerId = msg.m_dwRoleId;
         this.mainStage.SkillId = msg.m_dwSkillId;
+        Debug.Log("TargetBeastId:" + msg.m_dwTargetRoleId);
         if (msg.m_dwTargetRoleId != 0)
         {
             this.mainStage.BeAttackerList.Add(msg.m_dwTargetRoleId);
@@ -103,6 +104,18 @@ public class SequenceShow : SequenceBase
     public override void OnMsg(CPtcM2CNtf_EndCastSkill msg)
     {
         this.BeginShow(base.StartTime, base.LastAnimEndTime);
+    }
+    public override void OnMsg(CptcM2CNtf_ChangeHp msg,int origHpVal)
+    {
+        if (!this.mainStage.HpChangeInfo.ContainsKey(msg.m_dwRoleId))
+        {
+            this.mainStage.HpChangeInfo[msg.m_dwRoleId] = new List<KeyValuePair<int, int>>();
+        }
+        this.mainStage.HpChangeInfo[msg.m_dwRoleId].Add(new KeyValuePair<int, int>(msg.m_btHp, origHpVal));
+        if (!this.mainStage.BeAttackerList.Contains(msg.m_dwRoleId))
+        {
+            this.mainStage.BeAttackerList.Add(msg.m_dwRoleId);
+        }
     }
     #endregion
 }

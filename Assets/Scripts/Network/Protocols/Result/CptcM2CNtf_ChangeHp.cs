@@ -57,12 +57,19 @@ public class CptcM2CNtf_ChangeHp : CProtocol
             {
                 Singleton<BeastManager>.singleton.OnBeastHpChange(this.m_dwRoleId, this.m_btHp);
             }
-            /*HpChangeEvent hpChangeEvent = new HpChangeEvent();
-            hpChangeEvent.DurationTime = 0.5f;
-            hpChangeEvent.BeastId = this.m_dwRoleId;
-            hpChangeEvent.HpChange = hpChange;
-            Singleton<ActEventManager>.singleton.AddEvent(hpChangeEvent);
-            */
+            if (Singleton<SequenceShowManager>.singleton.CanRecevieMsg)
+            {
+                Singleton<SequenceShowManager>.singleton.OnMsg(this, hp);
+            }
+            else
+            {
+                HpChangeEvent hpChangeEvent = new HpChangeEvent();
+                hpChangeEvent.DurationTime = 0.5f;
+                hpChangeEvent.BeastId = this.m_dwRoleId;
+                hpChangeEvent.HpChange = hpChange;
+                Singleton<ActEventManager>.singleton.AddEvent(hpChangeEvent);
+            }
+
         }
     }
 	#endregion
