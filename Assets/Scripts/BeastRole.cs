@@ -249,6 +249,13 @@ public class BeastRole : Singleton<BeastRole>
         Singleton<OpStateManager>.singleton.Refresh();
     }
     /// <summary>
+    /// 技能锁定不能使用
+    /// </summary>
+    public void LockUseSkill(EnumSkillType type,int skillId,bool bTure)
+    {
+        DlgBase<DlgMain, DlgMainBehaviour>.singleton.LockUseSkill(type, skillId, bTure);
+    }
+    /// <summary>
     /// 取得神兽能使用的技能列表
     /// </summary>
     /// <param name="type"></param>

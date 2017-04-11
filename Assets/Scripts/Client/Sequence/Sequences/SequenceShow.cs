@@ -81,6 +81,7 @@ public class SequenceShow : SequenceBase
         Debug.Log("TargetBeastId:" + msg.m_dwTargetRoleId);
         if (msg.m_dwTargetRoleId != 0)
         {
+            Debug.Log("Cast Add"+msg.m_dwTargetRoleId);
             this.mainStage.BeAttackerList.Add(msg.m_dwTargetRoleId);
             if (!this.mainStage.HpChangeInfo.ContainsKey(msg.m_dwTargetRoleId))
             {
@@ -114,6 +115,7 @@ public class SequenceShow : SequenceBase
         this.mainStage.HpChangeInfo[msg.m_dwRoleId].Add(new KeyValuePair<int, int>(msg.m_btHp, origHpVal));
         if (!this.mainStage.BeAttackerList.Contains(msg.m_dwRoleId))
         {
+            Debug.Log("HP Add"+msg.m_dwRoleId);
             this.mainStage.BeAttackerList.Add(msg.m_dwRoleId);
         }
     }

@@ -173,6 +173,11 @@ public abstract class UseSkillBase
     {
         CSceneMgr.singleton.ClearCastRange();
     }
+    protected void LockUse()
+    {
+        Debug.Log("LockUse");
+        Singleton<BeastRole>.singleton.LockUseSkill(this.m_eSkillType, this.m_unSkillId, true);
+    }
     #endregion
     #region 公共方法
     /// <summary>

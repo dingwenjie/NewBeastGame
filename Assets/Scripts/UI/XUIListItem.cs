@@ -351,7 +351,10 @@ public class XUIListItem : XUIObject, IXUIObject,IXUIListItem
         XUISprite xUISprite = this.GetUIObject(strId) as XUISprite;
         if (null != xUISprite)
         {
-            xUISprite.SetSprite(strSprite);
+            if (!xUISprite.SetSprite(strSprite))
+            {
+                Debug.LogError("SetSprite Failed");
+            }
         }
     }
     /// <summary>

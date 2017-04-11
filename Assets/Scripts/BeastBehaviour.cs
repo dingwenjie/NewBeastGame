@@ -331,15 +331,19 @@ public class BeastBehaviour : MonoBehaviour
         float result = 0;
         if (bSpaceAnim)
         {
-            result = this.GetAnimPlayTime("BeAttack");
+            result = this.GetAnimPlayTime("knockback01");
         }
         else if (bDuraAnim)
         {
-            result = this.GetAnimPlayTime("BeAttack01");
+            result = this.GetAnimPlayTime("knockback01");
         }
         else if (nHpChange < -2)
         {
-            result = this.GetAnimPlayTime("BeAttack02");
+            result = this.GetAnimPlayTime("knockback01");
+        }
+        else
+        {
+            result = this.GetAnimPlayTime("knockback01");
         }
         return result;
     }
@@ -528,15 +532,15 @@ public class BeastBehaviour : MonoBehaviour
         }
         else if (bDuraAnim)
         {
-            this.PlayAnim("BeAttack01");
+            this.PlayAnim("knockback01");
         }
         else if (nHpChange < -2)
         {
-            this.PlayAnim("BeAttack02");
+            this.PlayAnim("knockback01");
         }
         else
         {
-            this.PlayAnim("BeAttack");
+            this.PlayAnim("knockback01");
         }
     }
 	#endregion

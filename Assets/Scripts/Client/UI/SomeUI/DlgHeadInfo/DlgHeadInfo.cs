@@ -76,13 +76,11 @@ public class DlgHeadInfo : DlgBase<DlgHeadInfo,DlgHeadInfoBehaviour>
     }
     protected override void OnShow()
     {
-        Debug.Log("ONFEWFWEFE");
         base.OnShow();
         this.OnRefresh();
     }
     protected override void OnRefresh()
     {
-        Debug.Log("OnRefresh");
         base.OnRefresh();
         List<long> allBeastIds = Singleton<BeastManager>.singleton.GetAllBeastIds();
         List<long> exitsIds = this.m_dicBeastHeadInfo.Keys.ToList<long>();
@@ -90,15 +88,23 @@ public class DlgHeadInfo : DlgBase<DlgHeadInfo,DlgHeadInfoBehaviour>
         {
             long id = allBeastIds[i];
             exitsIds.Remove(id);
-            Debug.Log("OnRefreshID:"+id);
             if (!this.m_dicBeastHeadInfo.ContainsKey(id))
             {
-                Debug.Log("OnRefresh1");
                 IXUIListHeadInfoItem iXUIListHeadInfoItem = base.uiBehaviour.m_List_HeadInfo.AddListItem() as IXUIListHeadInfoItem;             
                 DlgHeadInfo.HeadInfoEntity headInfoEntity = new DlgHeadInfo.HeadInfoEntity(id, iXUIListHeadInfoItem);
                 this.m_dicBeastHeadInfo.Add(id, headInfoEntity);
                 this.Translate(headInfoEntity.TargetBeast, iXUIListHeadInfoItem, false);
                 this.Refresh(headInfoEntity.TargetBeast);
+            }
+        }
+    }
+    public override void Update()
+    {
+        if (base.Prepared && base.IsVisible())
+        {
+            foreach (DlgHeadInfo.HeadInfoEntity current in this.m_dicBeastHeadInfo.Values)
+            {
+                this.Translate(current.TargetBeast, current.HeadInfoItem, false);
             }
         }
     }
@@ -109,7 +115,6 @@ public class DlgHeadInfo : DlgBase<DlgHeadInfo,DlgHeadInfoBehaviour>
     /// <param name="player"></param>
     public void UpdateHeadeInfoVisible(DlgHeadInfo.HeadInfoEntity headInfo, Beast player)
     {
-        Debug.Log("333");
         if (player != null)
         {
             if (!player.IsVisible)
@@ -118,7 +123,6 @@ public class DlgHeadInfo : DlgBase<DlgHeadInfo,DlgHeadInfoBehaviour>
             }
             else
             {
-                Debug.Log("33e2e3");
                 headInfo.HeadInfoItem.SetVisible(!player.HideHeadInfo);
             }
         }
@@ -133,12 +137,12 @@ public class DlgHeadInfo : DlgBase<DlgHeadInfo,DlgHeadInfoBehaviour>
                 IXUIListHeadInfoItem iXUIListHeadInfoItem = uiListItem as IXUIListHeadInfoItem;
                 if (iXUIListHeadInfoItem == null)
                 {
-                    XLog.Log.Debug("null == uiListItemHeadInfo");
+                    XLog.Log.Error("null == uiListItemHeadInfo");
                 }
                 else
                 {
                     Vector3 movingPos = beast.MovingPos;
-                    movingPos.y += beast.Height + 0.5f;
+                    movingPos.y += beast.Height + 2f;
                     Vector3 position = Camera.main.WorldToScreenPoint(movingPos);
                     Vector3 vector = Singleton<UIManager>.singleton.UICamera.ScreenToWorldPoint(position);
                     Vector3 position2 = iXUIListHeadInfoItem.CachedGameObject.transform.position;
@@ -154,19 +158,15 @@ public class DlgHeadInfo : DlgBase<DlgHeadInfo,DlgHeadInfoBehaviour>
 
     public void Refresh(Beast beast)
     {
-        Debug.Log("Head Role Refresh");
         if (null != beast)
         {
-            Debug.Log("Head Role Refresh1");
             DlgHeadInfo.HeadInfoEntity headInfoEntity = null;
             if (this.m_dicBeastHeadInfo.TryGetValue(beast.Id, out headInfoEntity))
             {
-                Debug.Log("Head Role Refresh2");
                 if (null != headInfoEntity)
                 {
                     if (null != headInfoEntity.HeadInfoItem)
                     {
-                        Debug.Log("Head Role Refresh3");
                         this.UpdateHeadeInfoVisible(headInfoEntity, beast);
                         headInfoEntity.HeadInfoItem.IsFriend = (beast.eCampType == Singleton<BeastRole>.singleton.CampType);
                         headInfoEntity.HeadInfoItem.SetText("lb_hp", beast.Hp.ToString());
@@ -179,13 +179,33 @@ public class DlgHeadInfo : DlgBase<DlgHeadInfo,DlgHeadInfoBehaviour>
             }
         }
     }
+    public void DelayRefreshHp(Beast beast, int hp)
+    {
+        if (null != beast)
+        {
+            DlgHeadInfo.HeadInfoEntity headInfoEntity = null;
+            if (this.m_dicBeastHeadInfo.TryGetValue(beast.Id, out headInfoEntity))
+            {
+                if (null != headInfoEntity)
+                {
+                    if (null != headInfoEntity.HeadInfoItem)
+                    {
+                        this.UpdateHeadeInfoVisible(headInfoEntity, beast);
+                        headInfoEntity.HeadInfoItem.IsFriend = (beast.eCampType == Singleton<BeastRole>.singleton.CampType);
+                        headInfoEntity.HeadInfoItem.SetText("lb_hp", hp.ToString());
+                        this.UpdatePlayerHpAction(beast, headInfoEntity.HeadInfoItem,hp);
+                    }
+                }
+            }
+        }
+    }
     private void UpdatePlayerHp(Beast beast, IXUIListHeadInfoItem uiListHeadInfoItem)
     {
         if (beast != null && null != uiListHeadInfoItem)
         {
-            float num = beast.Hp / beast.HpMax;
-            IXUIProgress iXUIProgress = uiListHeadInfoItem.GetUIObject("sp_hpred") as IXUIProgress;
-            iXUIProgress.value = num;
+            float rate = beast.Hp / beast.HpMax;
+            IXUIProgress iXUIProgress = uiListHeadInfoItem.GetUIObject("pb_hp") as IXUIProgress;
+            iXUIProgress.value = rate;
             CampData ourCampData = Singleton<RoomManager>.singleton.GetOurCampData();
             CampData enemyCampData = Singleton<RoomManager>.singleton.GetEnemyCampData();
             if (beast.eCampType == ourCampData.CampType)
@@ -200,20 +220,18 @@ public class DlgHeadInfo : DlgBase<DlgHeadInfo,DlgHeadInfoBehaviour>
                 uiListHeadInfoItem.SetSprite("sp_hpred", "redhp");
                 //uiListHeadInfoItem.SetSprite("Sprite_Light_Green", "Light_Red");
             }
-            /*IXUISprite iXUISprite = uiListHeadInfoItem.GetUIObject("Sprite_Light_Green") as IXUISprite;
-            if (iXUISprite != null)
+        }
+    }
+    private void UpdatePlayerHpAction(Beast beast, IXUIListHeadInfoItem uiListHeadInfoItem, int hp)
+    {
+        if (beast != null && null != uiListHeadInfoItem)
+        {
+            float rate = (float)hp / (float)beast.HpMax;
+            IXUIProgress iXUIProgress = uiListHeadInfoItem.GetUIObject("pb_hp") as IXUIProgress;
+            if (iXUIProgress != null)
             {
-                if (0f < num && num < 1f)
-                {
-                    iXUISprite.SetVisible(true);
-                    Vector3 localPosition = iXUISprite.CachedGameObject.transform.localPosition;
-                    iXUISprite.CachedGameObject.transform.localPosition = new Vector3(72.8f - 132.5f * (1f - num), localPosition.y, localPosition.z);
-                }
-                else
-                {
-                    iXUISprite.SetVisible(false);
-                }
-            }*/
+                iXUIProgress.value = rate;
+            }
         }
     }
 }

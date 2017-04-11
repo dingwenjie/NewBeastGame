@@ -329,7 +329,6 @@ public class BeastManager
     /// <param name="hpChange"></param>
     public void OnBeastHpChangeAction(long beastId, int hpChange)
     {
-        Debug.Log("OnBeastHpChangeAction");
         Beast beast = this.GetBeastById(beastId);
         if (beast != null)
         {

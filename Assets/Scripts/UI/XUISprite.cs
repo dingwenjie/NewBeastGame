@@ -182,7 +182,7 @@ public class XUISprite : XUIObject,IXUIObject,IXUISprite
             this.RemoveSpriteRef(this.m_atlasNameCached, this.m_spriteNameCached);
             //清除缓存图集精灵
             this.m_spriteNameCached = string.Empty;
-            this.m_spriteNameCached = string.Empty;
+            this.m_atlasNameCached = string.Empty;
         }
         //重新设置缓存图集精灵
         this.m_spriteNameCached = strSprite;

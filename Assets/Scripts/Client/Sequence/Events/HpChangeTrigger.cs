@@ -52,16 +52,18 @@ public class HpChangeTrigger : Triggerable
             Singleton<BeastManager>.singleton.OnBeastHpChangeAction(this.BeAttackId, this.HpValue);
         }
         int changeHpValue = this.HpValue - this.OgrinHpValue;
+        Debug.Log("HPChange:" + changeHpValue);
         if (this.AttackId != this.BeAttackId)
         {
             //如果改变的血量为增值，就是加血类型
             if (changeHpValue > 0)
             {
+                Debug.Log("AddHpEffect2");
                 DlgBase<DlgFlyText, DlgFlyTextBehaviour>.singleton.AddHpEffect(changeHpValue, this.BeAttackId, EnumHpEffectType.eHpEffectType_Heal);
             }
             else
             {
-                Debug.Log("AddHpEffect");
+                Debug.Log("AddHpEffect1");
                 DlgBase<DlgFlyText, DlgFlyTextBehaviour>.singleton.AddHpEffect(changeHpValue, this.BeAttackId, EnumHpEffectType.eHpEffectType_Damage);
             }
         }

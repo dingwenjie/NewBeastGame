@@ -229,6 +229,7 @@ public class MainStage : SeqBuilder
         float allTime = fStartTime;
         if (data != null)
         {
+            Debug.Log("f32f3");
             Vector3 pos = this.BeAttackPosList.Count > 0 ? Hexagon.GetHex3DPos(this.BeAttackPosList[0], Space.World) : Vector3.zero;
             float hitTime = 0;
             //如果是普通攻击的话
@@ -250,6 +251,7 @@ public class MainStage : SeqBuilder
             fBeAttackStartTime = allTime;
             if (this.HpChangeInfo.ContainsKey(beAttacker))
             {
+                Debug.Log("3f2332");
                 bool ShowAnim = false;
                 if (!this.MissInfo.Contains(beAttacker))
                 {
@@ -267,6 +269,7 @@ public class MainStage : SeqBuilder
                 string[] arrayTime = string.IsNullOrEmpty(data.BeAttackSpaceTime) ? new string[0] : data.BeAttackSpaceTime.Split(';');
                 for (int i=0; i < attackCount;i++)
                 {
+                    Debug.Log("ff23f23rfwecw");
                     BeAttackSkillTrigger trigger = new BeAttackSkillTrigger();
                     trigger.AttackerId = this.AttackerId;
                     trigger.BeAttackerId = beAttacker;
@@ -289,7 +292,6 @@ public class MainStage : SeqBuilder
                     else
                     {
                         trigger.Duration = trigger.GetDuration();
-
                     }
                     trigger.MainBeAttcker = beAttacker;
                     trigger.ShowAnim = ShowAnim;
@@ -314,6 +316,7 @@ public class MainStage : SeqBuilder
     /// </summary>
     private float BuildHpChangeShow(float fStartTime,long beAttacker)
     {
+        Debug.Log("BuildHpCHangeASHpe");
         float time = fStartTime;
         if (this.HpChangeInfo.ContainsKey(beAttacker))
         {

@@ -15,7 +15,7 @@
     <BeAttackJumpSpeed_f>0.5</BeAttackJumpSpeed_f>
     <BeAttackCount_i>1</BeAttackCount_i>
     <BeAttackSpaceTime_s></BeAttackSpaceTime_s>
-    <BeAttackDuraTime_f>2</BeAttackDuraTime_f>
+    <BeAttackDuraTime_f>0</BeAttackDuraTime_f>
     <CameraMove_i>0</CameraMove_i>
     <CameraMoveDurationTime_f>0</CameraMoveDurationTime_f>
     <ScreenBlur_i>0</ScreenBlur_i>
@@ -51,7 +51,7 @@
     <BeAttackJumpSpeed_f>0.5</BeAttackJumpSpeed_f>
     <BeAttackCount_i>1</BeAttackCount_i>
     <BeAttackSpaceTime_s></BeAttackSpaceTime_s>
-    <BeAttackDuraTime_f>2</BeAttackDuraTime_f>
+    <BeAttackDuraTime_f>0</BeAttackDuraTime_f>
     <CameraMove_i>0</CameraMove_i>
     <CameraMoveDurationTime_f>0</CameraMoveDurationTime_f>
     <ScreenBlur_i>0</ScreenBlur_i>
@@ -87,7 +87,7 @@
     <BeAttackJumpSpeed_f>0.5</BeAttackJumpSpeed_f>
     <BeAttackCount_i>1</BeAttackCount_i>
     <BeAttackSpaceTime_s></BeAttackSpaceTime_s>
-    <BeAttackDuraTime_f>2</BeAttackDuraTime_f>
+    <BeAttackDuraTime_f>0</BeAttackDuraTime_f>
     <CameraMove_i>0</CameraMove_i>
     <CameraMoveDurationTime_f>0</CameraMoveDurationTime_f>
     <ScreenBlur_i>0</ScreenBlur_i>
@@ -123,7 +123,7 @@
     <BeAttackJumpSpeed_f>0.5</BeAttackJumpSpeed_f>
     <BeAttackCount_i>1</BeAttackCount_i>
     <BeAttackSpaceTime_s></BeAttackSpaceTime_s>
-    <BeAttackDuraTime_f>2</BeAttackDuraTime_f>
+    <BeAttackDuraTime_f>0</BeAttackDuraTime_f>
     <CameraMove_i>0</CameraMove_i>
     <CameraMoveDurationTime_f>0</CameraMoveDurationTime_f>
     <ScreenBlur_i>0</ScreenBlur_i>
@@ -159,7 +159,7 @@
     <BeAttackJumpSpeed_f>0.5</BeAttackJumpSpeed_f>
     <BeAttackCount_i>1</BeAttackCount_i>
     <BeAttackSpaceTime_s></BeAttackSpaceTime_s>
-    <BeAttackDuraTime_f>2</BeAttackDuraTime_f>
+    <BeAttackDuraTime_f>0</BeAttackDuraTime_f>
     <CameraMove_i>0</CameraMove_i>
     <CameraMoveDurationTime_f>0</CameraMoveDurationTime_f>
     <ScreenBlur_i>0</ScreenBlur_i>
@@ -195,7 +195,7 @@
     <BeAttackJumpSpeed_f>0.5</BeAttackJumpSpeed_f>
     <BeAttackCount_i>1</BeAttackCount_i>
     <BeAttackSpaceTime_s></BeAttackSpaceTime_s>
-    <BeAttackDuraTime_f>2</BeAttackDuraTime_f>
+    <BeAttackDuraTime_f>0</BeAttackDuraTime_f>
     <CameraMove_i>0</CameraMove_i>
     <CameraMoveDurationTime_f>0</CameraMoveDurationTime_f>
     <ScreenBlur_i>0</ScreenBlur_i>

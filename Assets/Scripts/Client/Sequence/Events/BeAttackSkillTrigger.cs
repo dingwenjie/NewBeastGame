@@ -48,19 +48,22 @@ public class BeAttackSkillTrigger : Triggerable
     }
     public override void Trigger()
     {
-        Beast beast = Singleton<BeastManager>.singleton.GetBeastById(AttackerId);
+        Beast beast = Singleton<BeastManager>.singleton.GetBeastById(BeAttackerId);
         if (beast != null && this.ShowAnim)
         {
+            Debug.Log("OnAttack");
             beast.OnBeAttack(HpChange, IsSpaceAnim, IsDuraAnim);
         }
     }
     public float GetDuration()
     {
-        Beast beast = Singleton<BeastManager>.singleton.GetBeastById(AttackerId);
+        float dura = 0.2f;
+        Beast beast = Singleton<BeastManager>.singleton.GetBeastById(BeAttackerId);
         if (beast != null)
         {
-            return beast.GetAnimPlayTime(HpChange, IsSpaceAnim, IsDuraAnim);
+            dura = beast.GetAnimPlayTime(HpChange, IsSpaceAnim, IsDuraAnim);
         }
-        return 0.2f;
+        Debug.Log("Dra:" + dura);
+        return dura;
     }
 }

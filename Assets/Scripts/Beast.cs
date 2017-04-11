@@ -1251,7 +1251,7 @@ public class Beast : IBeast, IDisposable
     public void RefreshRoleHpInfo(int unhp)
     {
         //刷新角色头顶的血条信息
-
+        DlgBase<DlgHeadInfo, DlgHeadInfoBehaviour>.singleton.DelayRefreshHp(this, unhp);
     }
     /// <summary>
     /// 设置模型是否可见

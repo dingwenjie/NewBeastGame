@@ -190,18 +190,21 @@ public class HexagonManager : Singleton<HexagonManager>
     /// <param name="listHex"></param>
     public void ShowHexagon(EnumShowHexagonType eShowHexagonType, List<CVector3> listHex)
     {
-        string strTexture = "";
-        if (EnumShowHexagonType.eShowHexagonType_Highlight == eShowHexagonType)
+        string strTexture = "Texture/Hexagon/Hexagon.png";
+        switch (eShowHexagonType)
         {
-            strTexture = "Texture/Hexagon/Highlight.png";
-        }
-        if (EnumShowHexagonType.eShowHexagonType_Affect == eShowHexagonType)
-        {
-            strTexture = "Texture/Hexagon/Affect.png";
-        }
-        if (EnumShowHexagonType.eShowHexagonType_CastRange == eShowHexagonType)
-        {
-            strTexture = "Texture/Hexagon/CastRange.png";
+            case EnumShowHexagonType.eShowHexagonType_Highlight:
+                strTexture = "Texture/Hexagon/Highlight.png";
+                break;
+            case EnumShowHexagonType.eShowHexagonType_Affect:
+                strTexture = "Texture/Hexagon/Affect.png";
+                break;
+            case EnumShowHexagonType.eShowHexagonType_CastRange:
+                strTexture = "Texture/Hexagon/CastRange.png";
+                break;
+            case EnumShowHexagonType.eShowHexagonType_Path:
+                strTexture = "Texture/Hexagon/MovingPath.png";
+                break;
         }
         this.ShowHexagon(eShowHexagonType, listHex, strTexture);
     }

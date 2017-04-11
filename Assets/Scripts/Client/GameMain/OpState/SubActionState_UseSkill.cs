@@ -70,23 +70,26 @@ public class SubActionState_UseSkill : SubActionStateBase
             ActionState.Singleton.ChangeState(enumSubActionState.eSubActionState_Enable);
             return true;
         }
-        if (this.m_curState.OnSelectSkill(eType, unSkillId))
+        else if (this.m_curState.OnSelectSkill(eType, unSkillId))
         {
             return true;
         }
-        if (this.ChangeSkill(eType, unSkillId))
+        else
         {
-            SkillBase skill = null;
-            skill = SkillGameManager.GetSkillBase(unSkillId);
-            EnumErrorCodeCheckUse errorCode = skill.CheckUse(Singleton<BeastRole>.singleton.Id);
-            if (errorCode == EnumErrorCodeCheckUse.eCheckErr_Success)
+            if (this.ChangeSkill(eType, unSkillId))
             {
-                this.m_curState.OnLockOperation();
-            }
-            else
-            {
-                this.m_curState.ShowErrCheckUse(errorCode);
-                ActionState.Singleton.ChangeState(enumSubActionState.eSubActionState_Enable);
+                SkillBase skill = null;
+                skill = SkillGameManager.GetSkillBase(unSkillId);
+                EnumErrorCodeCheckUse errorCode = skill.CheckUse(Singleton<BeastRole>.singleton.Id);
+                if (errorCode == EnumErrorCodeCheckUse.eCheckErr_Success)
+                {
+                    this.m_curState.OnLockOperation();
+                }
+                else
+                {
+                    this.m_curState.ShowErrCheckUse(errorCode);
+                    ActionState.Singleton.ChangeState(enumSubActionState.eSubActionState_Enable);
+                }
             }
         }
         return true;

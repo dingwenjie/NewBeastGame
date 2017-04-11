@@ -27,7 +27,7 @@ public class XUIListHeadInfoItem : XUIListItem, IXUIObject, IXUIListItem, IXUILi
         set
         {
             this.m_bIsFriend = value;
-            if (this.m_List_Hp != null)
+            /*if (this.m_List_Hp != null)
             {
                 for (int i = 0; i < this.m_List_Hp.Count; i++)
                 {
@@ -39,12 +39,20 @@ public class XUIListHeadInfoItem : XUIListItem, IXUIObject, IXUIListItem, IXUILi
                     }
                 }
             }
+            */
+            /*IXUISprite iXUISprite1 = this.GetUIObject("sp_hpred") as IXUISprite;
+            if (iXUISprite1 != null)
+            {
+                string sprite = (!this.m_bIsFriend) ? "redhp" : "bluehp";
+                iXUISprite1.SetSprite(sprite);
+            }
             IXUISprite iXUISprite = this.GetUIObject("sp_bighp") as IXUISprite;
             if (iXUISprite != null)
             {
                 string sprite = (!this.m_bIsFriend) ? "RedHeadInfo" : "BlueHeadInfo";
                 iXUISprite.SetSprite(sprite);
             }
+            */
         }
     }
     public Color HpColor

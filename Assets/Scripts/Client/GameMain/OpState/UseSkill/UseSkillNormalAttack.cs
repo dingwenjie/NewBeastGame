@@ -6,6 +6,7 @@ using Utility;
 using Client.Skill;
 using Client.UI;
 using Client.UI.UICommon;
+using Client.GameMain.OpState.Stage;
 #region 模块信息
 /*----------------------------------------------------------------
 // 模块名：UseSkill_NormalAttack 
@@ -45,15 +46,12 @@ public class UseSkill_NormalAttack : UseSkillBase
         if (skill != null)
         {
             this.m_listValidTargetPos = skill.GetValidTargetHexs(Singleton<BeastRole>.singleton.Id);
-            Debug.Log("PosList" + this.m_listValidTargetBeastId.Count);
             this.m_listValidTargetBeastId = skill.GetValidTargetPlayers(Singleton<BeastRole>.singleton.Id);
         }
         Beast beast = Singleton<BeastManager>.singleton.GetBeastById(Singleton<BeastRole>.singleton.Id);
         //还没有攻击过
         if (beast.UsedAttackToBaseBuildingCount < 1)
-        {
-            Debug.Log("显示攻击范围为高亮");
-            
+        {      
             Singleton<HexagonManager>.singleton.ShowHexagon(EnumShowHexagonType.eShowHexagonType_Highlight, this.m_listValidTargetPos);
         }
         //高亮角色模型（边缘外发光）
@@ -61,7 +59,11 @@ public class UseSkill_NormalAttack : UseSkillBase
     public override void OnLeave()
     {
         base.OnLeave();
-
+        this.m_listValidTargetBeastId.Clear();
+        this.m_listValidTargetPos.Clear();
+        Singleton<HexagonManager>.singleton.ClearHexagon(EnumShowHexagonType.eShowHexagonType_Highlight);
+        Singleton<HexagonManager>.singleton.ClearHexagon(EnumShowHexagonType.eShowHexagonType_Affect);
+        Singleton<HexagonManager>.singleton.ClearHexagon(EnumShowHexagonType.eShowHexagonType_Selected);
     }
     public override void OnLockOperation()
     {
@@ -175,9 +177,10 @@ public class UseSkill_NormalAttack : UseSkillBase
         else
         {
             msg.m_oTargetPos = this.m_vec3TargetPos;
-        }
-        
+        }       
         Singleton<NetworkManager>.singleton.SendUseSkill(msg);
+        base.LockUse();
+        ActionState.Singleton.ChangeState(enumSubActionState.eSubActionState_Enable);
         result = true;
         return result;
     }

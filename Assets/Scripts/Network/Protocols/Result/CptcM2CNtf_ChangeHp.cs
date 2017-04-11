@@ -47,18 +47,20 @@ public class CptcM2CNtf_ChangeHp : CProtocol
     }
     public override void Process()
     {
-        Debug.Log("Hp Init");
+
         Beast beast = Singleton<BeastManager>.singleton.GetBeastById(this.m_dwRoleId);
         if (beast != null)
         {
             int hp = beast.Hp;
             int hpChange = this.m_btHp - hp;
+            Debug.Log("Hp Change:" +hpChange);
             if (!Singleton<RoomManager>.singleton.ProcessHpChangedAsync(this.m_dwRoleId, (byte)this.m_btHp))
             {
                 Singleton<BeastManager>.singleton.OnBeastHpChange(this.m_dwRoleId, this.m_btHp);
             }
             if (Singleton<SequenceShowManager>.singleton.CanRecevieMsg)
             {
+                Debug.Log("HPfwefefef");
                 Singleton<SequenceShowManager>.singleton.OnMsg(this, hp);
             }
             else

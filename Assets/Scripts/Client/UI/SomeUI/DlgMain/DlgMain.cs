@@ -123,6 +123,13 @@ public class DlgMain : DlgBase<DlgMain,DlgMainBehaviour>
             }
         }
     }
+    public void LockUseSkill(EnumSkillType type,int skillId,bool bTrue)
+    {
+        if (base.Prepared)
+        {
+            base.uiBehaviour.m_Button_Attack.SetEnable(bTrue);
+        }
+    }
     /// <summary>
     /// 显示角色的基础信息,比如血量，速度，攻击距离等
     /// </summary>
