@@ -53,6 +53,7 @@ namespace Game
             CProtocol.Register(new CPtcG2CNtf_StopPlayerRound());//1033
             CProtocol.Register(new CPtcM2CNtf_CastSkill());//1034
             CProtocol.Register(new CPtcM2CNtf_EndCastSkill());//1035
+            CProtocol.Register(new CPtcM2CNtf_CDChanged());//1036
         }
     }
 }

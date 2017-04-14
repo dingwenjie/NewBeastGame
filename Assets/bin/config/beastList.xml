@@ -19,7 +19,7 @@
     <NickName_s>德玛西亚之翼</NickName_s>
     <IconFile_s>1</IconFile_s>
     <ModelFile_s>WuDiEr</ModelFile_s>
-    <Move_i>3</Move_i>
+    <Move_i>4</Move_i>
     <PassiveSkill_i>10006</PassiveSkill_i>
     <Skill_1_i>10007</Skill_1_i>
     <Skill_2_i>10008</Skill_2_i>
@@ -32,7 +32,7 @@
     <NickName_s>无敌法师</NickName_s>
     <IconFile_s>2</IconFile_s>
     <ModelFile_s>Yasuo</ModelFile_s>
-    <Move_i>3</Move_i>
+    <Move_i>2</Move_i>
     <PassiveSkill_i>10011</PassiveSkill_i>
     <Skill_1_i>10012</Skill_1_i>
     <Skill_2_i>10013</Skill_2_i>

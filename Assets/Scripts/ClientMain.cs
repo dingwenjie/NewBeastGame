@@ -16,6 +16,7 @@ using Client.Logic;
 using Game;
 using GameClient.Audio;
 using Client.GameMain.OpState;
+using Client.Effect;
 #region 模块信息
 /*----------------------------------------------------------------
 // 模块名：ClientMain
@@ -96,6 +97,7 @@ public class ClientMain : Singleton<ClientMain>
         Singleton<PublishConfig>.singleton.Init();
         Singleton<WordFilter>.singleton.Init();
         GameConfig.singleton.Init();
+        EffectManager.Instance.Init();
         //SkillGameManager.Init();
         GameConfig.singleton.DoGlobalConfig();//设置游戏的运行速度
         Singleton<ConfigCS>.singleton.Init();//电脑配置信息
@@ -146,6 +148,7 @@ public class ClientMain : Singleton<ClientMain>
         UIManager.singleton.Update();
         Singleton<CWindowHandle>.singleton.Update();
         Singleton<SequenceShowManager>.singleton.Update();
+        EffectManager.Instance.Update();
     }
     public void ChangeGameState(EnumGameState eGameState)
     {

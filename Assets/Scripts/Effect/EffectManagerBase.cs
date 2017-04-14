@@ -122,6 +122,22 @@ namespace Effect.Export
         {
             EffectManagerBase.s_uiManager = uiManager;
         }
+        /// <summary>
+        /// 加载特效配置文件
+        /// </summary>
+        /// <param name="strConfigFile"></param>
+        public void LoadXml(string strConfigFile)
+        {
+            try
+            {
+                Singleton<EffectManagerImplement>.singleton.LoadXml(strConfigFile);
+            }
+            catch (Exception ex)
+            {
+                EffectLogger.Fatal(ex.ToString());
+            }
+        }
+
         public static Vector3 WorldToScreenPoint(Vector3 pos)
         {
             Vector3 result;
@@ -186,6 +202,46 @@ namespace Effect.Export
         {
             EffectManagerBase.s_cameraManager.SetCameraFov(fFov);
         }
+
+        #region PlayEffect
+        public int PlayEffect(int id, Beast iCast, Vector3 vec3SrcPos, IXUIObject uiObjectCast,
+            Beast iTarget, Vector3 vec3DestPos, IXUIObject uiObjectTarget, Vector3 vec3FixDir)
+        {
+            return EffectManagerImplement.singleton.PlayEffect(id, iCast, vec3SrcPos, uiObjectCast, iTarget, vec3DestPos, uiObjectTarget, vec3FixDir);
+        }
+        #endregion
+        #region GetEffectHitTime
+        public float GetEffectHitTime(int effectId, Beast caster, Beast target)
+        { 
+            float result;
+            try
+            {
+                result = Singleton<EffectManagerImplement>.singleton.GetEffectHitTime(effectId, caster, target);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                EffectLogger.Fatal(ex.ToString());
+            }
+            result = 0f;
+            return result;
+        }
+        public float GetEffectHitTime(int effectId, Beast caster, Vector3 targetPos)
+        {
+            float result;
+            try
+            {
+                result = Singleton<EffectManagerImplement>.singleton.GetEffectHitTime(effectId, caster, targetPos);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                EffectLogger.Fatal(ex.ToString());
+            }
+            result = 0f;
+            return result;
+        }
+        #endregion
         /// <summary>
         /// 清除所有特效数据
         /// </summary>

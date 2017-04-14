@@ -214,6 +214,23 @@ public class SkillGameManager
         return result;
     }
     /// <summary>
+    /// 取得技能cd
+    /// </summary>
+    /// <param name="skillId"></param>
+    /// <returns></returns>
+    public int GetSkillCD(int skillId)
+    {
+        SkillGameData data = this.GetSkillById(skillId);
+        if (data != null)
+        {
+            return data.CDTime;
+        }
+        else
+        {
+            return -1;
+        }
+    }
+    /// <summary>
     /// 取得该神兽能使用的技能列表
     /// </summary>
     /// <returns></returns>

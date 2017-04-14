@@ -3,6 +3,8 @@ using System.Xml;
 using System.Collections.Generic;
 using Client.Data;
 using System;
+using System.Text;
+using System.IO;
 using Utility;
 #region 模块信息
 /*----------------------------------------------------------------
@@ -15,20 +17,17 @@ using Utility;
 #endregion
 public class screen : MonoBehaviour
 {
-    /*public string path;
-    private string dic = "F://chenfuling/龙翼编年史/龙翼编年史/bin";
+    public string path;
+    private string dic = "F:/config";
+    private string targetPath = "E:/";
     void Start()
     {
         if (!string.IsNullOrEmpty(path))
         {
-            path = dic + "/" + path;
-            XmlDocument xmlDocument = XmlResAdapter.GetXmlDocument(path);
+            string path1 = dic + "/" + path;
+            XmlDocument xmlDocument = XmlResAdapter.GetXmlDocument(path1);
             print(xmlDocument.InnerXml);
+            File.WriteAllText(targetPath+path, xmlDocument.InnerXml, Encoding.UTF8);
         }
-    }*/
-    void Start()
-    {
-        Debug.Log(Screen.resolutions.Length);
     }
-
 }

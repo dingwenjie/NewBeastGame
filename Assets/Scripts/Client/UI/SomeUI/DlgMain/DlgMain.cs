@@ -8,6 +8,7 @@ using Utility;
 using Client.Data;
 using Game;
 using Client.GameMain.OpState;
+using Client.Skill;
 #region 模块信息
 /*----------------------------------------------------------------
 // 模块名：DlgMain 
@@ -210,6 +211,86 @@ public class DlgMain : DlgBase<DlgMain,DlgMainBehaviour>
             {
 
             }
+        }
+    }
+    public void RefreshSkill(EnumSkillType type,int skillId)
+    {
+        List<SkillGameData> skills = Singleton<BeastRole>.singleton.Beast.Skills;
+        for (int i = 0; i < skills.Count; i++)
+        {
+            SkillGameData skillData = skills[i];
+            if (skillId == skillData.Id)
+            {
+                if (skillId == 1)
+                {
+                    //this.uiBehaviour.m_Button_Attack.SetEnable(skillData.CDTime <= 0);
+                    return;
+                }
+                switch (skillData.SkillType)
+                {
+                    case 0:
+                        IXUILabel cdq = base.uiBehaviour.m_Sprite_SkillQ.GetUIObject("lb_skillQ_cd") as IXUILabel;
+                        if (skillData.CDTime > 0)
+                        {
+                            cdq.SetText(skillData.CDTime.ToString());
+                            cdq.SetVisible(true);
+                            this.uiBehaviour.m_Sprite_SkillQ.SetEnable(false);
+                        }
+                        else
+                        {
+                            cdq.SetVisible(false);
+                            this.uiBehaviour.m_Sprite_SkillQ.SetEnable(true);
+                        }
+                        break;
+                    case 1:
+                        IXUILabel cdw = base.uiBehaviour.m_Button_SkillW.GetUIObject("lb_skillW_cd") as IXUILabel;
+                        if (skillData.CDTime > 0)
+                        {
+                            cdw.SetText(skillData.CDTime.ToString());
+                            cdw.SetVisible(true);
+                            base.uiBehaviour.m_Button_SkillW.SetEnable(false);
+                        }
+                        else
+                        {
+                            cdw.SetVisible(false);
+                            base.uiBehaviour.m_Button_SkillW.SetEnable(true);
+                        }
+                        break;
+                    case 2:
+                        IXUILabel cde = base.uiBehaviour.m_Button_SkillE.GetUIObject("lb_skillE_cd") as IXUILabel;
+                        if (skillData.CDTime > 0)
+                        {
+                            cde.SetText(skillData.CDTime.ToString());
+                            cde.SetVisible(true);
+                            base.uiBehaviour.m_Sprite_SkillE.SetEnable(false);
+                        }
+                        else
+                        {
+                            cde.SetVisible(false);
+                            base.uiBehaviour.m_Sprite_SkillE.SetEnable(true);
+                        }
+                        break;
+                    case 3:
+                        IXUILabel cdr = base.uiBehaviour.m_Sprite_SkillR.GetUIObject("lb_skillR_cd") as IXUILabel;
+                        if (cdr != null && skillData.CDTime > 0)
+                        {
+                            cdr.SetText(skillData.CDTime.ToString());
+                            cdr.SetVisible(true);
+                            base.uiBehaviour.m_Sprite_SkillR.SetEnable(false);
+                        }
+                        else
+                        {
+                            cdr.SetVisible(false);
+                            base.uiBehaviour.m_Sprite_SkillR.SetEnable(true);
+                        }
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+
+                }
+            }   
         }
     }
     /// <summary>

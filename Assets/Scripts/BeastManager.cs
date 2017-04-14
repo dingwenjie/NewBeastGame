@@ -4,6 +4,7 @@ using Utility.Export;
 using Utility;
 using Client.Common;
 using Game;
+using Client.Data;
 using System;
 #region 模块信息
 /*----------------------------------------------------------------
@@ -268,6 +269,39 @@ public class BeastManager
         }
     }
     /// <summary>
+    /// 技能cd改变
+    /// </summary>
+    /// <param name="beastId"></param>
+    /// <param name="skillId"></param>
+    /// <param name="value"></param>
+    /// <param name="msg"></param>
+    public void OnCDChange(long beastId, int skillId, byte value, CPtcM2CNtf_CDChanged msg)
+    {
+        int type = skillId >> 16;
+        int cdValue = (int)value;
+        ECoolDownType eCoolDownType = (ECoolDownType)type;
+        Beast beast = this.GetBeastById(beastId);
+        if (beast != null)
+        {
+            switch (eCoolDownType)
+            {
+                case ECoolDownType.COOL_DOWN_SKILL:
+                    cdValue = beast.SkillManager.GetSkillCD(skillId);
+                    Singleton<BeastManager>.singleton.OnBeastSkillCDChange(beastId, skillId, (int)value);
+                    break;
+                case ECoolDownType.COOL_DOWN_EQUIP:
+                    break;
+            }
+            if (!beast.IsDead)
+            {
+                if (Singleton<SequenceShowManager>.singleton.CanRecevieMsg)
+                {
+                    Singleton<SequenceShowManager>.singleton.OnMsg(msg,cdValue);
+                }
+            }
+        }
+    }
+    /// <summary>
     /// 神兽释放技能
     /// </summary>
     /// <param name="beastId"></param>
@@ -306,7 +340,7 @@ public class BeastManager
         Beast beast = this.GetBeastById(beastId);
         if (beast != null)
         {
-            beast.OnCastSkillEffect(unSkillId, castSkillParam);
+            //beast.OnCastSkillEffect(unSkillId, castSkillParam);
         }
     }
     /// <summary>

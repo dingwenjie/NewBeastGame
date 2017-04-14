@@ -99,7 +99,7 @@ namespace Game
             this.m_nSize++;
             return this;
         }
-        public CByteStream Wirte(byte[] val)
+        public CByteStream Write(byte[] val)
         {
             this.SpaceCheck(val.Length);
             Array.Copy(val, 0, this.m_oBuffer, this.m_nSize, val.Length);

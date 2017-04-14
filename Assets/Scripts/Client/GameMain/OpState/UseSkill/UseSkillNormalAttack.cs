@@ -164,7 +164,6 @@ public class UseSkill_NormalAttack : UseSkillBase
     }
     public override bool OnButtonOkClick()
     {
-        Debug.Log("发送NormalClick技能到服务器");
         bool result = false;
         //发送释放技能的请求到服务器
         CPtcC2MReq_CastSkill msg = new CPtcC2MReq_CastSkill();

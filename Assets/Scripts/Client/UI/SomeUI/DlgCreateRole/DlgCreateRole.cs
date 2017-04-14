@@ -132,8 +132,8 @@ namespace Client.UI.UICommon
             this.m_bIsLeaveSecondCreatePanel = false;
             this.m_createPanel1 = base.uiBehaviour.transform.FindChild("pn_create1").gameObject;
             this.m_createPanel2 = base.uiBehaviour.transform.FindChild("pn_create2").gameObject;
-            this.m_movieTexture = Resources.Load("Data/Video/beginAnimation") as MovieTexture;
-            this.m_movieTexture.loop = true;
+            //this.m_movieTexture = Resources.Load("Data/Video/beginAnimation") as MovieTexture;
+            //this.m_movieTexture.loop = true;
             this.m_oExplorerIntro = base.uiBehaviour.transform.FindChild("pn_create1/sp_intro/explorer_intro").gameObject;
             this.m_oMagicianIntro = base.uiBehaviour.transform.FindChild("pn_create1/sp_intro/magician_intro").gameObject;
             this.m_oEngineerIntro = base.uiBehaviour.transform.FindChild("pn_create1/sp_intro/engineer_intro").gameObject;

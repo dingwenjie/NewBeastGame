@@ -70,10 +70,12 @@ public class CPtcM2CNtf_CastSkill : CProtocol
             {
                 beast.ResetMomentForVoiceInRound();
             }
+            /*
             if (beast.Role)
             {
                 Singleton<BeastRole>.singleton.LockUseSkill(EnumSkillType.eSkillType_Skill, this.m_dwSkillId, false);
             }
+            */
         }
     }
 }

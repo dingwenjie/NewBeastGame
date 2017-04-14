@@ -8,8 +8,8 @@
     <AttackAction_s>Attack</AttackAction_s>
     <IsEffectForward_b>true</IsEffectForward_b>
     <AttackAnimStartDelayTime_f>0</AttackAnimStartDelayTime_f>
-    <AttackerEffectId_i>0</AttackerEffectId_i>
-    <BeAttackerEffectId_i>0</BeAttackerEffectId_i>
+   <AttackerEffectId_i>1001</AttackerEffectId_i>
+    <BeAttackerEffectId_i>1002</BeAttackerEffectId_i>
     <SubHitEffectId_i>0</SubHitEffectId_i>
     <AttackJumpSpeed_f>0.5</AttackJumpSpeed_f>
     <BeAttackJumpSpeed_f>0.5</BeAttackJumpSpeed_f>
@@ -44,8 +44,8 @@
     <AttackAction_s>Attack</AttackAction_s>
     <IsEffectForward_b>true</IsEffectForward_b>
     <AttackAnimStartDelayTime_f>0</AttackAnimStartDelayTime_f>
-    <AttackerEffectId_i>0</AttackerEffectId_i>
-    <BeAttackerEffectId_i>0</BeAttackerEffectId_i>
+   <AttackerEffectId_i>1001</AttackerEffectId_i>
+    <BeAttackerEffectId_i>1002</BeAttackerEffectId_i>
     <SubHitEffectId_i>0</SubHitEffectId_i>
     <AttackJumpSpeed_f>0.5</AttackJumpSpeed_f>
     <BeAttackJumpSpeed_f>0.5</BeAttackJumpSpeed_f>
@@ -80,8 +80,8 @@
     <AttackAction_s>Attack</AttackAction_s>
     <IsEffectForward_b>true</IsEffectForward_b>
     <AttackAnimStartDelayTime_f>0</AttackAnimStartDelayTime_f>
-    <AttackerEffectId_i>0</AttackerEffectId_i>
-    <BeAttackerEffectId_i>0</BeAttackerEffectId_i>
+   <AttackerEffectId_i>1001</AttackerEffectId_i>
+    <BeAttackerEffectId_i>1002</BeAttackerEffectId_i>
     <SubHitEffectId_i>0</SubHitEffectId_i>
     <AttackJumpSpeed_f>0.5</AttackJumpSpeed_f>
     <BeAttackJumpSpeed_f>0.5</BeAttackJumpSpeed_f>
@@ -116,8 +116,8 @@
     <AttackAction_s>Attack</AttackAction_s>
     <IsEffectForward_b>true</IsEffectForward_b>
     <AttackAnimStartDelayTime_f>0</AttackAnimStartDelayTime_f>
-    <AttackerEffectId_i>0</AttackerEffectId_i>
-    <BeAttackerEffectId_i>0</BeAttackerEffectId_i>
+   <AttackerEffectId_i>1001</AttackerEffectId_i>
+    <BeAttackerEffectId_i>1002</BeAttackerEffectId_i>
     <SubHitEffectId_i>0</SubHitEffectId_i>
     <AttackJumpSpeed_f>0.5</AttackJumpSpeed_f>
     <BeAttackJumpSpeed_f>0.5</BeAttackJumpSpeed_f>
@@ -152,8 +152,8 @@
     <AttackAction_s>Attack</AttackAction_s>
     <IsEffectForward_b>true</IsEffectForward_b>
     <AttackAnimStartDelayTime_f>0</AttackAnimStartDelayTime_f>
-    <AttackerEffectId_i>0</AttackerEffectId_i>
-    <BeAttackerEffectId_i>0</BeAttackerEffectId_i>
+   <AttackerEffectId_i>1001</AttackerEffectId_i>
+    <BeAttackerEffectId_i>1002</BeAttackerEffectId_i>
     <SubHitEffectId_i>0</SubHitEffectId_i>
     <AttackJumpSpeed_f>0.5</AttackJumpSpeed_f>
     <BeAttackJumpSpeed_f>0.5</BeAttackJumpSpeed_f>
@@ -188,8 +188,8 @@
     <AttackAction_s>Attack</AttackAction_s>
     <IsEffectForward_b>true</IsEffectForward_b>
     <AttackAnimStartDelayTime_f>0</AttackAnimStartDelayTime_f>
-    <AttackerEffectId_i>0</AttackerEffectId_i>
-    <BeAttackerEffectId_i>0</BeAttackerEffectId_i>
+   <AttackerEffectId_i>1001</AttackerEffectId_i>
+    <BeAttackerEffectId_i>1002</BeAttackerEffectId_i>
     <SubHitEffectId_i>0</SubHitEffectId_i>
     <AttackJumpSpeed_f>0.5</AttackJumpSpeed_f>
     <BeAttackJumpSpeed_f>0.5</BeAttackJumpSpeed_f>

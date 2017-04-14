@@ -53,7 +53,7 @@ namespace Game
         public override void Process()
         {
             int skillId = this.m_dwID;
-            int type = this.m_dwID >> 16;//10000末尾4位随便填有（skill）,100000末尾4位随便填有（equip）
+            int type = this.m_dwID >> 16;//1-10000末尾4位随便填有（skill）,100000末尾4位随便填有（equip）
             ECoolDownType eCoolDownType = (ECoolDownType)type;
             XLog.Log.Debug(string.Concat(new object[]
 			{

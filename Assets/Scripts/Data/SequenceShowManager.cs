@@ -185,6 +185,10 @@ namespace Client.Data
         {
             this.GetCurrentShow().OnMsg(msg,orgiHpVal);
         }
+        public void OnMsg(CPtcM2CNtf_CDChanged msg,int preCDTime)
+        {
+            this.GetCurrentShow().OnMsg(msg,preCDTime);
+        }
         #endregion
 
         /// <summary>

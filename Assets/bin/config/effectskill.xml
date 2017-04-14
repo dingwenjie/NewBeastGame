@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EffectPool>
+  <Effect>
+    <ID>1001</ID>
+    <!--冰之圣女普攻-->
+    <Life>5</Life>
+    <HitPoint>0.66</HitPoint>
+    <Instance>
+      <Type>Follow</Type>
+      <Life>5</Life>
+      <Path>Data/Effect/bingnv/bingnv_pu</Path>
+      <Sound>Audio/SkillSound/Hero_01_IceWoman/audio_bingnv-act</Sound>
+      <Scale>1</Scale>
+      <StartDelay>0</StartDelay>
+      <FadeOutTime>4</FadeOutTime>
+      <FollowDirection>0</FollowDirection>
+      <CasterBindType>Foot</CasterBindType>
+      <TargetBindType>Foot</TargetBindType>
+      <TraceType>Line</TraceType>
+      <TraceTime>1</TraceTime>
+    </Instance>
+  </Effect>
+  <Effect>
+    <ID>1002</ID>
+    <!--冰之圣女普攻受击-->
+    <Life>5</Life>
+    <Instance>
+      <Type>Follow</Type>
+      <Life>5</Life>
+      <Path>FX/Attack/beattack</Path>
+      <Sound>AudioClips/audio_hit</Sound>
+      <Scale>1</Scale>
+      <StartDelay>0</StartDelay>
+      <FadeOutTime>4</FadeOutTime>
+      <FollowDirection>0</FollowDirection>
+      <CasterBindType>Body</CasterBindType>
+      <TargetBindType>Body</TargetBindType>
+      <TraceType>Line</TraceType>
+      <TraceTime>1</TraceTime>
+    </Instance>
+  </Effect>
+</EffectPool>

@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections.Generic;
 using Game;
 using UILib.Export;
+using Effect.Export;
 #region 模块信息
 /*----------------------------------------------------------------
 // 模块名：Effect
@@ -28,7 +30,7 @@ namespace Effect
         public Effect.PosType eForceTargetType = PosType.Player;
         public Effect.PosType eForceCasterType = PosType.Player;
         public bool HighLight = false;
-        public int m_nEffecTypeId = 0;
+        public int m_nEffectTypeId = 0;
         private List<EffectInstance> m_EffectInstances;
         private EffectData m_Data;
         private bool m_Loaded = false;
@@ -116,7 +118,39 @@ namespace Effect
         #region 公有方法
         public void Update()
         {
- 
+            try
+            {
+                if (this.m_Loaded)
+                {
+                    if (this.m_Data.Life != 0f && Time.time - this.m_StartTime > this.m_Data.Life)
+                    {
+                        this.Dead = true;
+                    }
+                    else
+                    {
+                        this.Dead = true;
+                        foreach (EffectInstance current in this.m_EffectInstances)
+                        {
+                            if (!current.Dead)
+                            {
+                                this.Dead = false;
+                                break;
+                            }
+                        }
+                    }
+                    if (!this.Dead)
+                    {
+                        foreach (var current in this.m_EffectInstances)
+                        {
+                            current.Update();
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                EffectLogger.Fatal(e);
+            }
         }
         /// <summary>
         /// 设置初始位置

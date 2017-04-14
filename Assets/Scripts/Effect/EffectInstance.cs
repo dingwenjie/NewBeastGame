@@ -674,7 +674,7 @@ namespace Effect
         }
         private void UpdatePosition()
         {
-            if (this.FatherEffect.m_nEffecTypeId == 1000099)
+            if (this.FatherEffect.m_nEffectTypeId == 1000099)
             {
                 int num = 1;
                 num++;
@@ -1192,7 +1192,7 @@ namespace Effect
                             break;
                         }
                     case EffectInstanceType.BindToCamera:
-                        this.m_Object.transform.position = Camera.mainCamera.transform.position;
+                        this.m_Object.transform.position = Camera.main.transform.position;
                         break;
                     case EffectInstanceType.FollowTarget:
                         if (this.FatherEffect != null && this.FatherEffect.Target != null && !this.FatherEffect.Caster.IsError)
@@ -1223,17 +1223,20 @@ namespace Effect
         }
         public void Update()
         {
+            Debug.Log("Update");
             try
             {
                 if (this.FatherEffect != null && (this.FatherEffect.Caster == null || this.FatherEffect.Caster.IsModelVisible))
                 {
                     if (this.m_Data.Life > 0f && Time.time - this.BornTime >= this.m_Data.Life)
                     {
+                        Debug.Log("Update2");
                         this.Dead = true;
                         this.Destroy();
                     }
                     else
                     {
+                        Debug.Log("Update1");
                         if (!this.Visible && Time.time - this.BornTime >= 0f)
                         {
                             this.Visible = true;
@@ -1245,6 +1248,7 @@ namespace Effect
                             float num = Time.time - this.BornTime;
                             if (this.m_Data.Life > 0f && this.m_Data.FadeInTime > 0f && num <= this.m_Data.FadeInTime)
                             {
+                                Debug.Log("Update3");
                                 float transparent = num / this.m_Data.FadeInTime;
                                 this.SetTransparent(transparent);
                             }

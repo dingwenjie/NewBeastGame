@@ -7,6 +7,7 @@ using System;
 using Effect.Export;
 using Game;
 using Client.Common;
+using Client.UI.UICommon;
 #region 模块信息
 /*----------------------------------------------------------------
 // 模块名：EffectManagerImplement
@@ -138,6 +139,7 @@ namespace Effect
                 }
             }
         }
+        #region PlayEffect
         public int PlayEffect(int id, IBeast caster, IBeast target)
         {
             int num = -1;
@@ -158,7 +160,7 @@ namespace Effect
                     return result;
                 }
                 Effect effect = new Effect();
-                effect.m_nEffecTypeId = id;
+                effect.m_nEffectTypeId = id;
                 effect.Caster = caster;
                 effect.Target = target;
                 num = this.GetID();
@@ -181,6 +183,197 @@ namespace Effect
             result = num;
             return result;
         }
+        public int PlayEffect(int id, Beast iCast, Vector3 vec3SrcPos, IXUIObject uiObjectCast,
+            Beast iTarget, Vector3 vec3DestPos, IXUIObject uiObjectTarget, Vector3 vec3FixDir)
+        {
+            int num = -1;
+            try
+            {
+                if (this.m_EffectDatas.ContainsKey(id))
+                {
+                    EffectData effectData = this.m_EffectDatas[id];
+                    if (null != effectData)
+                    {
+                        if (effectData.Reverse > 0)
+                        {
+                            if (iCast == null || null == iTarget)
+                            {
+                                effectData.Reverse = 0;
+                            }
+                        }
+                        Effect effect = new Effect();
+                        effect.m_nEffectTypeId = id;
+                        effect.Caster = ((effectData.Reverse == 0) ? iCast : iTarget);
+                        effect.Target = ((effectData.Reverse == 0) ? iTarget : iCast);
+                        /*if (null != uiObjectCast)
+                        {
+                            effect.CasterUIObject = SafeXUIObject.GetSafeXUIObject(uiObjectCast);
+                        }
+                        if (null != uiObjectTarget)
+                        {
+                            effect.TargetUIObject = SafeXUIObject.GetSafeXUIObject(uiObjectTarget);
+                        }*/
+                        num = this.GetID();
+                        if (num != -1)
+                        {
+                            if (this.HighLight)
+                            {
+                                effect.HighLight = true;
+                                this.m_HightLightEffect.Add(num, effect);
+                            }
+                            effect.Load(effectData);
+                            effect.Id = num;
+                            this.m_Effects.Add(num, effect);
+                            if (vec3SrcPos != Vector3.zero)
+                            {
+                                if (vec3DestPos != Vector3.zero)
+                                {
+                                    this.m_Effects[num].SetSrcPos(vec3SrcPos);
+                                }
+                                else
+                                {
+                                    this.m_Effects[num].SourcePos = vec3SrcPos;
+                                }
+                            }
+                            if (vec3DestPos != Vector3.zero)
+                            {
+                                this.m_Effects[num].TargetPos = vec3DestPos;
+                            }
+                            if (vec3FixDir != Vector3.zero)
+                            {
+                                this.m_Effects[num].FixDir = vec3FixDir;
+                            }
+                            EffectLogger.Debug("PlayEffect:" + id);
+                        }
+                    }
+                }
+                else
+                {
+                    EffectLogger.Error("!m_EffectDatas.ContainsKey(id):" + id);
+                }
+            }
+            catch (Exception ex)
+            {
+                EffectLogger.Fatal(ex.ToString());
+            }
+            return num;
+        }
+        #endregion
+        #region GetEffectHitTime
+        public float GetEffectHitTime(int effect_id, Beast caster, Beast target)
+        {
+            EffectData effectData = null;
+            float result;
+            if (!this.m_EffectDatas.ContainsKey(effect_id))
+            {
+                result = 0f;
+            }
+            else
+            {
+                effectData = this.m_EffectDatas[effect_id];
+                float allTime = 0f;
+                foreach (EffectInstanceData current in effectData.InstanceDatas)
+                {
+                    float num2 = 0f;
+                    if (current.Type == EffectInstanceType.UITrace)
+                    {
+                        allTime = current.TraceTime;
+                    }
+                    if (current.Type == EffectInstanceType.Trace)
+                    {
+                        if (current.InstanceTraceMoveType == TraceMoveType.FixMoveSpeed)
+                        {
+                            Vector3 zero = Vector3.zero;
+                            Vector3 zero2 = Vector3.zero;
+                            if (null != caster)
+                            {
+                                EffectInstance.GetBindPos(caster, current.CasterBindType, out zero);
+                            }
+                            if (null != target)
+                            {
+                                EffectInstance.GetBindPos(target, current.TargetBindType, out zero2);
+                            }
+                            float num3 = Vector3.Magnitude(zero2 - zero);
+                            if (current.MoveSpeed != 0f)
+                            {
+                                num2 = num3 / current.MoveSpeed;
+                            }
+                            else
+                            {
+                                num2 = current.TraceTime;
+                            }
+                        }
+                        else
+                        {
+                            num2 = current.TraceTime;
+                        }
+                    }
+                    if (allTime < num2)
+                    {
+                        allTime = num2;
+                    }
+                }
+                allTime += effectData.HitPointTime;
+                result = allTime;
+            }
+            return result;
+        }
+        public float GetEffectHitTime(int effect_id, Beast caster, Vector3 targetPos)
+        {
+            float result;
+            if (!this.m_EffectDatas.ContainsKey(effect_id))
+            {
+                result = 0f;
+            }
+            else
+            {
+                EffectData effectData = this.m_EffectDatas[effect_id];
+                float num = effectData.HitPointTime;
+                foreach (EffectInstanceData current in effectData.InstanceDatas)
+                {
+                    if (current.Type == EffectInstanceType.UITrace)
+                    {
+                        num = current.StartDelay + current.TraceTime;
+                    }
+                    float allTime;
+                    if (current.Type == EffectInstanceType.Trace)
+                    {
+                        if (current.InstanceTraceMoveType == TraceMoveType.FixMoveSpeed)
+                        {
+                            Vector3 zero = Vector3.zero;
+                            if (null != caster)
+                            {
+                                EffectInstance.GetBindPos(caster, current.CasterBindType, out zero);
+                            }
+                            float num2 = Vector3.Magnitude(targetPos - zero);
+                            if (current.MoveSpeed != 0f)
+                            {
+                                allTime = num2 / current.MoveSpeed + current.StartDelay;
+                            }
+                            else
+                            {
+                                allTime = current.StartDelay;
+                            }
+                        }
+                        else
+                        {
+                            allTime = current.StartDelay + current.TraceTime;
+                        }
+                    }
+                    else
+                    {
+                        allTime = current.StartDelay;
+                    }
+                    if (num < allTime)
+                    {
+                        num = allTime;
+                    }
+                }
+                result = num;
+            }
+            return result;
+        }
+        #endregion
         public void DelayEffect(int nEffectId, float deltaTime)
         {
             if (this.m_Effects.ContainsKey(nEffectId))
@@ -262,7 +455,7 @@ namespace Effect
             List<int> list = new List<int>();
             foreach (Effect current in this.m_Effects.Values)
             {
-                if (current.m_nEffecTypeId == nTypeId)
+                if (current.m_nEffectTypeId == nTypeId)
                 {
                     list.Add(current.Id);
                 }

@@ -67,18 +67,18 @@ public class BeAttackSkillEffectTrigger : Triggerable
                 if (data.SubHitEffectId != 0)
                 {
                     beAttackEftId = data.SubHitEffectId;
-                }
-                if (bShowMissEffect)
-                {
-                    //显示MIss漂浮字样
-                }
-                else if(beAttackEftId > 0)
-                {
-                    //取得被攻击者的位置，然后播放特效
-                    Vector3 vTargetPos = this.BeAttackPos.Count > 0 ? Hexagon.GetHex3DPos(this.BeAttackPos[0], Space.World) : Vector3.zero;
-                    EffectManager.Instance.PlayEffect(beAttackEftId,
-                        this.BeAttackerId, Vector3.zero, null, 0L, vTargetPos, null, Vector3.zero);
-                }
+                }            
+            }
+            if (bShowMissEffect)
+            {
+                //显示MIss漂浮字样
+            }
+            else if (beAttackEftId > 0)
+            {
+                //取得被攻击者的位置，然后播放特效
+                Vector3 vTargetPos = this.BeAttackPos.Count > 0 ? Hexagon.GetHex3DPos(this.BeAttackPos[0], Space.World) : Vector3.zero;
+                EffectManager.Instance.PlayEffect(beAttackEftId,
+                    this.BeAttackerId, Vector3.zero, null, 0L, vTargetPos, null, Vector3.zero);
             }
         }
     }

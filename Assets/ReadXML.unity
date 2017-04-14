@@ -182,12 +182,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 461987152}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f54f175698858647831ae6e0a8c1162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: 
+  path: effectskill.xml
 --- !u!4 &461987154
 Transform:
   m_ObjectHideFlags: 0
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 461987152}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26533d9f8a82ecc4b80b881b5e9aa2b4, type: 3}
   m_Name: 

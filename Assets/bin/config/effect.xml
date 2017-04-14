@@ -37,13 +37,13 @@
   <Effect>
     <ID>3</ID>
     <!--复活红-->
-    <Life>5</Life>
+    <Life>2</Life>
     <Instance>
       <Type>Follow</Type>
       <Life>5</Life>
-      <Path>Data/Effect/Terrain/yy_Hero_Birth_Effect_op</Path>
-      <Sound>Audio/GameEffect/audio_hero_birth</Sound>
-      <Scale>1</Scale>
+      <Path>FX/BornLight1</Path>
+      <Sound>AudioClips/audio_beast_birth.ogg</Sound>
+      <Scale>0</Scale>
       <StartDelay>0</StartDelay>
       <FadeOutTime>0</FadeOutTime>
       <FollowDirection>1</FollowDirection>
@@ -57,10 +57,10 @@
     <Life>5</Life>
     <Instance>
       <Type>Follow</Type>
-      <Life>5</Life>
-      <Path>Data/Effect/Terrain/yy_Hero_Birth_Effect_op</Path>
-      <Sound>Audio/GameEffect/audio_hero_birth</Sound>
-      <Scale>1</Scale>
+      <Life>2</Life>
+      <Path>FX/BornLight2</Path>
+      <Sound>AudioClips/audio_beast_birth.ogg</Sound>
+      <Scale>0</Scale>
       <StartDelay>0</StartDelay>
       <FadeOutTime>0</FadeOutTime>
       <FollowDirection>1</FollowDirection>

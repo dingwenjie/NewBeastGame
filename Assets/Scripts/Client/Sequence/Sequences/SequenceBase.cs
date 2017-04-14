@@ -81,6 +81,10 @@ public abstract class SequenceBase
     {
 
     }
+    public virtual void OnMsg(CPtcM2CNtf_CDChanged msg, int preCDTime)
+    {
+
+    }
     #endregion
     #endregion
 

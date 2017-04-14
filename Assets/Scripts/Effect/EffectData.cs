@@ -50,6 +50,11 @@ namespace Effect
             get;
             set;
         }
+        public byte Reverse
+        {
+            get;
+            set;
+        }
         #endregion
         #region 构造方法
         #endregion

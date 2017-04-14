@@ -425,7 +425,28 @@ namespace Client.Skill
         }
         public virtual void OnCastSkillEffect(CastSkillParam castSkillParam)
         {
-
+            if (castSkillParam != null)
+            {
+                Beast beast = Singleton<BeastManager>.singleton.GetBeastById(castSkillParam.m_unMasterBeastId);
+                if (beast != null)
+                {
+                    DataSkillShow data = beast.GetSkillShow(this.m_unskillId);
+                    int attackEffectId = 0;
+                    int beAttackEffectId = 0;
+                    this.GetEffectId(beast.Id, ref attackEffectId, ref beAttackEffectId);
+                    if (castSkillParam.listTargetRoleID.Count == 1)
+                    {
+                        this.m_nEffectId = EffectManager.Instance.PlayEffect(attackEffectId, beast.Id, 
+                            Hexagon.GetHex3DPos(this.GetHeroPosByCastSkillParam(castSkillParam), Space.World)
+                            , null, castSkillParam.listTargetRoleID[0], 
+                            Hexagon.GetHex3DPos(castSkillParam.vec3TargetPos, Space.World), null, Vector3.zero);
+                    }
+                    if (data != null && data.IsEffectForward)
+                    {
+                        this.AdjustAttackDirection(castSkillParam, beast);
+                    }
+                }
+            }
         }
         /// <summary>
         /// 具体技能使用表现
@@ -629,6 +650,28 @@ namespace Client.Skill
             }
             return false;
         }
+        #endregion
+        #region 私有方法
+        /// <summary>
+        /// 取得技能特效的位置，如果神兽存在的话，就神兽位置，否则就是目标位置
+        /// </summary>
+        /// <param name="castSkill"></param>
+        /// <returns></returns>
+        private CVector3 GetHeroPosByCastSkillParam(CastSkillParam castSkill)
+        {
+            Beast heroById = Singleton<BeastManager>.singleton.GetBeastById(castSkill.m_unMasterBeastId);
+            CVector3 result;
+            if (heroById != null)
+            {
+                result = heroById.Pos;
+            }
+            else
+            {
+                result = castSkill.vec3TargetPos;
+            }
+            return result;
+        }
+
         #endregion
     }
 }

@@ -4,6 +4,10 @@ using Effect.Export;
 using Effect;
 using Client.UI.UICommon;
 using Utility;
+using GameClient.Audio;
+using Client.UI;
+using Game;
+using System;
 #region 模块信息
 /*----------------------------------------------------------------
 // 模块名EffectManager
@@ -38,8 +42,32 @@ namespace Client.Effect
             }
         }
         #endregion
+
+        public void Init()
+        {
+            this.ClearEffectData();
+            EffectManagerBase.SetAudioManager(Singleton<AudioManager>.singleton);
+            EffectManagerBase.SetCameraManager(CameraManager.Instance);
+            EffectManagerBase.SetUIManager(UIManager.singleton);
+            string strConfigFile = "config/effect.xml";
+            base.LoadXml(strConfigFile);
+            strConfigFile = "config/effectskill.xml";
+            base.LoadXml(strConfigFile);
+        }
+
+        public void Update()
+        {
+            try
+            {
+                Singleton<EffectManagerImplement>.singleton.Update();
+            }
+            catch (Exception message)
+            {
+                EffectLogger.Fatal(message);
+            }
+        }
         /// <summary>
-        /// 取得技能攻击特效的存活时间(目标神兽)
+        /// 取得技能攻击到目标时间(目标神兽)
         /// </summary>
         /// <param name="effectId"></param>
         /// <param name="castId"></param>
@@ -47,7 +75,9 @@ namespace Client.Effect
         /// <returns></returns>
         public float GetEffectHitTime(int effectId, long castId, long targetId)
         {
-            return 0;
+            Beast attacker = Singleton<BeastManager>.singleton.GetBeastById(castId);
+            Beast beAttacker = Singleton<BeastManager>.singleton.GetBeastById(targetId);
+            return base.GetEffectHitTime(effectId,attacker,beAttacker);
         }
         /// <summary>
         /// 取得技能攻击特效的存活时间(目标神兽 + 技能类型)
@@ -70,7 +100,8 @@ namespace Client.Effect
         /// <returns></returns>
         public float GetEffectHitTime(int effectId, long castId, Vector3 targetPos)
         {
-            return 0;
+            Beast attacker = Singleton<BeastManager>.singleton.GetBeastById(castId);
+            return base.GetEffectHitTime(effectId, attacker, targetPos);
         }
         /// <summary>
         /// 取得技能攻击特效的存活时间（目标地点 + 技能类型）
@@ -84,6 +115,8 @@ namespace Client.Effect
         {
             return 0;
         }
+
+        #region PlayEffect
         /// <summary>
         /// 播放特效
         /// </summary>
@@ -98,12 +131,22 @@ namespace Client.Effect
         /// <returns></returns>
         public int PlayEffect(int id, long unCastId, Vector3 vec3SrcPos, IXUIObject uiObjCast, long unTargetId, Vector3 vec3DestPos, IXUIObject uiObjTarget, Vector3 vec3FixDir)
         {
-            return 0;
+            Beast caster = Singleton<BeastManager>.singleton.GetBeastById(unCastId);
+            Beast target = Singleton<BeastManager>.singleton.GetBeastById(unTargetId);
+            return base.PlayEffect(id, caster, vec3SrcPos, uiObjCast, target, vec3DestPos, uiObjTarget, vec3FixDir);
         }
         public int PlayEffect(int id, long unCastId, long unTargetId)
         {
-            return 0;
+            Beast caster = Singleton<BeastManager>.singleton.GetBeastById(unCastId);
+            Beast target = Singleton<BeastManager>.singleton.GetBeastById(unTargetId);
+            return base.PlayEffect(id, caster, Vector3.zero, null, target, Vector3.zero, null, Vector3.zero);
         }
+        public int PlayEffect(int id, long casterId, Vector3 targetPos)
+        {
+            Beast caster = Singleton<BeastManager>.singleton.GetBeastById(casterId);
+            return base.PlayEffect(id, caster, Vector3.zero, null, null, targetPos, null, Vector3.zero);
+        }
+        #endregion
         /// <summary>
         /// 取得特效摄像机跟随的类型
         /// </summary>

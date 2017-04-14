@@ -276,7 +276,6 @@ namespace Client.Common
     /// </summary>
     public enum ECoolDownType
     {
-        COOL_DOWN_INVALID,
         COOL_DOWN_SKILL,
         COOL_DOWN_EQUIP
     }

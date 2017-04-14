@@ -17,7 +17,7 @@ using Effect;
 #endregion
 namespace Client
 {
-    public class CameraManager
+    public class CameraManager : ICameraManager
     {
         #region 字段
         /// <summary>
@@ -274,6 +274,14 @@ namespace Client
             this.m_fDeltaYAngle = 0f;
             this.m_nForceFollowHeroId = -1;
             this.m_bCtrlByEffect = false;
+        }
+        public void SetCamerPosAndDir(Vector3 cameraPos, Vector3 lookDir)
+        {
+            if (this.m_GameNode != null)
+            {
+                this.m_GameNode.forward = lookDir;
+                this.m_GameNode.position = cameraPos;
+            }
         }
         public void SetCamerPosAndLookAt(Vector3 cameraPos, Vector3 lookAtPos)
         {
@@ -551,12 +559,5 @@ namespace Client
             return this.m_nForceFollowHeroId > 0 || this.FollowHeroInRound;
         }
         #endregion
-    }
-    public interface ICameraManager
-    {
-        void SetCamerPosAndDir(Vector3 vPos, Vector3 vDir);
-        void BeginCtrlByEffect();
-        void EndCtrlByEffect();
-        void SetCameraFov(float fFov);
     }
 }

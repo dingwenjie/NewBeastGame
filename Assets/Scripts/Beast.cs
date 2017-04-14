@@ -8,6 +8,7 @@ using Client.Data;
 using Client.UI.UICommon;
 using Client.Common;
 using GameClient.Audio;
+using Client.Effect;
 #region 模块信息
 /*----------------------------------------------------------------
 // 模块名：Hero
@@ -81,6 +82,20 @@ public class Beast : IBeast, IDisposable
         {
             this.m_unBeastId = value;
         }
+    }
+    /// <summary>
+    /// 技能管理器
+    /// </summary>
+    public SkillGameManager SkillManager
+    {
+        get { return this.m_skillManager; }
+    }
+    /// <summary>
+    /// 行为动作管理器
+    /// </summary>
+    public ActWorkManager ActWorkManager
+    {
+        get { return this.m_actWorkManager; }
     }
     /// <summary>
     /// 神兽类型id
@@ -757,7 +772,15 @@ public class Beast : IBeast, IDisposable
     public void OnRevive()
     {
         this.m_bDead = false;
+        DlgBase<DlgMain, DlgMainBehaviour>.singleton.Refresh();
         this.SetVisible(true);
+        this.HideHeadInfo = false;
+        int id = 3;
+        if (this.eCampType == ECampType.CAMP_LEAGUE)
+        {
+            id = 4;
+        }
+        EffectManager.Instance.PlayEffect(id, this.m_unBeastId, this.m_unBeastId);
         if (this.m_beastBehaviour != null)
         {
             this.m_beastBehaviour.OnRevive();
@@ -1078,7 +1101,7 @@ public class Beast : IBeast, IDisposable
         this.m_skillManager.OnSkillCDChange(unSkillId, byteCD);
         if (this.Role)
         {
-            //DlgBase<DlgMain, DlgMainBehaviour>.singleton.RefreshCard(EnumCardType.eCardType_Skill, unSkillId);
+            DlgBase<DlgMain, DlgMainBehaviour>.singleton.RefreshSkill(EnumSkillType.eSkillType_Skill, unSkillId);
         }
         //DlgBase<DlgTab, DlgTabBehaviour>.singleton.Refresh();
     }
